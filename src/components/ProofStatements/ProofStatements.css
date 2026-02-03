@@ -1,0 +1,57 @@
+/* ==========================================================================
+   Proof Statements Styles
+   ========================================================================== */
+
+.proof-statements {
+  padding: 3rem 0;
+  background: var(--color-surface);
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.proof-card {
+  padding: 1.5rem 1.2rem;
+  border-radius: 16px;
+  border: 1px solid var(--color-border-subtle);
+  background: linear-gradient(145deg, #0b3c5d 0, #145b8a 60%, #0b3c5d 100%);
+  color: #e5e7eb;
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.proof-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.3);
+}
+
+.proof-value {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: #ffffff;
+}
+
+.proof-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #cbd5f5;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .proof-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .proof-grid {
+    grid-template-columns: 1fr;
+  }
+}

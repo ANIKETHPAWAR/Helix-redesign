@@ -1,0 +1,240 @@
+/* ==========================================================================
+   Home Page Styles
+   ========================================================================== */
+
+.hero {
+  padding: 4.5rem 0 3.5rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  letter-spacing: 0.03em;
+  line-height: 1.15;
+  color: #0f172a;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  max-width: 42rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease-out, color 0.15s ease-out, border-color 0.15s ease-out, box-shadow 0.15s ease-out, transform 0.1s ease-out;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0b3c5d 0, #145b8a 45%, #0b3c5d 100%);
+  color: #f9fafb;
+  box-shadow: 0 16px 35px rgba(15, 23, 42, 0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.3);
+}
+
+.btn-outline {
+  background: #f9fafb;
+  color: #111827;
+  border-color: rgba(148, 163, 184, 0.7);
+}
+
+.btn-outline:hover {
+  background: #111827;
+  color: #f9fafb;
+  border-color: #111827;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+.section-alt {
+  background: var(--color-surface);
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.8rem;
+}
+
+.section-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.section-highlight {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0.5rem 0;
+}
+
+.section-subtitle {
+  font-size: 0.94rem;
+  color: var(--color-text-muted);
+  max-width: 32rem;
+}
+
+.failure-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.failure-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.2rem;
+  background: var(--color-surface);
+  border-radius: 12px;
+  border: 1px solid var(--color-border-subtle);
+}
+
+.failure-icon {
+  font-size: 1.5rem;
+  color: #ef4444;
+  flex-shrink: 0;
+}
+
+.failure-point p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.bridge-line {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(11, 60, 93, 0.05) 0, rgba(246, 166, 35, 0.05) 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(246, 166, 35, 0.2);
+}
+
+.bridge-line p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.cta-band {
+  margin: 3.2rem 0 3.4rem;
+}
+
+.cta-band-inner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  background: radial-gradient(circle at 10% 0, rgba(246, 166, 35, 0.14), transparent 60%),
+    radial-gradient(circle at 90% 100%, rgba(96, 165, 250, 0.18), transparent 60%),
+    linear-gradient(135deg, #020617 0, #0b1120 55%, #020617 100%);
+  color: #f9fafb;
+  padding: 1.7rem 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.7);
+}
+
+.cta-band-content {
+  max-width: 30rem;
+}
+
+.cta-band-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.cta-band-subtitle {
+  font-size: 0.92rem;
+  color: #cbd5f5;
+}
+
+.cta-band-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  font-size: 0.78rem;
+  color: #cbd5f5;
+}
+
+.mt-sm {
+  margin-top: 0.8rem;
+}
+
+.cta-band-actions {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 3.5rem 0 2.75rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .failure-points {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-band {
+    margin: 2.6rem 0 2.8rem;
+  }
+
+  .cta-band-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cta-band-actions {
+    width: 100%;
+  }
+
+  .cta-band-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
