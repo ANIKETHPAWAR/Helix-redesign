@@ -1,0 +1,74 @@
+/* ==========================================================================
+   Utility Classes
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.8rem;
+}
+
+.section-kicker {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
+.section-title {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.section-subtitle {
+  font-size: 0.94rem;
+  color: var(--color-text-muted);
+  max-width: 32rem;
+}
+
+/* Spacing utilities */
+.mt-xs {
+  margin-top: 0.4rem;
+}
+
+.mt-sm {
+  margin-top: 0.8rem;
+}
+
+.mt-md {
+  margin-top: 1.5rem;
+}
+
+.mt-lg {
+  margin-top: 2rem;
+}
+
+/* Text utilities */
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
