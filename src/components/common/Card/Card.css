@@ -1,0 +1,182 @@
+/* Base Card - Modern Glass/Neu-brutalism hybrid or Clean Modern */
+.card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: var(--spacing-xl);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    /* Soft shadow */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Bouncy spring transition */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: var(--color-text-main);
+    border: 1px solid #f3f4f6;
+    /* Very subtle border */
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+/* Hover Effect - Lift and Glow */
+.card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    border-color: rgba(49, 42, 83, 0.1);
+    /* Hint of brand color */
+}
+
+/* Gradient Overlay on Hover */
+.card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(49, 42, 83, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.card:hover::after {
+    opacity: 1;
+}
+
+.card-no-padding {
+    padding: 0;
+}
+
+/* Feature Card Specifics */
+.feature-card {
+    text-align: left;
+    justify-content: flex-start;
+}
+
+.feature-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+    border-radius: 14px;
+    color: var(--color-dblue);
+    margin-bottom: var(--spacing-lg);
+    transition: all 0.4s ease;
+    position: relative;
+    border: 1px solid #E5E7EB;
+}
+
+/* Icon Glow on Card Hover */
+.card:hover .feature-icon {
+    background: var(--color-dblue);
+    color: #ffffff;
+    transform: rotateY(180deg);
+    /* 3D flip effect */
+    border-color: transparent;
+    box-shadow: 0 8px 16px rgba(49, 42, 83, 0.2);
+}
+
+.card:hover .feature-icon svg {
+    transform: rotateY(-180deg);
+    /* Keep icon facing forward */
+}
+
+.feature-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+    color: #111827;
+    letter-spacing: -0.01em;
+    transition: color 0.3s ease;
+}
+
+.card:hover .feature-title {
+    color: var(--color-dblue);
+}
+
+.feature-desc {
+    color: #6B7280;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* Metric Card */
+.metric-card {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* Assuming dark background usually */
+    backdrop-filter: blur(10px);
+}
+
+.metric-number {
+    font-size: var(--font-size-4xl);
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--color-accent) 0%, #fff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: var(--font-family-display);
+    line-height: 1;
+    margin-bottom: var(--spacing-xs);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.metric-label {
+    color: var(--color-text-light);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+/* Service Card */
+.service-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card:hover .service-image {
+    transform: scale(1.05);
+}
+
+.service-content {
+    padding: var(--spacing-xl);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.service-title {
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.service-desc {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    margin-bottom: var(--spacing-md);
+    flex-grow: 1;
+}
+
+.service-link {
+    color: var(--color-dblue);
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-top: auto;
+    transition: gap 0.3s ease;
+}
+
+.service-link:hover {
+    gap: 0.75rem;
+}

@@ -1,0 +1,131 @@
+.framework-section {
+    padding: 6rem 0;
+    background-color: #fff;
+    overflow: hidden;
+    /* For decos */
+}
+
+.framework-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.framework-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.framework-label {
+    color: var(--color-dblue);
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+}
+
+.framework-title {
+    font-size: 3rem;
+    line-height: 1.1;
+    color: #111827;
+    /* Dark text */
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-family-display, sans-serif);
+}
+
+.framework-desc {
+    color: #4B5563;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 90%;
+}
+
+.framework-quote {
+    border-left: 4px solid var(--color-dblue);
+    padding: 2rem;
+    background-color: #F9FAFB;
+    font-size: 1.125rem;
+    color: #1F2937;
+    font-weight: 500;
+    width: 100%;
+    margin-bottom: 2.5rem;
+    border-radius: 0 4px 4px 0;
+}
+
+.framework-btn {
+    min-width: 200px;
+}
+
+/* Image Side */
+.framework-image-wrapper {
+    position: relative;
+    height: 600px;
+    /* Tall image */
+    width: 100%;
+}
+
+.framework-img {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    margin: 0 auto;
+    /* Center in wrapper if using decos */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Decorative Shapes */
+.framework-deco-top {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background-color: #DBEAFE;
+    /* Light blue */
+    border-radius: 20px 0 0 0;
+    /* Or custom shape */
+    z-index: 1;
+}
+
+.framework-deco-bottom {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background-color: #F3F4F6;
+    /* Light gray */
+    border-radius: 0 0 20px 0;
+    z-index: 1;
+}
+
+@media (max-width: 968px) {
+    .framework-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .framework-title {
+        font-size: 2.25rem;
+    }
+
+    .framework-image-wrapper {
+        height: 400px;
+        margin-top: 2rem;
+    }
+
+    .framework-deco-top,
+    .framework-deco-bottom {
+        width: 100px;
+        height: 100px;
+    }
+}

@@ -1,10 +1,22 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './Header.css'
+import logoHicpl from '../../assets/Logo-hicpl.jpeg'
+import Container from '../common/Container/Container'
+import Button from '../common/Button/Button'
 
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen)
@@ -19,13 +31,12 @@ function Header() {
   }
 
   return (
-    <header className="site-header">
-      <div className="container site-header-inner">
+    <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
+      <Container className="site-header-inner">
         <Link to="/" className="brand" aria-label="Helix Group" onClick={closeNav}>
-          <div className="brand-mark">H</div>
+          <img src={logoHicpl} alt="Helix Group" className="brand-logo" />
           <div className="brand-text">
             <span className="brand-title">Helix Group</span>
-            <span className="brand-subtitle">Consult · Design · Build · Deliver</span>
           </div>
         </Link>
 
@@ -42,8 +53,8 @@ function Header() {
         <nav className={`nav ${isNavOpen ? 'nav--open' : ''}`} aria-label="Primary">
           <ul className="nav-list">
             <li>
-              <Link 
-                to="/" 
+              <Link
+                to="/"
                 className={`nav-link ${isActive('/') ? 'nav-link--active' : ''}`}
                 onClick={closeNav}
               >
@@ -51,8 +62,8 @@ function Header() {
               </Link>
             </li>
             <li>
-              <Link 
-                to="/infrastructure" 
+              <Link
+                to="/infrastructure"
                 className={`nav-link ${isActive('/infrastructure') ? 'nav-link--active' : ''}`}
                 onClick={closeNav}
               >
@@ -60,8 +71,8 @@ function Header() {
               </Link>
             </li>
             <li>
-              <Link 
-                to="/helix360" 
+              <Link
+                to="/helix360"
                 className={`nav-link ${isActive('/helix360') ? 'nav-link--active' : ''}`}
                 onClick={closeNav}
               >
@@ -69,17 +80,8 @@ function Header() {
               </Link>
             </li>
             <li>
-              <Link 
-                to="/about" 
-                className={`nav-link ${isActive('/about') ? 'nav-link--active' : ''}`}
-                onClick={closeNav}
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link 
-                to="/projects" 
+              <Link
+                to="/projects"
                 className={`nav-link ${isActive('/projects') ? 'nav-link--active' : ''}`}
                 onClick={closeNav}
               >
@@ -87,8 +89,17 @@ function Header() {
               </Link>
             </li>
             <li>
-              <Link 
-                to="/contact" 
+              <Link
+                to="/about"
+                className={`nav-link ${isActive('/about') ? 'nav-link--active' : ''}`}
+                onClick={closeNav}
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/contact"
                 className={`nav-link ${isActive('/contact') ? 'nav-link--active' : ''}`}
                 onClick={closeNav}
               >
@@ -96,12 +107,13 @@ function Header() {
               </Link>
             </li>
           </ul>
-          <Link to="/contact" className="nav-cta" onClick={closeNav}>
-            Talk to our team
-            <span>→</span>
-          </Link>
+          <div className="nav-cta-wrapper">
+            <Button to="/contact" variant="primary" onClick={closeNav} className="nav-cta-btn">
+              Get in Touch
+            </Button>
+          </div>
         </nav>
-      </div>
+      </Container>
     </header>
   )
 }

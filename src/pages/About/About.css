@@ -56,31 +56,52 @@
   margin-bottom: 0.9rem;
 }
 
+/* Feature List with Custom Checkmarks */
 .feature-list {
   list-style: none;
   padding: 0;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
   display: grid;
-  gap: 0.6rem;
+  gap: 0.8rem;
 }
 
 .feature-list li {
-  padding-left: 1.5rem;
+  padding-left: 2rem;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .feature-list li::before {
-  content: "✓";
+  content: "";
   position: absolute;
   left: 0;
-  color: var(--color-accent);
-  font-weight: 600;
+  top: 0.2rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: rgba(100, 255, 218, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-list li::after {
+  content: "";
+  position: absolute;
+  left: 0.45rem;
+  top: 0.5rem;
+  width: 0.35rem;
+  height: 0.6rem;
+  border: solid var(--color-primary);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 .info-card {
   background: var(--color-surface);
   border-radius: 16px;
-  padding: 1.3rem 1.2rem;
+  padding: 1.5rem;
   border: 1px solid var(--color-border-subtle);
   box-shadow: var(--shadow-subtle);
   position: sticky;
@@ -96,9 +117,9 @@
 }
 
 .card-title {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.5rem;
   color: #111827;
 }
 
@@ -106,27 +127,54 @@
   color: var(--color-text-muted);
   font-size: 0.9rem;
   margin-bottom: 1rem;
+  line-height: 1.5;
 }
 
 .values-list {
   display: grid;
   gap: 0.75rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .value-item {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.6rem;
-  background: rgba(11, 60, 93, 0.05);
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: #f8fafc;
   border-radius: 8px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.value-item:hover {
+  background: #ffffff;
+  border-color: var(--color-secondary);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transform: translateX(4px);
 }
 
 .value-icon {
-  color: var(--color-accent);
-  font-weight: 600;
-  font-size: 1.1rem;
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.value-icon::after {
+  content: "";
+  width: 0.35rem;
+  height: 0.6rem;
+  border: solid var(--color-accent);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-top: -2px;
+  /* Visual center adjustment */
 }
 
 @media (max-width: 900px) {

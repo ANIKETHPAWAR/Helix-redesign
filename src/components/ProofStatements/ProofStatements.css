@@ -1,57 +1,97 @@
-/* ==========================================================================
-   Proof Statements Styles
-   ========================================================================== */
+.proof-section {
+  background-color: #1a365d;
+  /* Dark Blue - adjust to match image/brand */
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+  /* Example gradient to match "royal blue" look */
+  /* Or specifically based on user image, it's a solid deep blue */
+  background-color: #172554;
+  color: #ffffff;
+  padding: 6rem 0;
+}
 
-.proof-statements {
-  padding: 3rem 0;
-  background: var(--color-surface);
+.proof-header {
+  margin-bottom: 4rem;
+}
+
+.proof-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.proof-subtitle {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .proof-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 columns for top row */
+  gap: 3rem;
+  justify-content: center;
+}
+
+/* For the second row of 3 items, we need a way to center them or just use flex/grid auto layout */
+/* Grid with auto-fit might be better but let's try to match the specific 4 then 3 look if possible, or just standard responsive grid */
+/* The image has 4 top, 3 bottom centered. */
+
+.proof-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem 2rem;
+  /* Row gap, col gap */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .proof-card {
-  padding: 1.5rem 1.2rem;
-  border-radius: 16px;
-  border: 1px solid var(--color-border-subtle);
-  background: linear-gradient(145deg, #0b3c5d 0, #145b8a 60%, #0b3c5d 100%);
-  color: #e5e7eb;
-  box-shadow: var(--shadow-soft);
   text-align: center;
-  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
-}
-
-.proof-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.3);
+  flex: 0 0 calc(25% - 2rem);
+  /* Approx 4 per row */
+  min-width: 250px;
 }
 
 .proof-value {
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
   color: #ffffff;
+  font-family: var(--font-family-display, sans-serif);
 }
 
 .proof-label {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #cbd5f5;
-  margin: 0;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  max-width: 200px;
+  margin: 0 auto;
 }
 
-@media (max-width: 768px) {
-  .proof-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+@media (max-width: 1024px) {
+  .proof-card {
+    flex: 0 0 calc(33.333% - 2rem);
   }
 }
 
-@media (max-width: 640px) {
-  .proof-grid {
-    grid-template-columns: 1fr;
+@media (max-width: 768px) {
+  .proof-card {
+    flex: 0 0 calc(50% - 2rem);
+  }
+
+  .proof-title {
+    font-size: 2rem;
+  }
+
+  .proof-value {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .proof-card {
+    flex: 0 0 100%;
   }
 }
