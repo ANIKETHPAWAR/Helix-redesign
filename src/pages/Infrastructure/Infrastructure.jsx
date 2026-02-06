@@ -1,86 +1,93 @@
-import { Link } from 'react-router-dom'
-import './Infrastructure.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Section from '../../components/common/Section/Section';
+import Container from '../../components/common/Container/Container';
+import Button from '../../components/common/Button/Button';
+import { FeatureCard } from '../../components/common/Card/Card';
+import './Infrastructure.css';
 
 function Infrastructure() {
   return (
     <>
-      {/* Page Header */}
-      <section className="page-header">
-        <div className="container">
+      <Section className="infra-header">
+        <Container>
           <p className="page-eyebrow">Helix Infrastructure</p>
           <h1 className="page-title">From Concept to Commercial Success</h1>
           <p className="page-subtitle">
             Engineering-led advisory, execution control, and large-scale real estate project marketing.
           </p>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
-      {/* Main Content */}
-      <section className="section">
-        <div className="container">
-          <div className="content-grid">
-            <article className="prose">
-              <h2>Real Estate Project Marketing & Sales</h2>
-              <p className="highlight-text">
-                10,000+ homes sold across South India.
-              </p>
-              <p>
-                Helix Infrastructure combines deep engineering expertise with proven 
-                go-to-market capabilities. We don't just design projects—we ensure 
-                they succeed commercially through strategic marketing and sales execution.
-              </p>
-              <p>
-                Our integrated approach covers the complete project lifecycle:
-              </p>
-              <ul className="feature-list">
-                <li>Engineering-led feasibility and design</li>
-                <li>Project structuring and approvals</li>
-                <li>Execution oversight and quality control</li>
-                <li>Strategic marketing and sales execution</li>
-                <li>Post-delivery support and handover</li>
+      <Section>
+        <div className="infra-grid">
+          <div className="infra-content">
+            <h2>Real Estate Project Marketing & Sales</h2>
+            <p className="highlight-text">
+              10,000+ homes sold across South India.
+            </p>
+            <p className="text-body">
+              Helix Infrastructure combines deep engineering expertise with proven
+              go-to-market capabilities. We don't just design projects—we ensure
+              they succeed commercially through strategic marketing and sales execution.
+            </p>
+
+            <div className="lifecycle-visual">
+              <h3>Integrated Project Lifecycle</h3>
+              <ul className="lifecycle-steps">
+                <li>
+                  <span className="step-marker">01</span>
+                  <span className="step-text">Engineering-led feasibility and design</span>
+                </li>
+                <li>
+                  <span className="step-marker">02</span>
+                  <span className="step-text">Project structuring and approvals</span>
+                </li>
+                <li>
+                  <span className="step-marker">03</span>
+                  <span className="step-text">Execution oversight and quality control</span>
+                </li>
+                <li>
+                  <span className="step-marker">04</span>
+                  <span className="step-text">Strategic marketing and sales execution</span>
+                </li>
+                <li>
+                  <span className="step-marker">05</span>
+                  <span className="step-text">Post-delivery support and handover</span>
+                </li>
               </ul>
-            </article>
+            </div>
+          </div>
 
-            <aside className="info-card">
-              <p className="card-meta">Capabilities</p>
-              <h3 className="card-title">End-to-End Project Delivery</h3>
-              <p className="text-muted">
-                From initial concept through commercial success, Helix Infrastructure 
-                provides single-point accountability for serious B2B real estate projects.
-              </p>
-              <div className="capabilities-list">
-                <span className="capability-pill">Engineering Advisory</span>
-                <span className="capability-pill">Project Management</span>
-                <span className="capability-pill">Sales & Marketing</span>
-                <span className="capability-pill">Execution Control</span>
+          <div className="infra-sidebar">
+            <div className="sidebar-card">
+              <h3>Capabilities</h3>
+              <p>End-to-End Project Delivery</p>
+              <div className="tags-container">
+                <span className="tag">Engineering Advisory</span>
+                <span className="tag">Project Management</span>
+                <span className="tag">Sales & Marketing</span>
+                <span className="tag">Execution Control</span>
               </div>
-            </aside>
-          </div>
-        </div>
-      </section>
+            </div>
 
-      {/* CTA */}
-      <section className="cta-band">
-        <div className="container">
-          <div className="cta-band-inner">
-            <div className="cta-band-content">
-              <h2 className="cta-band-title">
-                Ready to discuss your infrastructure project?
-              </h2>
-              <p className="cta-band-subtitle">
-                Let's explore how Helix Infrastructure can deliver your project from concept to commercial success.
-              </p>
-            </div>
-            <div className="cta-band-actions">
-              <Link to="/contact" className="btn btn-primary">
-                Start a conversation
-              </Link>
+            <div className="sidebar-cta">
+              <h3>Have a project in mind?</h3>
+              <Link to="/contact" className="sidebar-link">Get in touch &rarr;</Link>
             </div>
           </div>
         </div>
-      </section>
+      </Section>
+
+      <Section className="cta-section-alt">
+        <div className="cta-box-simple">
+          <h2>Ready to discuss your infrastructure project?</h2>
+          <p>Let's explore how Helix Infrastructure can deliver your project from concept to commercial success.</p>
+          <Button to="/contact" variant="primary">Start a conversation</Button>
+        </div>
+      </Section>
     </>
-  )
+  );
 }
 
-export default Infrastructure
+export default Infrastructure;

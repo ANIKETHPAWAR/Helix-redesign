@@ -1,86 +1,159 @@
-/* ==========================================================================
-   Helix Group - Global Styles
-   Modern, scalable CSS for React components
-   ========================================================================== */
-
 :root {
-  --color-primary: #0b3c5d;
-  --color-primary-light: #145b8a;
-  --color-secondary: #f6a623;
-  --color-accent: #2ecc71;
-  --color-bg: #f5f7fa;
-  --color-surface: #ffffff;
-  --color-text: #1b1f23;
-  --color-text-muted: #6b7280;
-  --color-border-subtle: #e5e7eb;
+  /* Dark blue from logo*/
+  --color-dblue: #312A53;
+  /* Brand Colors - Construction & Infrastructure Inspired */
+  --color-primary: #0A192F;
+  /* Deep Navy */
+  --color-secondary: #112240;
+  /* Steel Blue */
+  --color-accent: #02ACF7;
+  /* Confident cyan – action, clarity, trust */
+  --color-accent-hover: #0284C7;
 
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --color-text-main: #E6F1FF;
+  /* Off-white for dark bg */
+  --color-text-muted: #475569;
+  /* Muted text */
+  --color-text-light: #CCD6F6;
+  /* Light text */
+  --color-text-inverse: #0A192F;
+  /* Dark text for light bg */
 
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 18px;
+  --color-bg-dark: #0A192F;
+  --color-bg-card: #112240;
+  --color-bg-light: #F4F7F6;
+  /* Neutral light background */
 
-  --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.08);
-  --shadow-subtle: 0 4px 12px rgba(15, 23, 42, 0.04);
+  /* Typography */
+  --font-family-main: 'Inter', 'Roboto', sans-serif;
+  --font-family-display: 'Outfit', 'Inter', sans-serif;
 
-  --container-width: 1120px;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 3rem;
+  --font-size-5xl: 4rem;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+
+  /* Layout */
+  --container-max-width: 1200px;
+  --container-padding: 1rem;
+  --header-height: 80px;
+
+  /* Effects */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --transition-default: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  font-family: var(--font-sans);
-  background: var(--color-bg);
-  color: var(--color-text);
-  line-height: 1.6;
+  font-family: var(--font-family-main);
+  background-color: var(--color-bg-light);
+  color: var(--color-text-inverse);
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-default);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
 }
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button {
-  font-family: inherit;
-  cursor: pointer;
-}
-
-#root {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1;
-}
-
-/* Container utility */
+/* Utility Classes */
 .container {
-  width: 100%;
-  max-width: var(--container-width);
+  max-width: var(--container-max-width);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 var(--container-padding);
 }
 
-@media (max-width: 768px) {
-  .container {
-    padding: 0 1rem;
-  }
+.section {
+  padding: var(--spacing-3xl) 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
 }

@@ -1,108 +1,135 @@
-import { Link } from 'react-router-dom'
-import ProofStatements from '../../components/ProofStatements/ProofStatements'
 import './Home.css'
+import Section from '../../components/common/Section/Section'
+import Container from '../../components/common/Container/Container'
+import Button from '../../components/common/Button/Button'
+import { FeatureCard } from '../../components/common/Card/Card'
+import ProofStatements from '../../components/ProofStatements/ProofStatements'
+import HeroCarousel from '../../components/HeroCarousel/HeroCarousel'
+import IntegratedApproach from '../../components/IntegratedApproach/IntegratedApproach'
+import FrameworkSection from '../../components/FrameworkSection/FrameworkSection'
+
+// Icons for Problem Section
+const Icons = {
+  Drawing: () => (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M14 2V8H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M16 13H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M16 17H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M10 9H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  ),
+  Alert: () => (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10.29 3.86L1.82 18C1.64538 18.3024 1.55296 18.6453 1.55196 18.9945C1.55096 19.3437 1.64142 19.6871 1.81443 19.9905C1.98744 20.2939 2.23696 20.5467 2.53846 20.7239C2.83996 20.901 3.18318 20.9962 3.535 21H20.465C20.8168 20.9962 21.16 20.901 21.4615 20.7239C21.763 20.5467 22.0126 20.2939 22.1856 19.9905C22.3586 19.6871 22.449 19.3437 22.448 18.9945C22.447 18.6453 22.3546 18.3024 22.18 18L13.71 3.86C13.5317 3.56613 13.2807 3.32314 12.9812 3.15449C12.6817 2.98585 12.3437 2.89722 12 2.89722C11.6563 2.89722 11.3183 2.98585 11.0188 3.15449C10.7193 3.32314 10.4683 3.56613 10.29 3.86V3.86Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M12 9V13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M12 17H12.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  ),
+  TrendUp: () => (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M23 6L13.5 15.5L8.5 10.5L1 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M17 6H23V12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  ),
+  Leak: () => (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M4.92993 4.92999L19.0699 19.07" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  )
+}
 
 function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero">
-        <div className="container hero-grid">
-          <div>
-            <h1 className="hero-title">
-              Consult. Design. Build. Deliver.
-            </h1>
-            <p className="hero-subtitle">
-              Helix Group is a B2B consulting and delivery organisation combining engineering, 
-              project management, execution, and go-to-market capability under one accountable framework.
-            </p>
-
-            <div className="hero-actions">
-              <Link to="/contact" className="btn btn-primary">
-                Start a Business Conversation
-                <span>→</span>
-              </Link>
-              <Link to="/infrastructure" className="btn btn-outline">
-                Explore our services
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Projects Fail Section */}
-      <section className="section">
-        <div className="container">
-          <header className="section-header">
-            <h2 className="section-title">Why Projects Fail — Even with Good Consultants</h2>
-          </header>
-          <div className="failure-points">
-            <div className="failure-point">
-              <span className="failure-icon">✗</span>
-              <p>Advice stops at drawings</p>
-            </div>
-            <div className="failure-point">
-              <span className="failure-icon">✗</span>
-              <p>Execution drifts on site</p>
-            </div>
-            <div className="failure-point">
-              <span className="failure-icon">✗</span>
-              <p>Costs escalate late</p>
-            </div>
-            <div className="failure-point">
-              <span className="failure-icon">✗</span>
-              <p>Post-plaster stage causes maximum leakage</p>
-            </div>
-          </div>
-          <div className="bridge-line">
-            <p>Helix was built to close this gap — by staying accountable till delivery.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* One Framework Section */}
-      <section className="section section-alt">
-        <div className="container">
-          <header className="section-header">
-            <h2 className="section-title">One Framework. End-to-End Accountability.</h2>
-            <p className="section-highlight">
-              We don't just design projects. We build what we design.
-            </p>
-            <p className="section-subtitle">
-              Single-point accountability for serious B2B real estate and infrastructure projects.
-            </p>
-          </header>
-        </div>
-      </section>
-
-      {/* Proof Statements */}
-      <ProofStatements />
-
-      {/* CTA Band */}
-      <section className="cta-band">
-        <div className="container">
-          <div className="cta-band-inner">
-            <div className="cta-band-content">
-              <h2 className="cta-band-title">
-                Planning a B2B real estate or infrastructure project?
-              </h2>
-              <p className="cta-band-subtitle">
-                Share your brief and we'll revert with a structured view on feasibility, 
-                timelines and optimal delivery models for your asset.
+      <div className="hero-section">
+        <HeroCarousel>
+          <Container>
+            <div className="hero-content">
+              <h1 className="hero-title">
+                Consult. Design.<br />
+                Build. Deliver.
+              </h1>
+              <p className="hero-subtitle">
+                Helix Group is a B2B consulting and delivery organisation combining engineering,
+                project management, execution, and go-to-market capability under one accountable framework.
               </p>
-              <div className="cta-band-meta mt-sm">
-                <span>Strategic advisory for land owners & HNIs</span>
-                <span>Execution support for builders & developers</span>
+
+              <div className="hero-cta-group">
+                <Button to="/contact" variant="primary">
+                  Start a Business Conversation
+                </Button>
+                <Button to="/infrastructure" variant="secondary">
+                  Explore Services
+                </Button>
               </div>
             </div>
-            <div className="cta-band-actions">
-              <Link to="/contact" className="btn btn-primary">
-                Send an enquiry
-              </Link>
-            </div>
+          </Container>
+        </HeroCarousel>
+      </div>
+
+      {/* Integrated Approach Section */}
+      <IntegratedApproach />
+
+      {/* Problem Section */}
+      <Section id="problems">
+        <div className="header-center mb-xl">
+          <h2 className="section-title">Why Projects Fail - Even with Good Consultants</h2>
+        </div>
+        <div className="grid-responsive">
+          <FeatureCard
+            icon={<Icons.Drawing />}
+            title="Advice stops at drawings"
+            description="Consultants provide designs but lack skin in the game during execution."
+          />
+          <FeatureCard
+            icon={<Icons.Alert />}
+            title="Execution drifts on site"
+            description="Contractors misinterpret details leading to quality dilution."
+          />
+          <FeatureCard
+            icon={<Icons.TrendUp />}
+            title="Costs escalate late"
+            description="Unforeseen changes during construction blow up budgets."
+          />
+          <FeatureCard
+            icon={<Icons.Leak />}
+            title="Post-plaster leakage"
+            description="Finishing stages cause maximum timeline and cost overruns."
+          />
+        </div>
+
+
+        {/* Closing Highlight Statement */}
+        <div className="bridge-statement-bar" style={{ marginTop: '4rem', marginBottom: '2rem' }}>
+          <Container>
+            <p className="highlight-text">
+              Helix was built to close this gap — <span className="text-highlight">by staying accountable till delivery.</span>
+            </p>
+          </Container>
+        </div>
+      </Section >
+
+
+
+      {/* Proof / Credibility */}
+      < ProofStatements />
+      {/* framework section */}
+      <FrameworkSection />
+      {/* Bottom CTA */}
+      < Section className="cta-section" >
+        <div className="cta-box">
+          <div className="cta-content">
+            <h2>Start a Business Conversation</h2>
+            <p>Helix Group works exclusively on B2B projects and partnerships.</p>
+          </div>
+          <div className="cta-actions">
+            <Button to="/contact" variant="primary">Get in Touch</Button>
           </div>
         </div>
-      </section>
+      </Section >
     </>
   )
 }

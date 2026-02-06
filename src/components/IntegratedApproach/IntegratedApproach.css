@@ -1,0 +1,280 @@
+.integrated-approach-section {
+    padding: 6rem 0;
+    background-color: #fff;
+}
+
+.ia-header {
+    margin-bottom: 3rem;
+}
+
+.ia-header .section-title {
+    font-size: 2.5rem;
+    color: #111827;
+    /* Dark text */
+    margin-bottom: 1rem;
+}
+
+.ia-header .section-desc {
+    color: #6B7280;
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Tabs */
+.ia-tabs-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.ia-tabs {
+    background-color: #F3F4F6;
+    border-radius: 8px;
+    /* Or fully rounded? Image looks slightly rounded */
+    padding: 0.25rem;
+    display: inline-flex;
+}
+
+.ia-tab {
+    padding: 0.75rem 2.5rem;
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #4B5563;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+}
+
+.ia-tab.active {
+    background-color: var(--color-dblue);
+    /* #312A53 from index.css */
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ia-tab:hover:not(.active) {
+    background-color: #E5E7EB;
+}
+
+/* Grid Layout */
+.ia-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* Left Image Card */
+.ia-image-card {
+    position: relative;
+    height: 400px;
+    /* Adjust as needed */
+    border-radius: 8px;
+    /* Slight roundness */
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.ia-image-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.ia-image-card:hover .ia-image-bg {
+    transform: scale(1.05);
+}
+
+.ia-image-overlay {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+    z-index: 10;
+}
+
+.ia-image-label {
+    background-color: var(--color-dblue);
+    /* #312A53 */
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    gap: 0.75rem;
+}
+
+.ia-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ia-label-text {
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+/* Right Text Content */
+.ia-text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ia-step-counter {
+    font-size: 0.875rem;
+    color: #3B82F6;
+    /* Accent Blue */
+    font-weight: 600;
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+    position: relative;
+    width: 100%;
+}
+
+.ia-step-counter::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: calc(100% - 80px);
+    /* Line after text */
+    height: 1px;
+    background-color: #E5E7EB;
+}
+
+.ia-title {
+    font-size: 3rem;
+    /* Big */
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-family-display, sans-serif);
+}
+
+.ia-subtitle {
+    font-size: 1.25rem;
+    color: #4338CA;
+    /* Deep Indigo/Purple to match branding */
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.ia-description {
+    color: #4B5563;
+    /* Gray 600 */
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 90%;
+}
+
+.ia-learn-more {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-dblue);
+    font-weight: 600;
+    text-decoration: none;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+    /* Space before controls */
+    border-bottom: 2px solid #E5E7EB;
+    padding-bottom: 2px;
+    transition: all 0.2s;
+}
+
+.ia-learn-more:hover {
+    border-color: var(--color-dblue);
+}
+
+/* Controls */
+.ia-controls {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.ia-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.ia-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #D1D5DB;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ia-dot.active {
+    background-color: var(--color-dblue);
+    width: 24px;
+    /* elongated active dot */
+    border-radius: 6px;
+}
+
+.ia-arrows {
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+    /* Push to right if desired, or keep near dots */
+}
+
+/* Or positioning arrows at very far right like in image? */
+/* In the image, arrows are actually floating outside or far sides. Let's stick to inline first for cleaner mobile support, or separate them. */
+/* The image has one arrow on far left, one on far right of the WHOLE section container (maybe). */
+/* Actually, let's look at the image again. Left arrow is left of image. Right arrow is right of text. */
+
+/* Let's try to mimic that Absolute positioning for arrows */
+.ia-arrow-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #E5E7EB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    color: #4B5563;
+    transition: all 0.2s;
+}
+
+.ia-arrow-btn:hover {
+    color: var(--color-dblue);
+    border-color: var(--color-dblue);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .ia-content-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .ia-image-card {
+        height: 300px;
+    }
+
+    .ia-step-counter::after {
+        display: none;
+        /* Hide line on mobile */
+    }
+
+    .ia-tabs {
+        overflow-x: auto;
+        white-space: nowrap;
+        max-width: 100%;
+    }
+}
