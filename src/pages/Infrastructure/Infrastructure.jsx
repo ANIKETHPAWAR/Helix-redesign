@@ -3,90 +3,140 @@ import { Link } from 'react-router-dom';
 import Section from '../../components/common/Section/Section';
 import Container from '../../components/common/Container/Container';
 import Button from '../../components/common/Button/Button';
-import { FeatureCard } from '../../components/common/Card/Card';
 import './Infrastructure.css';
+
+// Assets
+import heroBg from '../../assets/I-1.jpg';
+import infraImg from '../../assets/infra-1.png';
+import consultImg from '../../assets/I-5.jpg';
 
 function Infrastructure() {
   return (
-    <>
-      <Section className="infra-header">
+    <div className="infra-page">
+      {/* Hero Section */}
+      <section className="infra-hero" style={{ backgroundImage: `url(${heroBg})` }}>
+        <div className="infra-hero-overlay"></div>
         <Container>
-          <p className="page-eyebrow">Helix Infrastructure</p>
-          <h1 className="page-title">From Concept to Commercial Success</h1>
-          <p className="page-subtitle">
-            Engineering-led advisory, execution control, and large-scale real estate project marketing.
-          </p>
+          <div className="infra-hero-content">
+            <p className="page-eyebrow">Helix Infrastructure</p>
+            <h1 className="page-title">From Concept to <br />Commercial Success</h1>
+            <p className="page-subtitle">
+              Engineering-led advisory, execution control, and large-scale real estate project marketing. we bridge the gap between vision and reality.
+            </p>
+            <div className="hero-actions">
+              <Button to="/contact" variant="primary">Partner With Us</Button>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Intro / Value Prop Section (Zig) */}
+      <Section className="infra-section">
+        <Container>
+          <div className="infra-grid-zigzag">
+            <div className="infra-text-col">
+              <h2>Real Estate Project Marketing & Sales</h2>
+              <div className="highlight-box">
+                <span className="highlight-number">10,000+</span>
+                <span className="highlight-label">Homes sold across South India</span>
+              </div>
+              <p className="text-body">
+                Helix Infrastructure combines deep engineering expertise with proven go-to-market capabilities. We don't just design projects—we ensure they succeed commercially through strategic marketing and sales execution.
+              </p>
+              <p className="text-body">
+                Our approach integrates technical feasibility with market reality, ensuring that what is built is not only structurally sound but also commercially viable and desirable to the end-user.
+              </p>
+            </div>
+            <div className="infra-img-col">
+              <div className="image-wrapper glass-frame">
+                <img src={infraImg} alt="Infrastructure Project" />
+                <div className="floating-badge">
+                  <span className="badge-icon">🏗️</span>
+                  <span>End-to-End Execution</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </Container>
       </Section>
 
-      <Section>
-        <div className="infra-grid">
-          <div className="infra-content">
-            <h2>Real Estate Project Marketing & Sales</h2>
-            <p className="highlight-text">
-              10,000+ homes sold across South India.
-            </p>
-            <p className="text-body">
-              Helix Infrastructure combines deep engineering expertise with proven
-              go-to-market capabilities. We don't just design projects—we ensure
-              they succeed commercially through strategic marketing and sales execution.
-            </p>
+      {/* Lifecycle Section (Zag) */}
+      <Section className="infra-section alt-bg">
+        <Container>
+          <div className="infra-grid-zigzag reverse">
+            <div className="infra-text-col">
+              <h2>Integrated Project Lifecycle</h2>
+              <p className="text-body">
+                We take ownership of the entire lifecycle. From the first sketch to the final handover, our team is embedded in every process to mitigate risk and maximize value.
+              </p>
 
-            <div className="lifecycle-visual">
-              <h3>Integrated Project Lifecycle</h3>
-              <ul className="lifecycle-steps">
-                <li>
-                  <span className="step-marker">01</span>
-                  <span className="step-text">Engineering-led feasibility and design</span>
-                </li>
-                <li>
-                  <span className="step-marker">02</span>
-                  <span className="step-text">Project structuring and approvals</span>
-                </li>
-                <li>
-                  <span className="step-marker">03</span>
-                  <span className="step-text">Execution oversight and quality control</span>
-                </li>
-                <li>
-                  <span className="step-marker">04</span>
-                  <span className="step-text">Strategic marketing and sales execution</span>
-                </li>
-                <li>
-                  <span className="step-marker">05</span>
-                  <span className="step-text">Post-delivery support and handover</span>
-                </li>
+              <ul className="lifecycle-list">
+                {[
+                  { number: "01", text: "Engineering-led feasibility and design" },
+                  { number: "02", text: "Project structuring and approvals" },
+                  { number: "03", text: "Execution oversight and quality control" },
+                  { number: "04", text: "Strategic marketing and sales execution" },
+                  { number: "05", text: "Post-delivery support and handover" }
+                ].map((step, idx) => (
+                  <li key={idx} className="lifecycle-item">
+                    <span className="step-number">{step.number}</span>
+                    <span className="step-content">{step.text}</span>
+                  </li>
+                ))}
               </ul>
             </div>
-          </div>
-
-          <div className="infra-sidebar">
-            <div className="sidebar-card">
-              <h3>Capabilities</h3>
-              <p>End-to-End Project Delivery</p>
-              <div className="tags-container">
-                <span className="tag">Engineering Advisory</span>
-                <span className="tag">Project Management</span>
-                <span className="tag">Sales & Marketing</span>
-                <span className="tag">Execution Control</span>
+            <div className="infra-img-col">
+              <div className="image-wrapper glass-frame">
+                <img src={consultImg} alt="Consulting and Strategy" />
+                <div className="floating-badge bottom-right">
+                  <span className="badge-icon">📈</span>
+                  <span>Market Leaders</span>
+                </div>
               </div>
             </div>
+          </div>
+        </Container>
+      </Section>
 
-            <div className="sidebar-cta">
-              <h3>Have a project in mind?</h3>
-              <Link to="/contact" className="sidebar-link">Get in touch &rarr;</Link>
+      {/* Capabilities Section */}
+      <Section className="infra-section">
+        <Container>
+          <div className="capabilities-wrapper">
+            <div className="capabilities-header text-center">
+              <h2>Core Capabilities</h2>
+              <p>Comprehensive solutions for complex infrastructure challenges.</p>
+            </div>
+
+            <div className="capabilities-grid">
+              {[
+                "Engineering Advisory", "Project Management", "Sales & Marketing",
+                "Execution Control", "Quality Assurance", "Regulatory Approvals",
+                "Asset Management", "Turnkey Solutions"
+              ].map((cap, i) => (
+                <div key={i} className="capability-card">
+                  <span className="check-icon">✓</span>
+                  {cap}
+                </div>
+              ))}
             </div>
           </div>
-        </div>
+        </Container>
       </Section>
 
-      <Section className="cta-section-alt">
-        <div className="cta-box-simple">
-          <h2>Ready to discuss your infrastructure project?</h2>
-          <p>Let's explore how Helix Infrastructure can deliver your project from concept to commercial success.</p>
-          <Button to="/contact" variant="primary">Start a conversation</Button>
-        </div>
-      </Section>
-    </>
+      {/* CTA Section */}
+      <section className="infra-cta">
+        <Container>
+          <div className="cta-content glass-panel">
+            <h2>Ready to discuss your infrastructure project?</h2>
+            <p>Let's explore how Helix Infrastructure can deliver your project from concept to commercial success.</p>
+            <div className="cta-buttons">
+              <Button to="/contact" variant="primary">Start a conversation</Button>
+              <Link to="/contact" className="secondary-link">View Portfolio &rarr;</Link>
+            </div>
+          </div>
+        </Container>
+      </section>
+    </div>
   );
 }
 
