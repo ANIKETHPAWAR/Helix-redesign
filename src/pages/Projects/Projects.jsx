@@ -94,7 +94,7 @@ function Projects() {
   };
 
   return (
-    <>
+    <div className="projects-page">
       {/* Page Header */}
       <section className="page-header">
         <Container>
@@ -152,7 +152,7 @@ function Projects() {
 
         </Container>
       </section>
-    </>
+    </div>
   )
 }
 
