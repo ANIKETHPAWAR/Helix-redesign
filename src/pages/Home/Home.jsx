@@ -7,6 +7,8 @@ import ProofStatements from '../../components/ProofStatements/ProofStatements'
 import HeroCarousel from '../../components/HeroCarousel/HeroCarousel'
 import IntegratedApproach from '../../components/IntegratedApproach/IntegratedApproach'
 import FrameworkSection from '../../components/FrameworkSection/FrameworkSection'
+import FeaturedProjects from '../../components/FeaturedProjects/FeaturedProjects'
+import ClientsSection from '../../components/ClientsSection/ClientsSection'
 
 // Icons for Problem Section
 const Icons = {
@@ -116,8 +118,16 @@ function Home() {
 
       {/* Proof / Credibility */}
       < ProofStatements />
+
+      {/* Featured Projects Section */}
+      <FeaturedProjects />
+
       {/* framework section */}
       <FrameworkSection />
+
+      {/* Clients Marquee Section */}
+      <ClientsSection />
+
       {/* Bottom CTA */}
       < Section className="cta-section" >
         <div className="cta-box">
