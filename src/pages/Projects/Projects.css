@@ -1,133 +1,88 @@
-/* ==========================================================================
-   Projects Page Styles
-   ========================================================================== */
-
-.page-header {
-  padding: 3rem 0 1.7rem;
+/* Page Layout */
+.projects-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  padding: 0.5rem;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  display: inline-flex;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.page-eyebrow {
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  color: var(--color-secondary);
-  font-weight: 600;
-  margin-bottom: 0.35rem;
-}
-
-.page-title {
-  font-size: clamp(1.7rem, 3vw, 2.5rem);
-  font-weight: 600;
-  color: #111827;
-  margin-bottom: 0.4rem;
-}
-
-.page-subtitle {
-  font-size: 0.95rem;
+.tab-button {
+  padding: 0.75rem 2rem;
+  border: none;
+  background-color: transparent;
   color: var(--color-text-muted);
-  max-width: 34rem;
+  border-radius: 100px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 0.95rem;
+  position: relative;
+  z-index: 1;
+}
+
+.tab-button:hover {
+  color: var(--color-primary);
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.tab-button.active {
+  background-color: var(--color-primary);
+  color: white;
+  box-shadow: 0 4px 12px rgba(10, 25, 47, 0.25);
 }
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  padding-bottom: 4rem;
 }
 
-.project-card {
-  background: var(--color-surface);
-  border-radius: 18px;
-  border: 1px solid var(--color-border-subtle);
-  box-shadow: var(--shadow-subtle);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+.no-projects {
+  text-align: center;
+  padding: 6rem 0;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(4px);
+  border-radius: 24px;
+  border: 2px dashed rgba(203, 213, 225, 0.6);
 }
 
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-soft);
-}
-
-.project-image-placeholder {
-  height: 180px;
-  background: linear-gradient(135deg, #0b3c5d 0, #145b8a 40%, #0b3c5d 100%);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.project-badge {
-  padding: 0.4rem 0.8rem;
-  border-radius: 999px;
-  background: rgba(34, 197, 94, 0.2);
-  color: #ffffff;
-  border: 1px solid rgba(34, 197, 94, 0.4);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 600;
-}
-
-.project-body {
-  padding: 1.3rem 1.2rem;
-}
-
-.project-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.35rem;
-  color: #0f172a;
-}
-
-.project-location {
-  font-size: 0.82rem;
+.no-projects p {
   color: var(--color-text-muted);
-  margin-bottom: 0.6rem;
-}
-
-.project-description {
-  font-size: 0.88rem;
-  color: var(--color-text-muted);
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
-.project-metrics {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.75rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--color-border-subtle);
-}
-
-.metric-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.metric-label {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-text-muted);
-}
-
-.metric-value {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--color-primary);
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {
+  .projects-tabs {
+    width: 100%;
+    left: 0;
+    transform: none;
+    border-radius: 24px;
+    flex-direction: column;
+    display: flex;
+  }
+
   .project-grid {
     grid-template-columns: 1fr;
   }
 
-  .project-metrics {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .tab-button {
+    width: 100%;
+    text-align: center;
+    border-radius: 16px;
   }
 }

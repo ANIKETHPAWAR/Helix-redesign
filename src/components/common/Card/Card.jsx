@@ -1,6 +1,7 @@
 import React from 'react';
 import './Card.css';
 import { Link } from 'react-router-dom';
+import { MapPin } from 'lucide-react';
 
 export const Card = ({ children, className = '', noPadding = false }) => {
     return (
@@ -40,6 +41,44 @@ export const ServiceCard = ({ title, description, linkTo, image }) => {
                 <p className="service-desc">{description}</p>
                 <Link to={linkTo} className="service-link">Learn More &rarr;</Link>
             </div>
+        </Card>
+    );
+};
+
+
+
+export const ProjectCard = ({ title, location, description, metrics, image }) => {
+    return (
+        <Card className="project-card glass-card" noPadding>
+            <div className="project-content-wrapper">
+                <div className="project-header">
+                    <div className="project-location-badge">
+                        <MapPin size={14} style={{ marginRight: '6px' }} />
+                        {location}
+                    </div>
+                    <h3 className="project-title">{title}</h3>
+                </div>
+
+                <div className="project-body-content">
+                    <p className="project-desc">{description}</p>
+                </div>
+
+                {metrics && (
+                    <div className="project-metrics">
+                        {Object.entries(metrics).map(([key, value]) => (
+                            <div key={key} className="project-metric">
+                                <div className="metric-info">
+                                    <span className="metric-value">{value}</span>
+                                    <span className="metric-label">{key}</span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                )}
+            </div>
+            {/* Decorative elements */}
+            <div className="project-card-glow"></div>
+            <div className="project-card-border"></div>
         </Card>
     );
 };
