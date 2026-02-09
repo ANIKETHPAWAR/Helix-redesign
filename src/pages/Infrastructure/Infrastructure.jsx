@@ -1,5 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {
+  DraftingCompass,
+  ClipboardList,
+  TrendingUp,
+  Activity,
+  ShieldCheck,
+  FileCheck,
+  Building2,
+  Key
+} from 'lucide-react';
 import Section from '../../components/common/Section/Section';
 import Container from '../../components/common/Container/Container';
 import Button from '../../components/common/Button/Button';
@@ -109,13 +119,55 @@ function Infrastructure() {
 
             <div className="capabilities-grid">
               {[
-                "Engineering Advisory", "Project Management", "Sales & Marketing",
-                "Execution Control", "Quality Assurance", "Regulatory Approvals",
-                "Asset Management", "Turnkey Solutions"
+                {
+                  icon: <DraftingCompass />,
+                  title: "Engineering Advisory",
+                  desc: "Technical due diligence and structural feasibility analysis."
+                },
+                {
+                  icon: <ClipboardList />,
+                  title: "Project Management",
+                  desc: "End-to-end timeline, cost, and resource optimization."
+                },
+                {
+                  icon: <TrendingUp />,
+                  title: "Sales & Marketing",
+                  desc: "Strategic go-to-market planning and sales velocity execution."
+                },
+                {
+                  icon: <Activity />,
+                  title: "Execution Control",
+                  desc: "On-site supervision ensuring adherence to design specifications."
+                },
+                {
+                  icon: <ShieldCheck />,
+                  title: "Quality Assurance",
+                  desc: "Rigorous material testing and construction quality audits."
+                },
+                {
+                  icon: <FileCheck />,
+                  title: "Regulatory Approvals",
+                  desc: "Navigating complex statutory clearances and compliance."
+                },
+                {
+                  icon: <Building2 />,
+                  title: "Asset Management",
+                  desc: "Post-completion value enhancement and facility oversight."
+                },
+                {
+                  icon: <Key />,
+                  title: "Turnkey Solutions",
+                  desc: "Design-build delivery contracts with single-point accountability."
+                }
               ].map((cap, i) => (
-                <div key={i} className="capability-card">
-                  <span className="check-icon">✓</span>
-                  {cap}
+                <div key={i} className="capability-card group">
+                  <div className="cap-icon-wrapper">
+                    {cap.icon}
+                  </div>
+                  <div className="cap-content">
+                    <h3>{cap.title}</h3>
+                    <p>{cap.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
