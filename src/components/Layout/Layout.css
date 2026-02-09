@@ -1,1 +1,6 @@
-/* Layout styles are minimal - main styles in global CSS */
+/* Add padding to prevent content from being hidden behind fixed header on mobile */
+/* @media (max-width: 992px) {
+    main {
+       
+    }
+} */
