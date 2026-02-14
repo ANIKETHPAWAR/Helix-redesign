@@ -1,0 +1,167 @@
+/* ServicesShowcase.css */
+
+.services-showcase-section {
+    padding: 6rem 0;
+    background-color: var(--color-bg-dark);
+    /* Dark Navy */
+    color: var(--color-text-main);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background accents similar to hero or just subtle glow */
+.services-showcase-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 10% 10%, rgba(2, 172, 247, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 90% 90%, rgba(67, 56, 202, 0.05) 0%, transparent 40%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.ss-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.ss-header h2 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-main);
+}
+
+.ss-header p {
+    color: var(--color-text-light);
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: var(--font-size-lg);
+    opacity: 0.8;
+}
+
+
+/* Grid Layouts */
+.ss-grid-advisory {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+    z-index: 1;
+}
+
+.ss-grid-execution {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    /* Wider cards for bottom row */
+    gap: var(--spacing-lg);
+    position: relative;
+    z-index: 1;
+    margin-top: var(--spacing-lg);
+}
+
+/* Card Styling */
+.ss-card {
+    background: rgba(17, 34, 64, 0.6);
+    /* Slightly lighter than bg-dark, transparent */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.ss-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.ss-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent);
+    box-shadow: 0 10px 30px -10px rgba(2, 172, 247, 0.15);
+    background: rgba(17, 34, 64, 0.9);
+}
+
+.ss-card:hover::after {
+    opacity: 1;
+}
+
+/* Icon Box */
+.ss-icon-box {
+    width: 48px;
+    height: 48px;
+    background: rgba(2, 172, 247, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-lg);
+    transition: all 0.3s ease;
+}
+
+.ss-card:hover .ss-icon-box {
+    background: var(--color-accent);
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Text Content */
+.ss-card-title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text-main);
+    font-family: var(--font-family-display);
+}
+
+.ss-card-desc {
+    font-size: var(--font-size-base);
+    color: var(--color-text-light);
+    line-height: 1.6;
+    opacity: 0.7;
+}
+
+/* Special styling for Execution cards to differentiate */
+.ss-grid-execution .ss-card {
+    border-color: rgba(2, 172, 247, 0.1);
+    background: linear-gradient(145deg, rgba(17, 34, 64, 0.4), rgba(10, 25, 47, 0.6));
+}
+
+.ss-grid-execution .ss-card:hover {
+    border-color: var(--color-accent);
+    background: linear-gradient(145deg, rgba(17, 34, 64, 0.8), rgba(10, 25, 47, 0.9));
+}
+
+
+/* Responsive */
+@media (max-width: 968px) {
+    .ss-grid-execution {
+        grid-template-columns: 1fr;
+    }
+
+    .services-showcase-section {
+        padding: 4rem 0;
+    }
+}

@@ -9,6 +9,8 @@ import IntegratedApproach from '../../components/IntegratedApproach/IntegratedAp
 import FrameworkSection from '../../components/FrameworkSection/FrameworkSection'
 import FeaturedProjects from '../../components/FeaturedProjects/FeaturedProjects'
 import ClientsSection from '../../components/ClientsSection/ClientsSection'
+import ServicesShowcase from '../../components/ServicesShowcase/ServicesShowcase'
+import EcosystemSnapshot from '../../components/EcosystemSnapshot/EcosystemSnapshot'
 
 // Icons for Problem Section
 const Icons = {
@@ -55,8 +57,7 @@ function Home() {
                 Build. Deliver.
               </h1>
               <p className="hero-subtitle">
-                Helix Group is a B2B consulting and delivery organisation combining engineering,
-                project management, execution, and go-to-market capability under one accountable framework.
+                Integrated real estate development, engineering, execution, marketing, and operational solutions designed to transform land, projects, and infrastructure into high-performing assets.
               </p>
 
               <div className="hero-cta-group">
@@ -64,7 +65,7 @@ function Home() {
                   Start a Business Conversation
                 </Button>
                 <Button to="/infrastructure" variant="secondary">
-                  Explore Services
+                  Explore Our Solutions
                 </Button>
               </div>
             </div>
@@ -75,8 +76,11 @@ function Home() {
       {/* Integrated Approach Section */}
       <IntegratedApproach />
 
+      {/* Services Showcase Section */}
+      <ServicesShowcase />
+
       {/* Problem Section */}
-      <Section id="problems">
+      {/* <Section id="problems">
         <div className="header-center mb-xl">
           <h2 className="section-title">Why Projects Fail - Even with Good Consultants</h2>
         </div>
@@ -105,19 +109,23 @@ function Home() {
 
 
         {/* Closing Highlight Statement */}
-        <div className="bridge-statement-bar" style={{ marginTop: '4rem', marginBottom: '2rem' }}>
-          <Container>
-            <p className="highlight-text">
-              Helix was built to close this gap — <span className="text-highlight">by staying accountable till delivery.</span>
-            </p>
-          </Container>
-        </div>
-      </Section >
+      {/* <div className="bridge-statement-bar" style={{ marginTop: '4rem', marginBottom: '2rem' }}>
+        <Container>
+          <p className="highlight-text">
+            Helix was built to close this gap — <span className="text-highlight">by staying accountable till delivery.</span>
+          </p>
+        </Container>
+      </div>
+    </Section > */
+      }
 
 
 
       {/* Proof / Credibility */}
       < ProofStatements />
+
+      {/* Ecosystem Snapshot */}
+      <EcosystemSnapshot />
 
       {/* Featured Projects Section */}
       <FeaturedProjects />
@@ -132,11 +140,11 @@ function Home() {
       < Section className="cta-section" >
         <div className="cta-box">
           <div className="cta-content">
-            <h2>Start a Business Conversation</h2>
+            <h2>Let’s Build Your Next Successful Project</h2>
             <p>Helix Group works exclusively on B2B projects and partnerships.</p>
           </div>
           <div className="cta-actions">
-            <Button to="/contact" variant="primary">Get in Touch</Button>
+            <Button to="/contact" variant="primary">Start Business Conversation</Button>
           </div>
         </div>
       </Section >

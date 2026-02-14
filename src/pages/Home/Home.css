@@ -225,10 +225,11 @@
 .cta-box {
   background: var(--color-primary);
   border-radius: 8px;
-  padding: var(--spacing-2xl) var(--spacing-3xl);
+  padding: var(--spacing-2xl) var(--spacing-2xl);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--spacing-2xl);
   color: var(--color-text-main);
   box-shadow: var(--shadow-xl);
 }
