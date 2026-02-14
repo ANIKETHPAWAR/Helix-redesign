@@ -95,3 +95,147 @@
     flex: 0 0 100%;
   }
 }
+
+/* Highlights Section - Premium Redesign */
+.proof-highlights {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 5rem;
+  width: 100%;
+}
+
+.highlight-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  /* More transparent for depth */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 2.5rem 2rem;
+  border-radius: 1.5rem;
+  /* Larger radius for modern feel */
+  display: flex;
+  align-items: flex-start;
+  /* Align top for better icon placement */
+  gap: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: default;
+  max-width: 550px;
+  flex: 1 1 350px;
+  overflow: hidden;
+}
+
+/* Gradient Border Effect */
+.highlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1.5rem;
+  padding: 1px;
+  /* border width */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  opacity: 0.5;
+  transition: opacity 0.4s ease;
+}
+
+.card-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.1), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.highlight-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(56, 189, 248, 0.2);
+  /* Cyan glow */
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.highlight-card:hover .card-glow {
+  opacity: 1;
+}
+
+.highlight-icon-wrapper {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-icon {
+  color: #38bdf8;
+  /* Sky blue accent */
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.highlight-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.highlight-text {
+  font-family: var(--font-family-display, sans-serif);
+  /* Ensure brand font */
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  /* Removed uppercase for better readability */
+  background: linear-gradient(90deg, #fff, #cbd5e1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.highlight-desc {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .proof-highlights {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+  }
+
+  .highlight-card {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: row;
+    /* Keep icon side-by-side on mobile too */
+    align-items: center;
+    padding: 1.5rem;
+  }
+
+  .highlight-text {
+    font-size: 1.1rem;
+  }
+}

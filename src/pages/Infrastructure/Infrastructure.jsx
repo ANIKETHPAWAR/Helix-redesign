@@ -31,7 +31,7 @@ function Infrastructure() {
             <p className="page-eyebrow">Helix Infrastructure</p>
             <h1 className="page-title">From Concept to <br />Commercial Success</h1>
             <p className="page-subtitle">
-              Engineering-led advisory, execution control, and large-scale real estate project marketing. we bridge the gap between vision and reality.
+              Helix Infrastructure Consultants delivers integrated development advisory, engineering, project management, and structured marketing solutions. We partner with landowners, developers, and investors to transform opportunities into profitable real estate assets.
             </p>
             <div className="hero-actions">
               <Button to="/contact" variant="primary">Partner With Us</Button>
