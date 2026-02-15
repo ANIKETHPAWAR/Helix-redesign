@@ -3,9 +3,26 @@
    ========================================================================== */
 
 .contact-header {
-  padding: var(--spacing-3xl) 0;
-  background-color: var(--color-bg-light);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding-top: var(--spacing-3xl);
+  background: transparent;
+  width: 100%;
+  overflow: hidden;
+}
+
+.contact-header .page-eyebrow {
+  color: white;
+  font-weight: var(--font-weight-semibold);
+}
+
+.contact-header .page-title {
+  color: white;
+  margin-bottom: var(--spacing-md);
+}
+
+.contact-header .page-subtitle {
+  color: var(--color-text-light);
+  opacity: 0.9;
+  max-width: 700px;
 }
 
 .trust-disclaimer {

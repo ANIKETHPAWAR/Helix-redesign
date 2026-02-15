@@ -111,6 +111,12 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
     /* Assuming dark background usually */
     backdrop-filter: blur(10px);
+    cursor: pointer;
+}
+
+.metric-card:hover {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* Hint of brand color */
 }
 
 .metric-number {
@@ -126,7 +132,7 @@
 }
 
 .metric-label {
-    color: var(--color-text-light);
+    color: whitesmoke;
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;

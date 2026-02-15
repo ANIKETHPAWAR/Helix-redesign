@@ -1,6 +1,14 @@
 .clients-section {
     padding: var(--spacing-3xl) 0;
-    background: linear-gradient(165deg, var(--color-primary) 50%, var(--color-accent) 100%);
+    /* Premium Radial Gradient */
+    background: radial-gradient(at 10% 25%, #02ACF7 0px, transparent 50%),
+        radial-gradient(at 24% 82%, #0284C7 0px, transparent 50%),
+        radial-gradient(at 12% 73%, #003EFA 0px, transparent 50%),
+        radial-gradient(at 90% 36%, #0D49FF 0px, transparent 50%),
+        radial-gradient(at 98.5% 98.4%, #6F00FF 0px, transparent 50%) #000000;
+    mix-blend-mode: var(--_gradient-blend-mode, normal);
+    background-attachment: fixed;
+    background-size: cover;
     position: relative;
     overflow: hidden;
 }
@@ -22,7 +30,7 @@
 
 .clients-subtitle {
     font-size: 1.125rem;
-    color: var(--color-text-muted);
+    color: var(--color-text-light);
     max-width: 600px;
     margin: 0 auto;
 }

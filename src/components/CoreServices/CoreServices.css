@@ -1,0 +1,297 @@
+/* =========================================
+   Core Services Section - Premium Redesign
+   ========================================= */
+
+.core-services-section {
+    padding: 6rem 0;
+    position: relative;
+    background-color: #0B1120;
+    /* Deep rich navy/black */
+    overflow: hidden;
+    color: white;
+
+}
+
+/* --- Ambient Background Effects --- */
+.core-services-section::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: 20%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(2, 172, 247, 0.15) 0%, transparent 60%);
+    filter: blur(80px);
+    z-index: 0;
+    pointer-events: none;
+    animation: pulseGlow 10s ease-in-out infinite alternate;
+}
+
+.core-services-section::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    right: 10%;
+    width: 40%;
+    height: 40%;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.1) 0%, transparent 60%);
+    filter: blur(60px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* --- Container & Layout --- */
+.core-services-section .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1280px;
+    padding: 0 2rem;
+}
+
+/* --- Section Header --- */
+.cs-header {
+    text-align: center;
+    margin-bottom: 6rem;
+    position: relative;
+}
+
+.cs-eyebrow {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #38BDF8;
+    /* Sky 400 */
+    margin-bottom: 1rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    background: rgba(56, 189, 248, 0.1);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    backdrop-filter: blur(4px);
+}
+
+.cs-title {
+    font-family: var(--font-family-display, sans-serif);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    color: #F8FAFC;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    text-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.cs-subtitle {
+    font-size: 1.25rem;
+    color: #94A3B8;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* --- Grid Layout --- */
+.cs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    perspective: 1000px;
+}
+
+/* --- Premium Card Styling --- */
+.cs-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 24px;
+    padding: 3.5rem 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Inner Glow/Shine Effect */
+.cs-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+/* Hover State */
+.cs-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(56, 189, 248, 0.2);
+    box-shadow:
+        0 20px 40px -5px rgba(0, 0, 0, 0.4),
+        0 0 30px -10px rgba(56, 189, 248, 0.2);
+    /* Colored glow */
+}
+
+/* Icon Styling */
+.cs-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 2.5rem;
+    border-radius: 20px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #38BDF8;
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+/* Icon Glow Ring */
+.cs-icon-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 22px;
+    background: linear-gradient(45deg, #38BDF8, transparent, #38BDF8);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+    filter: blur(8px);
+}
+
+.cs-card:hover .cs-icon-wrapper {
+    color: #E0F2FE;
+    background: rgba(56, 189, 248, 0.1);
+    border-color: rgba(56, 189, 248, 0.3);
+    transform: scale(1.1);
+}
+
+.cs-card:hover .cs-icon-wrapper::after {
+    opacity: 0.3;
+}
+
+/* Content Styling */
+.cs-card-title {
+    font-family: var(--font-family-display, sans-serif);
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #F8FAFC;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+}
+
+.cs-card-desc {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #94A3B8;
+    margin-bottom: 3rem;
+    flex-grow: 1;
+    /* Pushes footer down */
+}
+
+/* Interactive Footer */
+.cs-card-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #F8FAFC;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.cs-arrow {
+    transition: transform 0.3s ease;
+    color: #38BDF8;
+}
+
+.cs-card:hover .cs-card-footer {
+    opacity: 1;
+    color: #38BDF8;
+}
+
+.cs-card:hover .cs-arrow {
+    transform: translateX(6px);
+}
+
+/* Focus Ring for Accessibility */
+.cs-card:focus-visible {
+    outline: 2px solid #38BDF8;
+    outline-offset: 4px;
+}
+
+/* Animation Keyframes */
+@keyframes pulseGlow {
+    0% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Staggered Entrance */
+.cs-card:nth-child(1) {
+    animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0.1s both;
+}
+
+.cs-card:nth-child(2) {
+    animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s both;
+}
+
+.cs-card:nth-child(3) {
+    animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s both;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .cs-grid {
+        gap: 1.5rem;
+    }
+
+    .cs-card {
+        padding: 2.5rem 2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .cs-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .cs-header {
+        margin-bottom: 4rem;
+    }
+
+    .cs-title {
+        font-size: 2.5rem;
+    }
+}
