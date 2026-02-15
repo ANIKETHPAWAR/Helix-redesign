@@ -19,10 +19,10 @@ const HeroCarousel = ({ children }) => {
         <div className="hero-carousel-wrapper">
             <Swiper
                 modules={[Autoplay, EffectFade, Navigation, Pagination]}
-                effect="fade"
+                effect="slide"
                 speed={1000}
                 autoplay={{
-                    delay: 5000,
+                    delay: 2500,
                     disableOnInteraction: false,
                 }}
                 loop={true}

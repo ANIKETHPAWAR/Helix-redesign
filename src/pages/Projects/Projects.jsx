@@ -94,7 +94,7 @@ function Projects() {
   };
 
   return (
-    <div className="projects-page">
+    <div className="projects-page premium-gradient-bg">
       {/* Page Header */}
       <section className="page-header">
         <Container>

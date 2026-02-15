@@ -14,6 +14,7 @@ import Section from '../../components/common/Section/Section';
 import Container from '../../components/common/Container/Container';
 import Button from '../../components/common/Button/Button';
 import './Infrastructure.css';
+import CoreServices from '../../components/CoreServices/CoreServices';
 
 // Assets
 import heroBg from '../../assets/I-1.jpg';
@@ -28,7 +29,7 @@ function Infrastructure() {
         <div className="infra-hero-overlay"></div>
         <Container>
           <div className="infra-hero-content">
-            <p className="page-eyebrow">Helix Infrastructure</p>
+            <p className="page-eyebrow badge-eyebrow">Helix Infrastructure</p>
             <h1 className="page-title">From Concept to <br />Commercial Success</h1>
             <p className="page-subtitle">
               Helix Infrastructure Consultants delivers integrated development advisory, engineering, project management, and structured marketing solutions. We partner with landowners, developers, and investors to transform opportunities into profitable real estate assets.
@@ -39,6 +40,9 @@ function Infrastructure() {
           </div>
         </Container>
       </section>
+
+      {/* Core Services Section */}
+      <CoreServices />
 
       {/* Intro / Value Prop Section (Zig) */}
       <Section className="infra-section">

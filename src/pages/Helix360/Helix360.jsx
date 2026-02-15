@@ -8,13 +8,13 @@ import './Helix360.css';
 
 function Helix360() {
   return (
-    <>
+    <div className="premium-gradient-bg">
       <Section className="h360-header">
         <Container>
-          <p className="page-eyebrow">Helix 360</p>
+          <p className="page-eyebrow badge-eyebrow">Helix 360</p>
           <h1 className="page-title">Where Civil Contractors Stop,<br />Helix 360 Takes Over</h1>
           <p className="page-subtitle">
-            Post-plaster execution and integrated finishing partner. We bridge the gap between structural completion and final handover.
+            Helix 360 completes the development lifecycle by executing post-plaster finishing works with integrated quality control and vendor coordination
           </p>
         </Container>
       </Section>
@@ -31,20 +31,19 @@ function Helix360() {
 
             <div className="services-grid">
               <div className="service-item">
-                <h3>Painting & Finishes</h3>
-                <p>High-end texture execution and large-scale painting delivery.</p>
+                <h3>Painting & Surface Finishing</h3>
               </div>
               <div className="service-item">
-                <h3>Flooring & Tiling</h3>
-                <p>Precision installation of marble, granite, and vitrified tiles.</p>
+                <h3>Flooring & Tiling Solutions</h3>
               </div>
               <div className="service-item">
-                <h3>MEP Finishing</h3>
-                <p>Electrical & plumbing fixture installation and testing.</p>
+                <h3>Sanitary & Bathroom Fittings</h3>
               </div>
               <div className="service-item">
-                <h3>Woodwork & Joinery</h3>
-                <p>Doors, windows, and customized joinery solutions.</p>
+                <h3>Electrical & Plumbing MEP Execution</h3>
+              </div>
+              <div className="service-item">
+                <h3>Specialized Building Product Integration</h3>
               </div>
             </div>
 
@@ -80,7 +79,7 @@ function Helix360() {
           <Button to="/contact" variant="primary">Discuss your project</Button>
         </div>
       </Section>
-    </>
+    </div>
   );
 }
 

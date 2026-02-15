@@ -1,0 +1,109 @@
+/* LaborPro Page Styles */
+
+.labor-header {
+    padding-top: var(--spacing-3xl);
+    background: transparent;
+    width: 100%;
+    overflow: hidden;
+}
+
+.labor-header .page-eyebrow {
+    color: rgb(0, 0, 0);
+    font-weight: var(--font-weight-semibold);
+}
+
+.labor-header .page-title {
+    color: white;
+    margin-bottom: var(--spacing-md);
+}
+
+.labor-header .page-subtitle {
+    color: var(--color-text-light);
+    opacity: 0.9;
+    max-width: 700px;
+}
+
+.labor-content-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3xl);
+    margin-bottom: var(--spacing-3xl);
+}
+
+.labor-intro {
+    justify-items: center;
+}
+
+.labor-intro h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: var(--spacing-sm);
+}
+
+.labor-intro p {
+    color: var(--color-text-light);
+    max-width: 600px;
+}
+
+/* Services Grid */
+.labor-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.labor-service-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.labor-service-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--color-accent);
+    box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.4), 0 0 20px rgba(2, 172, 247, 0.15);
+}
+
+.labor-service-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: var(--spacing-sm);
+    letter-spacing: 0.01em;
+}
+
+.labor-service-card p {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+/* CTA Box */
+.labor-cta-box {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    padding: 3rem 2rem;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.labor-cta-box h2 {
+    color: white;
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.labor-cta-box p {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-xl);
+}

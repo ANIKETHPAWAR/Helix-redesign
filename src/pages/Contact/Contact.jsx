@@ -36,7 +36,7 @@ function Contact() {
   }
 
   return (
-    <>
+    <div className="premium-gradient-bg">
       <Section className="contact-header">
         <Container>
           <p className="page-eyebrow">Contact</p>
@@ -191,7 +191,7 @@ function Contact() {
           </div>
         </div>
       </Section>
-    </>
+    </div>
   )
 }
 

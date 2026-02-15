@@ -1,0 +1,149 @@
+/* Aabha & Dhwani Page Styles */
+
+.ad-hero {
+    padding: var(--spacing-3xl) 0;
+    background: transparent;
+    width: 100%;
+    overflow: hidden;
+}
+
+.ad-hero .page-eyebrow {
+    color: black;
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.1em;
+}
+
+.ad-hero .page-title {
+    color: white;
+    margin-bottom: var(--spacing-md);
+}
+
+.ad-hero .page-subtitle {
+    color: var(--color-text-light);
+    opacity: 0.9;
+    max-width: 700px;
+}
+
+/* Intro Section */
+.ad-intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ad-intro-content h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.ad-intro-content p {
+    color: var(--color-text-light);
+    line-height: 1.8;
+}
+
+.text-large {
+    font-size: 1.15rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-xl {
+    margin-bottom: var(--spacing-2xl);
+}
+
+/* Services Grid */
+.ad-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.ad-service-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    /* More subtle border */
+    backdrop-filter: blur(16px);
+    /* Stronger blur */
+    -webkit-backdrop-filter: blur(16px);
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle gradient overlay on hover */
+.ad-service-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.ad-service-card:hover::after {
+    opacity: 1;
+}
+
+.ad-service-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+.ad-service-card h3 {
+    font-size: 1.35rem;
+    /* Slightly larger headings */
+    font-weight: 600;
+    color: white;
+    margin-bottom: var(--spacing-sm);
+    letter-spacing: -0.01em;
+    position: relative;
+    z-index: 1;
+}
+
+.ad-service-card p {
+    font-size: 1rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+    opacity: 0.85;
+    position: relative;
+    z-index: 1;
+}
+
+/* CTA Box - Slightly different style to distinguish */
+.ad-cta-box {
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+}
+
+.ad-cta-box h2 {
+    color: white;
+    font-size: 2.5rem;
+    /* Big impact type */
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, #fff, #a5f3fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ad-cta-box p {
+    color: var(--color-text-light);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
