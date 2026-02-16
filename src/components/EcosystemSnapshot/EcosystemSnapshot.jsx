@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Section from '../common/Section/Section'
 import Container from '../common/Container/Container'
 import { Building, Hammer, Users, Lightbulb, ArrowUpRight } from 'lucide-react'
@@ -10,25 +11,29 @@ function EcosystemSnapshot() {
             id: 1,
             title: "Helix Infrastructure Consultants",
             description: "Engineering, development advisory, real estate marketing, and project execution consulting.",
-            icon: <Building className="eco-icon" strokeWidth={1.5} />
+            icon: <Building className="eco-icon" strokeWidth={1.5} />,
+            path: "/infrastructure"
         },
         {
             id: 2,
             title: "Helix 360",
             description: "Integrated finishing, MEP, and specialized building product execution.",
-            icon: <Hammer className="eco-icon" strokeWidth={1.5} />
+            icon: <Hammer className="eco-icon" strokeWidth={1.5} />,
+            path: "/helix360"
         },
         {
             id: 3,
             title: "LaborPro",
             description: "Technology-driven manpower supply and operational outsourcing platform.",
-            icon: <Users className="eco-icon" strokeWidth={1.5} />
+            icon: <Users className="eco-icon" strokeWidth={1.5} />,
+            path: "/laborpro"
         },
         {
             id: 4,
             title: "Aabha & Dhwani Creative Studios",
             description: "Strategic branding, advertising, and digital marketing solutions.",
-            icon: <Lightbulb className="eco-icon" strokeWidth={1.5} />
+            icon: <Lightbulb className="eco-icon" strokeWidth={1.5} />,
+            path: "/aabha-dhwani"
         }
     ]
 
@@ -42,7 +47,7 @@ function EcosystemSnapshot() {
 
                 <div className="ecosystem-grid">
                     {ecosystems.map((item) => (
-                        <div key={item.id} className="ecosystem-card">
+                        <Link key={item.id} to={item.path} className="ecosystem-card">
                             <div className="eco-card-inner">
                                 <div className="eco-icon-wrapper">
                                     {item.icon}
@@ -55,7 +60,7 @@ function EcosystemSnapshot() {
                                     <ArrowUpRight size={20} />
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </Container>
