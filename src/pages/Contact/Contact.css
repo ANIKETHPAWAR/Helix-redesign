@@ -153,6 +153,7 @@
   text-transform: uppercase;
   color: var(--color-secondary);
   margin-bottom: 2px;
+  font-weight: 700;
 }
 
 .info-item p {

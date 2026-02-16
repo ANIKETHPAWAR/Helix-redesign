@@ -12,7 +12,12 @@ function Footer() {
       <Container>
         <div className="footer-grid">
           <div className="footer-brand-col">
-            <div className="footer-brand">
+            <div
+              className="footer-brand"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              style={{ cursor: 'pointer' }}
+              title="Back to Top"
+            >
               <img src={logoHicpl} alt="Helix Group" className="footer-logo" />
               <span className="footer-brand-title">Helix Group</span>
             </div>
@@ -25,6 +30,7 @@ function Footer() {
           <div className="footer-links-col">
             <h4 className="footer-heading">Company</h4>
             <ul className="footer-list">
+              <li><Link to="/" className="footer-link">Home</Link></li>
               <li><Link to="/about" className="footer-link">About Helix</Link></li>
               <li><Link to="/projects" className="footer-link">Projects</Link></li>
               <li><Link to="/contact" className="footer-link">Contact</Link></li>
@@ -36,6 +42,8 @@ function Footer() {
             <ul className="footer-list">
               <li><Link to="/infrastructure" className="footer-link">Infrastructure</Link></li>
               <li><Link to="/helix360" className="footer-link">Helix 360</Link></li>
+              <li><Link to="/laborpro" className="footer-link">LaborPro</Link></li>
+              <li><Link to="/aabha-dhwani" className="footer-link">Aabha & Dhwani</Link></li>
             </ul>
           </div>
 

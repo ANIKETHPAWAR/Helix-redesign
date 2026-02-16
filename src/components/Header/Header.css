@@ -65,7 +65,7 @@
 .nav-link {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
-  color: var(--color-text-muted);
+  color: black;
   position: relative;
   text-transform: uppercase;
   letter-spacing: 0.5px;
