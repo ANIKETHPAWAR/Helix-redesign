@@ -76,6 +76,7 @@
     justify-content: flex-start;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 /* Subtle gradient overlay on hover */
