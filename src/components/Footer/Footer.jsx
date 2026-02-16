@@ -42,16 +42,11 @@ function Footer() {
           <div className="footer-contact-col">
             <h4 className="footer-heading">Contact</h4>
             <div className="footer-contact-item">
-              <span className="footer-label">Phone:</span>
-              <a href="tel:+918885028100" className="footer-text-link">+91 88850 28100</a>
-            </div>
-            <div className="footer-contact-item">
-              <span className="footer-label">Email:</span>
-              <a href="mailto:info@hicpl.com" className="footer-text-link">info@hicpl.com</a>
-            </div>
-            <div className="footer-contact-item">
               <span className="footer-label">Location:</span>
-              <span className="footer-text">Hyderabad, Telangana, India</span>
+              <span className="footer-text">Helix Group
+                Plot No.101/109A, Phase 3, Saket Township,
+                Kapra, ECIL Post – Hyderabad,
+                Telangana, INDIA – 500062</span>
             </div>
           </div>
         </div>

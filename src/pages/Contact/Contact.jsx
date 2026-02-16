@@ -152,15 +152,6 @@ function Contact() {
             <div className="info-card">
               <h3>Contact Information</h3>
               <p className="text-muted mb-lg">Direct lines to our execution teams.</p>
-
-              <div className="info-item">
-                <h4>Phone</h4>
-                <p>+91 88850 28100</p>
-              </div>
-              <div className="info-item">
-                <h4>Email</h4>
-                <p>info@hicpl.com</p>
-              </div>
               <div className="info-item">
                 <h4>Office</h4>
                 <p>

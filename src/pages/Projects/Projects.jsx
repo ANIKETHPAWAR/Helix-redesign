@@ -65,30 +65,42 @@ function Projects() {
     ],
     in_progress: [
       {
-        title: "Riverside Commercial Complex",
-        location: "Vijayawada",
-        description: "Ongoing construction of a premium commercial complex overlooking the river.",
-        metrics: { area: "50,000 Sq.Ft", status: "Structure Complete" }
+        title: "Christian Charitable Trust",
+        location: "Telangana ",
+        description: "Ongoing Design and Construction of Hostel Building in 800 Sq.Yds at KLR NJR Layout, Medchal totalling to 23600 Sq. Ft.",
+        metrics: { area: "800 Sq.Yds", status: "Structure Complete" }
       },
       {
-        title: "Green Valley Gated Community",
-        location: "Vizag",
-        description: "Development of a sustainable gated community with eco-friendly amenities.",
-        metrics: { units: "120 Villas", status: "Phase 1 Booking" }
+        title: "Christian Charitable Trust",
+        location: "Telangana ",
+        description: "Design and Construction of School Building in 3.6 acres at Shimoga totalling to 10,000 Sq. Ft.",
+        metrics: { area: "3.6 acres", status: "Structure Complete" }
       }
     ],
     pipeline: [
       {
-        title: "Tech Park Expansion",
-        location: "Hyderabad (Financial District)",
-        description: "Proposed expansion of existing tech park infrastructure.",
-        metrics: { area: "2,00,000 Sq.Ft", status: "Planning" }
+        title: "Residential Villas",
+        location: "Shankarpally",
+        description: "Design, Construction and Sales of Villas (99 units) in 3,96,000 sft across 10.5 acres at Shankarpally.",
+        metrics: { units: "99 Villas", area: "10.5 Acres" }
       },
       {
-        title: "Urban Renewal Project",
-        location: "Warangal",
-        description: "Revitalization of city center commercial zone.",
-        metrics: { area: "5 Acres", status: "Approval Stage" }
+        title: "Residential Apartments",
+        location: "Medchal (KLR NJR Layout)",
+        description: "Design and Construction of 8 Apartments in 400 Sq.Yds with overall area of 9900 sft at KLR NJR Layout, Medchal.",
+        metrics: { units: "8 Apts", area: "400 Sq.Yds" }
+      },
+      {
+        title: "The Elysium",
+        location: "Mangalpalle, Adibhatla",
+        description: "Design, Construction and Sales of 187 Villas, 1 million sft Commercial space and 1 million sft Residential space.",
+        metrics: { units: "187 Villas", type: "Mixed-use" }
+      },
+      {
+        title: "School Building",
+        location: "Narayanpet, Telangana",
+        description: "Design and Construction of 10,000 sft School Building in 3.6 acres at Narayanpet, Telangana.",
+        metrics: { area: "3.6 Acres", type: "Institutional" }
       }
     ]
   };
