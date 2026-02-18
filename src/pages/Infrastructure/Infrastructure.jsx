@@ -30,12 +30,12 @@ function Infrastructure() {
         <Container>
           <div className="infra-hero-content">
             <p className="page-eyebrow badge-eyebrow">Helix Infrastructure</p>
-            <h1 className="page-title">From Concept to <br />Commercial Success</h1>
+            <h1 className="page-title">Structured Development. <br />Predictable Outcomes.</h1>
             <p className="page-subtitle">
-              Helix Infrastructure Consultants delivers integrated development advisory, engineering, project management, and structured marketing solutions. We partner with landowners, developers, and investors to transform opportunities into profitable real estate assets.
+              Helix Infrastructure integrates development advisory, engineering governance, project management, and structured marketing to deliver predictable real estate outcomes for developers, landowners, and investors.
             </p>
             <div className="hero-actions">
-              <Button to="/contact" variant="primary">Partner With Us</Button>
+              <Button to="/contact" variant="primary">Start a Strategic Discussion</Button>
             </div>
           </div>
         </Container>
@@ -55,10 +55,10 @@ function Infrastructure() {
                 <span className="highlight-label">Homes sold across South India</span>
               </div>
               <p className="text-body">
-                Helix Infrastructure combines deep engineering expertise with proven go-to-market capabilities. We don't just design projects—we ensure they succeed commercially through strategic marketing and sales execution.
+                Helix Infrastructure integrates engineering capability with disciplined project marketing. Every project is structured for both technical soundness and commercial viability.
               </p>
               <p className="text-body">
-                Our approach integrates technical feasibility with market reality, ensuring that what is built is not only structurally sound but also commercially viable and desirable to the end-user.
+                Our approach governs technical feasibility alongside market positioning, ensuring that what is built is structurally sound, commercially viable, and positioned for predictable absorption.
               </p>
             </div>
             <div className="infra-img-col">
@@ -66,7 +66,7 @@ function Infrastructure() {
                 <img src={infraImg} alt="Infrastructure Project" />
                 <div className="floating-badge">
                   <span className="badge-icon">🏗️</span>
-                  <span>End-to-End Execution</span>
+                  <span>Coordinated Execution</span>
                 </div>
               </div>
             </div>
@@ -81,16 +81,16 @@ function Infrastructure() {
             <div className="infra-text-col">
               <h2>Integrated Project Lifecycle</h2>
               <p className="text-body">
-                We take ownership of the entire lifecycle. From the first sketch to the final handover, our team is embedded in every process to mitigate risk and maximize value.
+                Helix governs the entire development lifecycle. From the initial feasibility assessment to final handover, our team is embedded in every phase to mitigate risk and deliver predictable outcomes.
               </p>
 
               <ul className="lifecycle-list">
                 {[
-                  { number: "01", text: "Engineering-led feasibility and design" },
-                  { number: "02", text: "Project structuring and approvals" },
-                  { number: "03", text: "Execution oversight and quality control" },
-                  { number: "04", text: "Strategic marketing and sales execution" },
-                  { number: "05", text: "Post-delivery support and handover" }
+                  { number: "01", text: "Development structuring and feasibility governance" },
+                  { number: "02", text: "Regulatory coordination and approval management" },
+                  { number: "03", text: "Coordinated execution oversight and quality assurance" },
+                  { number: "04", text: "Structured marketing and disciplined sales execution" },
+                  { number: "05", text: "Governed handover and post-delivery coordination" }
                 ].map((step, idx) => (
                   <li key={idx} className="lifecycle-item">
                     <span className="step-number">{step.number}</span>
@@ -104,7 +104,7 @@ function Infrastructure() {
                 <img src={consultImg} alt="Consulting and Strategy" />
                 <div className="floating-badge bottom-right">
                   <span className="badge-icon">📈</span>
-                  <span>Market Leaders</span>
+                  <span>Governed Delivery</span>
                 </div>
               </div>
             </div>
@@ -118,7 +118,7 @@ function Infrastructure() {
           <div className="capabilities-wrapper">
             <div className="capabilities-header text-center">
               <h2>Core Capabilities</h2>
-              <p>Comprehensive solutions for complex infrastructure challenges.</p>
+              <p>Structured capabilities for disciplined real estate development.</p>
             </div>
 
             <div className="capabilities-grid">
@@ -126,22 +126,22 @@ function Infrastructure() {
                 {
                   icon: <DraftingCompass />,
                   title: "Engineering Advisory",
-                  desc: "Technical due diligence and structural feasibility analysis."
+                  desc: "Structured due diligence and feasibility governance for real estate."
                 },
                 {
                   icon: <ClipboardList />,
                   title: "Project Management",
-                  desc: "End-to-end timeline, cost, and resource optimization."
+                  desc: "Coordinated timeline, cost, and resource governance."
                 },
                 {
                   icon: <TrendingUp />,
                   title: "Sales & Marketing",
-                  desc: "Strategic go-to-market planning and sales velocity execution."
+                  desc: "Disciplined project positioning and structured sales execution."
                 },
                 {
                   icon: <Activity />,
                   title: "Execution Control",
-                  desc: "On-site supervision ensuring adherence to design specifications."
+                  desc: "Governed on-site supervision ensuring adherence to design and quality standards."
                 },
                 {
                   icon: <ShieldCheck />,
@@ -161,7 +161,7 @@ function Infrastructure() {
                 {
                   icon: <Key />,
                   title: "Turnkey Solutions",
-                  desc: "Design-build delivery contracts with single-point accountability."
+                  desc: "Structured design-build delivery with single-point accountability."
                 }
               ].map((cap, i) => (
                 <div key={i} className="capability-card group">
@@ -183,10 +183,10 @@ function Infrastructure() {
       <section className="infra-cta">
         <Container>
           <div className="cta-content glass-panel">
-            <h2>Ready to discuss your infrastructure project?</h2>
-            <p>Let's explore how Helix Infrastructure can deliver your project from concept to commercial success.</p>
+            <h2>Ready to discuss your real estate development project?</h2>
+            <p>Helix structures every engagement for predictable, governed delivery across the development lifecycle.</p>
             <div className="cta-buttons">
-              <Button to="/contact" variant="primary">Start a conversation</Button>
+              <Button to="/contact" variant="primary">Start a Strategic Discussion</Button>
               <Link to="/contact" className="secondary-link">View Portfolio &rarr;</Link>
             </div>
           </div>

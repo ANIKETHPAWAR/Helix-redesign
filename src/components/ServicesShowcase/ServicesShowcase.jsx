@@ -7,17 +7,17 @@ const ServicesShowcase = () => {
     const advisoryServices = [
         {
             title: "Development Advisory",
-            description: "Transform land and development ideas into profitable real estate projects.",
+            description: "Structured feasibility, financial modelling, and project planning for real estate development.",
             icon: <TrendingUp size={24} />
         },
         {
             title: "Engineering & PMC",
-            description: "End-to-end architectural, structural, and project management consulting.",
+            description: "Governed architectural design, structural engineering, and coordinated project management.",
             icon: <Compass size={24} />
         },
         {
             title: "Project Marketing",
-            description: "Structured marketing and sales strategies that drive measurable project absorption.",
+            description: "Disciplined marketing and sales execution aligned to development lifecycle milestones.",
             icon: <Megaphone size={24} />
         }
     ];
@@ -25,12 +25,12 @@ const ServicesShowcase = () => {
     const executionServices = [
         {
             title: "Post-Plaster Execution – Helix 360",
-            description: "Integrated finishing, MEP, and interior execution solutions.",
+            description: "Integrated finishing and MEP execution aligned to the real estate development lifecycle.",
             icon: <Hammer size={24} />
         },
         {
             title: "Manpower & Operations – LaborPro",
-            description: "Technology-driven manpower supply and operational management solutions.",
+            description: "Structured workforce deployment for real estate construction and development sites.",
             icon: <Users size={24} />
         }
     ];
@@ -39,8 +39,8 @@ const ServicesShowcase = () => {
         <section className="services-showcase-section">
             <Container>
                 <div className="ss-header">
-                    <h2>Comprehensive Real Estate Solutions</h2>
-                    <p>From strategic advisory to on-ground execution, we deliver excellence at every stage.</p>
+                    <h2>Integrated Real Estate Lifecycle Services</h2>
+                    <p>Helix delivers structured advisory and coordinated execution across every phase of real estate development.</p>
                 </div>
 
                 <div className="ss-grid-advisory">

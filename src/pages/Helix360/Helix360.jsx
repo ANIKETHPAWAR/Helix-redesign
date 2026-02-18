@@ -14,7 +14,7 @@ function Helix360() {
           <p className="page-eyebrow badge-eyebrow">Helix 360</p>
           <h1 className="page-title">Where Civil Contractors Stop,<br />Helix 360 Takes Over</h1>
           <p className="page-subtitle">
-            Helix 360 completes the development lifecycle by executing post-plaster finishing works with integrated quality control and vendor coordination
+            Helix 360 delivers integrated post-plaster finishing and MEP execution, governed by structured quality control and coordinated vendor management within the real estate development lifecycle.
           </p>
         </Container>
       </Section>
@@ -25,8 +25,8 @@ function Helix360() {
           <div className="h360-content">
             <h2>Integrated Finishing Services</h2>
             <p className="text-body mb-xl">
-              Projects often facing maximum cost leakage and quality dilution during the finishing stages.
-              Helix 360 provides single-point accountability for high-quality execution.
+              Real estate projects face maximum cost leakage and quality dilution during the finishing stages.
+              Helix 360 provides single-point accountability for disciplined, governed finishing execution.
             </p>
 
             <div className="services-grid">
@@ -54,7 +54,7 @@ function Helix360() {
           <div className="h360-sidebar">
             <div className="sidebar-card">
               <h3>Execution at Scale</h3>
-              <p>Market leading delivery metrics.</p>
+              <p>Disciplined delivery at scale.</p>
               <div className="sidebar-metrics">
                 <MetricCard number="4M+" label="sq ft Painted" className="compact-metric" />
                 <MetricCard number="1M+" label="sq ft Flooring" className="compact-metric" />
@@ -64,9 +64,9 @@ function Helix360() {
             </div>
 
             <div className="sidebar-cta">
-              <h3>Need finishing expertise?</h3>
-              <p className="text-sm mb-md text-muted">Ensure your project finishes as strong as it started.</p>
-              <Link to="/contact" className="sidebar-link">Consult Helix 360 &rarr;</Link>
+              <h3>Need structured finishing execution?</h3>
+              <p className="text-sm mb-md text-muted">Governed delivery ensures your project finishes as strong as it started.</p>
+              <Link to="/contact" className="sidebar-link">Start a Strategic Discussion &rarr;</Link>
             </div>
           </div>
         </div>
@@ -74,9 +74,9 @@ function Helix360() {
 
       <Section className="cta-section-alt">
         <div className="cta-box-simple">
-          <h2>Need a reliable finishing partner?</h2>
-          <p>Let Helix 360 handle your post-plaster execution with proven expertise and accountability.</p>
-          <Button to="/contact" variant="primary">Discuss your project</Button>
+          <h2>Need a structured finishing partner?</h2>
+          <p>Helix 360 delivers governed post-plaster execution with disciplined coordination and accountability.</p>
+          <Button to="/contact" variant="primary">Start a Strategic Discussion</Button>
         </div>
       </Section>
     </div>

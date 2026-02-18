@@ -88,8 +88,8 @@ function About() {
           <p className="page-eyebrow">About Helix</p>
           <h1 className="page-title">One Framework. End-to-End Accountability.</h1>
           <p className="page-subtitle">
-            Helix Group is a B2B consulting and delivery organisation combining engineering,
-            project management, execution, and go-to-market capability under one accountable framework.
+            Helix Group is a structured real estate development partner integrating engineering governance,
+            project management, coordinated execution, and market-ready delivery under one accountable framework.
           </p>
         </div>
       </section>
@@ -100,7 +100,7 @@ function About() {
           <div className="section-header">
             <h2 className="section-title">Our Team</h2>
             <p className="section-subtitle">
-              Meet the experts driving excellence in real estate development and execution.
+              Disciplined professionals governing real estate development and structured execution.
             </p>
           </div>
 

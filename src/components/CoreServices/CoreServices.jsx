@@ -8,17 +8,17 @@ const CoreServices = () => {
         {
             icon: <Ruler strokeWidth={1.5} size={40} />,
             title: "Development Advisory",
-            description: "Expert land evaluation, feasibility analysis, project structuring, and strategic investment planning."
+            description: "Structured land evaluation, feasibility analysis, project planning, and regulatory coordination for real estate."
         },
         {
             icon: <HardHat strokeWidth={1.5} size={40} />,
             title: "Engineering & PMC",
-            description: "Holistic architectural design, structural engineering, and end-to-end project management."
+            description: "Governed architectural design, structural engineering, and coordinated project management consulting."
         },
         {
             icon: <TrendingUp strokeWidth={1.5} size={40} />,
             title: "Project Marketing",
-            description: "Market-driven branding, sales velocity strategies, and structured project marketing execution."
+            description: "Disciplined branding, sales execution, and structured project marketing aligned to development milestones."
         }
     ];
 
@@ -29,7 +29,7 @@ const CoreServices = () => {
                     <span className="cs-eyebrow">Our Expertise</span>
                     <h2 className="cs-title">Core Services</h2>
                     <p className="cs-subtitle">
-                        Delivering integrated solutions from concept to commercial success.
+                        Structured advisory and coordinated execution across the real estate development lifecycle.
                     </p>
                 </div>
 

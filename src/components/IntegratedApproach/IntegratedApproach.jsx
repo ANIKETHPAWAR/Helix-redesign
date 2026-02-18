@@ -14,8 +14,8 @@ const steps = [
         id: 'consult',
         label: 'Consult',
         title: 'Consult',
-        subtitle: 'Strategic Advisory & Planning',
-        description: 'We begin every project with deep strategic analysis, feasibility studies, and comprehensive planning to ensure your vision is achievable and optimized for success.',
+        subtitle: 'Development Structuring',
+        description: 'Helix begins every engagement with feasibility analysis, financial modelling, and regulatory planning to establish commercial viability before commitment.',
         image: consult,
         icon: (
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,8 +27,8 @@ const steps = [
         id: 'design',
         label: 'Design',
         title: 'Design',
-        subtitle: 'Engineering & Architecture',
-        description: 'Our integrated design team translates strategy into executible blueprints, ensuring every technical nuance is addressed before ground is broken.',
+        subtitle: 'Engineering & Governance',
+        description: 'Helix integrates technical design with governance frameworks, ensuring compliance, execution readiness, and structural integrity before ground is broken.',
         image: imgDesign,
         icon: (
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,8 +43,8 @@ const steps = [
         id: 'build',
         label: 'Build',
         title: 'Build',
-        subtitle: 'Construction & Management',
-        description: 'We move from paper to production with rigorous project management, ensuring quality control, timeline adherence, and safety at every stage.',
+        subtitle: 'Coordinated Execution',
+        description: 'Helix delivers on-site project management with quality assurance protocols, timeline governance, and stakeholder coordination through structured delivery.',
         image: imgBuild,
         icon: (
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,8 +61,8 @@ const steps = [
         id: 'deliver',
         label: 'Deliver',
         title: 'Deliver',
-        subtitle: 'Handover & GTM',
-        description: 'Our job isnt done until the facility is operational. We manage handover, testing, and go-to-market support to ensure immediate ROI.',
+        subtitle: 'Market-Ready Delivery',
+        description: 'Helix coordinates finishing, handover protocols, and integrated marketing execution to ensure every project reaches commercial launch on schedule.',
         image: imgDeliver,
         icon: (
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -89,9 +89,9 @@ const IntegratedApproach = () => {
         <section className="integrated-approach-section">
             <Container>
                 <div className="ia-header text-center">
-                    <h2 className="section-title">Our Integrated Approach</h2>
+                    <h2 className="section-title">The Helix Development Framework</h2>
                     <p className="section-desc">
-                        Four pillars of accountability that ensure your project succeeds from concept to completion.
+                        Four structured phases that govern every Helix engagement from opportunity assessment to market-ready delivery.
                     </p>
                 </div>
 

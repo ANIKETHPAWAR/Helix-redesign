@@ -132,7 +132,7 @@ function Header() {
           </ul>
           <div className="nav-cta-wrapper">
             <Button to="/contact" variant="primary" onClick={closeNav} className="nav-cta-btn">
-              Get in Touch
+              Start a Strategic Discussion
             </Button>
           </div>
         </nav>

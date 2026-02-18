@@ -1,241 +1,223 @@
-.proof-section {
-  background-color: #1a365d;
-  /* Dark Blue - adjust to match image/brand */
-  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-  /* Example gradient to match "royal blue" look */
-  /* Or specifically based on user image, it's a solid deep blue */
-  background-color: #172554;
+/* ========================================
+   Differentiator Section (was ProofStatements)
+   ======================================== */
+
+.proof-section.differentiator-section {
+  background: linear-gradient(160deg, #0c1a3a 0%, #172554 40%, #1e3a5f 100%);
   color: #ffffff;
   padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
 }
 
-.proof-header {
+.proof-section.differentiator-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 40%, rgba(2, 172, 247, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 60%, rgba(56, 189, 248, 0.04) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+/* Header */
+.differentiator-section .proof-header {
   margin-bottom: 4rem;
 }
 
-.proof-title {
+.diff-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1.15rem;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 24px;
+  color: #38bdf8;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.25rem;
+}
+
+.differentiator-section .proof-title {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: #ffffff;
+  font-family: var(--font-family-display, 'Outfit', sans-serif);
+  letter-spacing: -0.02em;
 }
 
-.proof-subtitle {
-  font-size: 1.125rem;
-  color: rgba(255, 255, 255, 0.7);
+.differentiator-section .proof-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.55);
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.65;
 }
 
-.proof-grid {
+/* Differentiator Grid */
+.diff-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  /* 4 columns for top row */
-  gap: 3rem;
-  justify-content: center;
-}
-
-/* For the second row of 3 items, we need a way to center them or just use flex/grid auto layout */
-/* Grid with auto-fit might be better but let's try to match the specific 4 then 3 look if possible, or just standard responsive grid */
-/* The image has 4 top, 3 bottom centered. */
-
-.proof-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 4rem 2rem;
-  /* Row gap, col gap */
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.proof-card {
-  text-align: center;
-  flex: 0 0 calc(25% - 2rem);
-  /* Approx 4 per row */
-  min-width: 250px;
-}
-
-.proof-value {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: #ffffff;
-  font-family: var(--font-family-display, sans-serif);
-}
-
-.proof-label {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.5;
-  max-width: 200px;
-  margin: 0 auto;
-}
-
-@media (max-width: 1024px) {
-  .proof-card {
-    flex: 0 0 calc(33.333% - 2rem);
-  }
-}
-
-@media (max-width: 768px) {
-  .proof-card {
-    flex: 0 0 calc(50% - 2rem);
-  }
-
-  .proof-title {
-    font-size: 2rem;
-  }
-
-  .proof-value {
-    font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .proof-card {
-    flex: 0 0 100%;
-  }
-}
-
-/* Highlights Section - Premium Redesign */
-.proof-highlights {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 5rem;
-  width: 100%;
-}
-
-.highlight-card {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
   position: relative;
+  z-index: 1;
+}
+
+/* Differentiator Card */
+.diff-card {
   background: rgba(255, 255, 255, 0.03);
-  /* More transparent for depth */
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  padding: 2.5rem 2rem;
-  border-radius: 1.5rem;
-  /* Larger radius for modern feel */
-  display: flex;
-  align-items: flex-start;
-  /* Align top for better icon placement */
-  gap: 1.5rem;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  cursor: default;
-  max-width: 550px;
-  flex: 1 1 350px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 1.25rem;
+  padding: 2.25rem 2rem;
+  position: relative;
   overflow: hidden;
+  transition: all 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-/* Gradient Border Effect */
-.highlight-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 1.5rem;
-  padding: 1px;
-  /* border width */
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  opacity: 0.5;
-  transition: opacity 0.4s ease;
-}
-
-.card-glow {
+/* Top glow on hover */
+.diff-card-glow {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.1), transparent 70%);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 50%;
+  background: radial-gradient(ellipse at top, rgba(56, 189, 248, 0.08), transparent 70%);
   opacity: 0;
   transition: opacity 0.4s ease;
   pointer-events: none;
 }
 
-.highlight-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  background: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(56, 189, 248, 0.2);
-  /* Cyan glow */
-  border-color: rgba(255, 255, 255, 0.2);
+/* Accent top border */
+.diff-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, rgba(56, 189, 248, 0.4) 50%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
-.highlight-card:hover .card-glow {
+.diff-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(56, 189, 248, 0.2);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.25),
+    0 0 30px rgba(56, 189, 248, 0.06);
+}
+
+.diff-card:hover::before {
   opacity: 1;
 }
 
-.highlight-icon-wrapper {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 1rem;
+.diff-card:hover .diff-card-glow {
+  opacity: 1;
+}
+
+.diff-card:hover .diff-icon-wrap {
+  background: rgba(56, 189, 248, 0.12);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+/* Card Header */
+.diff-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.diff-icon-wrap {
+  width: 46px;
+  height: 46px;
+  border-radius: 0.75rem;
+  background: rgba(56, 189, 248, 0.06);
+  border: 1px solid rgba(56, 189, 248, 0.15);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
 }
 
-.highlight-icon {
+.diff-icon {
+  width: 20px;
+  height: 20px;
   color: #38bdf8;
-  /* Sky blue accent */
-  width: 1.75rem;
-  height: 1.75rem;
 }
 
-.highlight-content {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.highlight-text {
-  font-family: var(--font-family-display, sans-serif);
-  /* Ensure brand font */
-  font-size: 1.25rem;
+.diff-card-title {
+  font-family: var(--font-family-display, 'Outfit', sans-serif);
+  font-size: 1.2rem;
   font-weight: 700;
   color: #ffffff;
   margin: 0;
-  line-height: 1.3;
-  letter-spacing: -0.01em;
-  text-transform: none;
-  /* Removed uppercase for better readability */
-  background: linear-gradient(90deg, #fff, #cbd5e1);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  line-height: 1.25;
 }
 
-.highlight-desc {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.6);
+/* Description */
+.diff-card-desc {
+  font-size: 0.925rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.6;
   margin: 0;
-  line-height: 1.5;
-  font-weight: 400;
 }
 
+/* Contrast Statement */
+.diff-card-contrast {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.6rem 0.85rem;
+  background: rgba(56, 189, 248, 0.06);
+  border-left: 3px solid rgba(56, 189, 248, 0.4);
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.4;
+}
+
+.diff-contrast-arrow {
+  color: #38bdf8;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+/* ---- Responsive ---- */
 @media (max-width: 768px) {
-  .proof-highlights {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 3rem;
+  .proof-section.differentiator-section {
+    padding: 4.5rem 0;
   }
 
-  .highlight-card {
-    width: 100%;
-    max-width: 100%;
-    flex-direction: row;
-    /* Keep icon side-by-side on mobile too */
-    align-items: center;
-    padding: 1.5rem;
+  .differentiator-section .proof-title {
+    font-size: 2rem;
   }
 
-  .highlight-text {
+  .diff-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .diff-card {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .diff-card-title {
     font-size: 1.1rem;
   }
 }
