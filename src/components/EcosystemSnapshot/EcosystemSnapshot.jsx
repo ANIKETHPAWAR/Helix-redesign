@@ -10,28 +10,28 @@ function EcosystemSnapshot() {
         {
             id: 1,
             title: "Helix Infrastructure Consultants",
-            description: "Engineering, development advisory, real estate marketing, and project execution consulting.",
+            description: "Development structuring, engineering governance, PMC, and project marketing for real estate.",
             icon: <Building className="eco-icon" strokeWidth={1.5} />,
             path: "/infrastructure"
         },
         {
             id: 2,
             title: "Helix 360",
-            description: "Integrated finishing, MEP, and specialized building product execution.",
+            description: "Integrated finishing and MEP execution aligned to the real estate development lifecycle.",
             icon: <Hammer className="eco-icon" strokeWidth={1.5} />,
             path: "/helix360"
         },
         {
             id: 3,
             title: "LaborPro",
-            description: "Technology-driven manpower supply and operational outsourcing platform.",
+            description: "Structured workforce deployment for real estate construction and development.",
             icon: <Users className="eco-icon" strokeWidth={1.5} />,
             path: "/laborpro"
         },
         {
             id: 4,
             title: "Aabha & Dhwani Creative Studios",
-            description: "Strategic branding, advertising, and digital marketing solutions.",
+            description: "Real estate marketing and branding aligned to development positioning.",
             icon: <Lightbulb className="eco-icon" strokeWidth={1.5} />,
             path: "/aabha-dhwani"
         }

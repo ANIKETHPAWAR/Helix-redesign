@@ -1,0 +1,56 @@
+/* ========================================
+   Authority Metrics — Self-Contained Styles
+   ======================================== */
+
+.authority-metrics-section {
+    background-color: #172554;
+    color: #ffffff;
+    padding: 4rem 0;
+}
+
+.authority-metrics-section .proof-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.authority-metrics-section .proof-card {
+    text-align: center;
+    flex: 0 0 calc(33.333% - 2rem);
+    min-width: 200px;
+}
+
+.authority-metrics-section .proof-value {
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    font-family: var(--font-family-display, 'Outfit', sans-serif);
+}
+
+.authority-metrics-section .proof-label {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .authority-metrics-section .proof-card {
+        flex: 0 0 calc(50% - 2rem);
+    }
+
+    .authority-metrics-section .proof-value {
+        font-size: 2.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .authority-metrics-section .proof-card {
+        flex: 0 0 100%;
+    }
+}

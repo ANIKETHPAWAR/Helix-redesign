@@ -18,16 +18,15 @@ const FrameworkSection = () => {
                             Accountability.
                         </h2>
                         <p className="framework-desc">
-                            Helix Group is a B2B consulting and delivery organisation combining engineering,
-                            project management, execution, and go-to-market capability under one accountable framework.
+                            Helix integrates development structuring, engineering governance, coordinated execution, and project marketing under one accountable framework for real estate.
                         </p>
 
                         <div className="framework-quote">
-                            "We don't just design projects. We build what we design."
+                            "Helix structures every engagement for predictable, governed delivery."
                         </div>
 
-                        <Button to="/process" variant="primary" className="framework-btn">
-                            Learn About Our Process
+                        <Button to="/contact" variant="primary" className="framework-btn">
+                            Start a Strategic Discussion
                         </Button>
                     </div>
 

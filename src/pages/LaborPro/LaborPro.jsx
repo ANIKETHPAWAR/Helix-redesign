@@ -11,9 +11,9 @@ function LaborPro() {
             <Section className="labor-header">
                 <Container>
                     <p className="page-eyebrow badge-eyebrow">LaborPro Integration</p>
-                    <h1 className="page-title">Streamlined Workforce.<br />Optimized Operations.</h1>
+                    <h1 className="page-title">Structured Workforce Deployment<br />for Real Estate.</h1>
                     <p className="page-subtitle">
-                        LaborPro simplifies manpower procurement and operational outsourcing through technology-driven workforce supply and project management solutions.
+                        LaborPro provides structured manpower deployment and operational coordination for real estate construction and development projects.
                     </p>
                 </Container>
             </Section>
@@ -23,36 +23,36 @@ function LaborPro() {
                 <Container>
                     <div className="labor-content-grid">
                         <div className="labor-intro">
-                            <h2>Comprehensive Workforce Solutions</h2>
+                            <h2>Disciplined Workforce Solutions</h2>
                             <p className="text-body">
-                                We provide reliable, skilled, and managed workforce solutions to ensure your operations run smoothly without personnel bottlenecks.
+                                Helix deploys reliable, skilled, and governed workforce solutions to ensure real estate development sites operate without personnel bottlenecks.
                             </p>
                         </div>
 
                         <div className="labor-services-grid">
                             <div className="labor-service-card">
-                                <h3>Construction Manpower Supply</h3>
-                                <p>Skilled and unskilled labor for construction sites, managed for efficiency and safety.</p>
+                                <h3>Construction Manpower Deployment</h3>
+                                <p>Skilled and unskilled labour for real estate construction sites, governed for efficiency and safety.</p>
                             </div>
                             <div className="labor-service-card">
-                                <h3>Factory Operations Management</h3>
-                                <p>End-to-end workforce management for manufacturing and assembly lines.</p>
+                                <h3>Site Operations Coordination</h3>
+                                <p>Structured workforce coordination for real estate development and construction operations.</p>
                             </div>
                             <div className="labor-service-card">
                                 <h3>Facility & Security Staffing</h3>
-                                <p>Trained personnel for facility maintenance, housekeeping, and security services.</p>
+                                <p>Trained personnel for real estate facility maintenance, housekeeping, and site security.</p>
                             </div>
                             <div className="labor-service-card">
-                                <h3>Fleet & Logistics Workforce</h3>
-                                <p>Drivers, loaders, and logistics coordinators to keep your supply chain moving.</p>
+                                <h3>Post-Construction Support Staff</h3>
+                                <p>Coordinated staffing for handover operations, maintenance teams, and project closeout support.</p>
                             </div>
                         </div>
                     </div>
 
                     <div className="labor-cta-box">
-                        <h2>Ready to optimize your workforce?</h2>
-                        <p>Get in touch to discuss your manpower requirements.</p>
-                        <Button to="/contact" variant="primary">Contact LaborPro</Button>
+                        <h2>Ready to structure your project workforce?</h2>
+                        <p>Start a discussion about your real estate manpower requirements.</p>
+                        <Button to="/contact" variant="primary">Start a Strategic Discussion</Button>
                     </div>
                 </Container>
             </Section>

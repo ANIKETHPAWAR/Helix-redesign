@@ -11,6 +11,8 @@ import FeaturedProjects from '../../components/FeaturedProjects/FeaturedProjects
 import ClientsSection from '../../components/ClientsSection/ClientsSection'
 import ServicesShowcase from '../../components/ServicesShowcase/ServicesShowcase'
 import EcosystemSnapshot from '../../components/EcosystemSnapshot/EcosystemSnapshot'
+import HelixDevelopmentFramework from '../../components/HelixDevelopmentFramework/HelixDevelopmentFramework'
+import MetricsBanner from '../../components/MetricsBanner/MetricsBanner'
 
 // Icons for Problem Section
 const Icons = {
@@ -53,19 +55,19 @@ function Home() {
           <Container>
             <div className="hero-content">
               <h1 className="hero-title">
-                Consult. Design.<br />
-                Build. Deliver.
+                Structured Projects.<br />
+                Predictable Delivery.
               </h1>
               <p className="hero-subtitle">
-                Integrated real estate development, engineering, execution, marketing, and operational solutions designed to transform land, projects, and infrastructure into high-performing assets.
+                Helix integrates development structuring, engineering governance, coordinated execution, workforce deployment, and project marketing into one accountable framework for real estate development.
               </p>
 
               <div className="hero-cta-group">
                 <Button to="/contact" variant="primary">
-                  Start a Business Conversation
+                  Start a Strategic Discussion
                 </Button>
                 <Button to="/infrastructure" variant="secondary">
-                  Explore Our Solutions
+                  Explore Our Framework
                 </Button>
               </div>
             </div>
@@ -73,8 +75,13 @@ function Home() {
         </HeroCarousel>
       </div>
 
-      {/* Integrated Approach Section */}
+      {/* Metrics Banner — compact stats strip */}
+      <MetricsBanner />
       <IntegratedApproach />
+      {/* Clear Differentiator Section */}
+      <ProofStatements />
+      {/* Integrated Approach Section */}
+      {/*  */}
 
       {/* Services Showcase Section */}
       <ServicesShowcase />
@@ -122,10 +129,13 @@ function Home() {
 
 
       {/* Proof / Credibility */}
-      < ProofStatements />
+
 
       {/* Ecosystem Snapshot */}
-      <EcosystemSnapshot />
+
+
+      {/* Helix Development Framework (Visual Timeline) */}
+      <HelixDevelopmentFramework />
 
       {/* Featured Projects Section */}
       <FeaturedProjects />
@@ -140,11 +150,11 @@ function Home() {
       < Section className="cta-section" >
         <div className="cta-box">
           <div className="cta-content">
-            <h2>Let’s Build Your Next Successful Project</h2>
-            <p>Helix Group works exclusively on B2B projects and partnerships.</p>
+            <h2>Structured Partnerships for Real Estate Development</h2>
+            <p>Helix Group partners exclusively with developers, landowners, and investors to deliver governed real estate outcomes.</p>
           </div>
           <div className="cta-actions">
-            <Button to="/contact" variant="primary">Start Business Conversation</Button>
+            <Button to="/contact" variant="primary">Start a Strategic Discussion</Button>
           </div>
         </div>
       </Section >

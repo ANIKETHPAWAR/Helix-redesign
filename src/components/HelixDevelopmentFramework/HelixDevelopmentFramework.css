@@ -1,0 +1,494 @@
+/* ========================================
+   Helix Development Framework – Premium Visual Timeline
+   ======================================== */
+
+.hdf-section {
+    background: linear-gradient(160deg, #0c1a3a 0%, #172554 40%, #1e3a5f 100%);
+    padding: 7rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle background pattern */
+.hdf-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 15% 50%, rgba(2, 172, 247, 0.06) 0%, transparent 50%),
+        radial-gradient(circle at 85% 20%, rgba(56, 189, 248, 0.04) 0%, transparent 40%),
+        radial-gradient(circle at 50% 90%, rgba(2, 132, 199, 0.05) 0%, transparent 45%);
+    pointer-events: none;
+}
+
+/* Grid dot pattern overlay */
+.hdf-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 32px 32px;
+    pointer-events: none;
+}
+
+/* ---- Header ---- */
+.hdf-header {
+    text-align: center;
+    margin-bottom: 5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.hdf-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    background: rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 24px;
+    color: #38bdf8;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 1.5rem;
+}
+
+.hdf-main-title {
+    font-family: var(--font-family-display, 'Outfit', sans-serif);
+    font-size: 2.75rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.25rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.hdf-main-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.55);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.65;
+}
+
+/* ---- Timeline Container ---- */
+.hdf-timeline {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Central vertical connector line */
+.hdf-timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom,
+            transparent 0%,
+            rgba(56, 189, 248, 0.15) 5%,
+            rgba(56, 189, 248, 0.3) 50%,
+            rgba(56, 189, 248, 0.15) 95%,
+            transparent 100%);
+    transform: translateX(-50%);
+}
+
+/* ---- Phase Row ---- */
+.hdf-phase-row {
+    display: grid;
+    grid-template-columns: 1fr 80px 1fr;
+    align-items: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.hdf-phase-row:last-child {
+    margin-bottom: 0;
+}
+
+/* Alternate sides */
+.hdf-phase-row:nth-child(odd) .hdf-phase-card {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.hdf-phase-row:nth-child(odd) .hdf-phase-node {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.hdf-phase-row:nth-child(odd) .hdf-phase-spacer {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.hdf-phase-row:nth-child(even) .hdf-phase-card {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.hdf-phase-row:nth-child(even) .hdf-phase-node {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.hdf-phase-row:nth-child(even) .hdf-phase-spacer {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+/* ---- Timeline Node (center dot) ---- */
+.hdf-phase-node {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hdf-node-dot {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0c1a3a 0%, #172554 100%);
+    border: 2px solid rgba(56, 189, 248, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family-display, 'Outfit', sans-serif);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #38bdf8;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.1);
+}
+
+.hdf-node-dot::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    animation: hdfNodePulse 3s ease-in-out infinite;
+}
+
+@keyframes hdfNodePulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 0.4;
+    }
+}
+
+/* ---- Phase Card ---- */
+.hdf-phase-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 1.25rem;
+    padding: 2.25rem 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: default;
+}
+
+/* Gradient top border accent */
+.hdf-phase-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, rgba(56, 189, 248, 0.5) 50%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Inner glow */
+.hdf-phase-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 50%;
+    background: radial-gradient(ellipse at top, rgba(56, 189, 248, 0.06), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.hdf-phase-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(56, 189, 248, 0.2);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.25),
+        0 0 30px rgba(56, 189, 248, 0.08);
+}
+
+.hdf-phase-card:hover::before {
+    opacity: 1;
+}
+
+.hdf-phase-card:hover::after {
+    opacity: 1;
+}
+
+.hdf-phase-card:hover .hdf-card-icon-wrap {
+    background: rgba(56, 189, 248, 0.12);
+    border-color: rgba(56, 189, 248, 0.3);
+}
+
+.hdf-phase-card:hover .hdf-card-icon {
+    color: #7dd3fc;
+}
+
+/* Card Phase Label */
+.hdf-card-phase-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #38bdf8;
+    margin-bottom: 0.75rem;
+    opacity: 0.8;
+}
+
+/* Card Top Row */
+.hdf-card-top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.hdf-card-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 0.75rem;
+    background: rgba(56, 189, 248, 0.06);
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    transition: all 0.4s ease;
+}
+
+.hdf-card-icon {
+    width: 22px;
+    height: 22px;
+    color: #38bdf8;
+    transition: color 0.3s ease;
+}
+
+.hdf-card-title {
+    font-family: var(--font-family-display, 'Outfit', sans-serif);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.25;
+}
+
+/* Card Description */
+.hdf-card-desc {
+    font-size: 0.925rem;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* Card Bullet List */
+.hdf-card-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.hdf-card-bullets li {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    line-height: 1.4;
+}
+
+.hdf-bullet-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #38bdf8;
+    flex-shrink: 0;
+    opacity: 0.6;
+}
+
+/* ---- Spacer (empty column for alternating layout) ---- */
+.hdf-phase-spacer {
+    min-height: 1px;
+}
+
+/* ---- Bottom Flow Summary ---- */
+.hdf-flow-summary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin-top: 4rem;
+    position: relative;
+    z-index: 1;
+    flex-wrap: wrap;
+}
+
+.hdf-flow-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.25rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 2rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.hdf-flow-chip:hover {
+    background: rgba(56, 189, 248, 0.08);
+    border-color: rgba(56, 189, 248, 0.2);
+    color: #ffffff;
+}
+
+.hdf-flow-chip-number {
+    color: #38bdf8;
+    font-weight: 700;
+    font-size: 0.7rem;
+}
+
+.hdf-flow-arrow {
+    color: rgba(56, 189, 248, 0.3);
+    display: flex;
+    align-items: center;
+    padding: 0 0.25rem;
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 900px) {
+    .hdf-section {
+        padding: 5rem 0;
+    }
+
+    .hdf-main-title {
+        font-size: 2.25rem;
+    }
+
+    .hdf-header {
+        margin-bottom: 3.5rem;
+    }
+
+    /* Stack vertically on tablet/mobile */
+    .hdf-timeline-line {
+        left: 28px;
+    }
+
+    .hdf-phase-row {
+        display: flex;
+        gap: 1.25rem;
+        align-items: flex-start;
+        margin-bottom: 1.5rem;
+    }
+
+    .hdf-phase-spacer {
+        display: none;
+    }
+
+    .hdf-phase-node {
+        flex-shrink: 0;
+    }
+
+    .hdf-node-dot {
+        width: 44px;
+        height: 44px;
+        font-size: 0.75rem;
+    }
+
+    .hdf-phase-card {
+        flex: 1;
+        padding: 1.75rem 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hdf-section {
+        padding: 4rem 0;
+    }
+
+    .hdf-main-title {
+        font-size: 1.85rem;
+    }
+
+    .hdf-main-subtitle {
+        font-size: 1rem;
+    }
+
+    .hdf-timeline-line {
+        left: 24px;
+    }
+
+    .hdf-node-dot {
+        width: 38px;
+        height: 38px;
+        font-size: 0.7rem;
+    }
+
+    .hdf-card-title {
+        font-size: 1.15rem;
+    }
+
+    .hdf-card-desc {
+        font-size: 0.875rem;
+    }
+
+    .hdf-phase-card {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .hdf-flow-summary {
+        gap: 0.5rem;
+        margin-top: 3rem;
+    }
+
+    .hdf-flow-chip {
+        font-size: 0.7rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .hdf-flow-arrow {
+        display: none;
+    }
+}

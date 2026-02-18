@@ -40,14 +40,14 @@ function Contact() {
       <Section className="contact-header">
         <Container>
           <p className="page-eyebrow">Contact</p>
-          <h1 className="page-title">Start a Business Conversation</h1>
+          <h1 className="page-title">Start a Strategic Discussion</h1>
           <p className="page-subtitle">
-            Share your requirement and we'll get back with clarifications and next steps
-            for B2B infrastructure and real estate projects.
+            Share your development requirements and our team will respond with a structured assessment
+            and recommended next steps for your real estate project.
           </p>
 
           <div className="trust-disclaimer">
-            <strong>Note:</strong> Helix Group works exclusively on B2B projects and partnerships.
+            <strong>Note:</strong> Helix Group operates exclusively within structured real estate development.
           </div>
         </Container>
       </Section>
@@ -57,9 +57,9 @@ function Contact() {
           {/* Form Column */}
           <div className="contact-form-col">
             <div className="form-card">
-              <h3>Tell us about your project</h3>
+              <h3>Share Your Development Requirements</h3>
               <p className="form-intro">
-                Fill out the details below. Our engineering team typically responds within 24 hours.
+                Provide your project details below. Our development team typically responds within 24 hours.
               </p>
 
               <form onSubmit={handleSubmit} className="contact-form">
@@ -140,7 +140,7 @@ function Contact() {
                 </div>
 
                 <div className="form-actions">
-                  <Button type="submit" variant="primary">Submit Enquiry</Button>
+                  <Button type="submit" variant="primary">Start a Strategic Discussion</Button>
                   {status && <span className="submit-status">{status}</span>}
                 </div>
               </form>
@@ -151,7 +151,7 @@ function Contact() {
           <div className="contact-info-col">
             <div className="info-card">
               <h3>Contact Information</h3>
-              <p className="text-muted mb-lg">Direct lines to our execution teams.</p>
+              <p className="text-muted mb-lg">Direct lines to our development teams.</p>
               <div className="info-item">
                 <h4>Office</h4>
                 <p>

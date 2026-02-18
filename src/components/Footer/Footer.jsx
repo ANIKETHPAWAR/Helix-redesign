@@ -22,8 +22,8 @@ function Footer() {
               <span className="footer-brand-title">Helix Group</span>
             </div>
             <p className="footer-mission">
-              Consult. Design. Build. Deliver.<br />
-              End-to-end accountability for infrastructure and real estate projects.
+              Structured development. Governed engineering. Predictable delivery.<br />
+              End-to-end accountability for real estate development projects.
             </p>
           </div>
 
@@ -61,7 +61,7 @@ function Footer() {
 
         <div className="footer-bottom">
           <p className="copyright">© {currentYear} Helix Group. All rights reserved.</p>
-          <p className="disclaimer">Helix Group works exclusively on B2B projects and partnerships.</p>
+          <p className="disclaimer">Helix Group operates exclusively within structured real estate development.</p>
         </div>
       </Container>
     </footer>

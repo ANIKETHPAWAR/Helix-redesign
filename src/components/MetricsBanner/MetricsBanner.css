@@ -1,0 +1,125 @@
+/* ========================================
+   Metrics Banner — Compact Stats Strip
+   ======================================== */
+
+.metrics-banner {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 50%, #2563eb 100%);
+    padding: 2.25rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+/* Subtle shimmer overlay */
+.metrics-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(110deg,
+            transparent 20%,
+            rgba(255, 255, 255, 0.03) 40%,
+            rgba(255, 255, 255, 0.06) 50%,
+            rgba(255, 255, 255, 0.03) 60%,
+            transparent 80%);
+    pointer-events: none;
+}
+
+.metrics-banner-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.metrics-banner-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    flex: 1 1 0;
+    min-width: 160px;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+}
+
+/* Subtle vertical dividers */
+.metrics-banner-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 10%;
+    height: 80%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.metrics-banner-value {
+    font-family: var(--font-family-display, 'Outfit', sans-serif);
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.metrics-banner-label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    line-height: 1.35;
+    font-weight: 500;
+    max-width: 160px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+    .metrics-banner-inner {
+        gap: 1rem;
+    }
+
+    .metrics-banner-item {
+        min-width: 140px;
+        padding: 0.5rem 1rem;
+    }
+
+    .metrics-banner-value {
+        font-size: 1.65rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .metrics-banner {
+        padding: 1.75rem 1rem;
+    }
+
+    .metrics-banner-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem 0;
+    }
+
+    .metrics-banner-item {
+        min-width: auto;
+        padding: 0.25rem 0.5rem;
+    }
+
+    /* Remove dividers on 2-col grid — only add for left column items */
+    .metrics-banner-item::after {
+        display: none;
+    }
+
+    .metrics-banner-item:nth-child(odd)::after {
+        display: block;
+    }
+
+    .metrics-banner-value {
+        font-size: 1.5rem;
+    }
+
+    .metrics-banner-label {
+        font-size: 0.75rem;
+    }
+}
