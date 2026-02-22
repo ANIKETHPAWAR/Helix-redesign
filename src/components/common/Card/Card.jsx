@@ -50,6 +50,8 @@ export const ServiceCard = ({ title, description, linkTo, image }) => {
 export const ProjectCard = ({ title, location, description, metrics, image }) => {
     return (
         <Card className="project-card glass-card" noPadding>
+            {image && <img src={image} alt={title} className="project-card-bg-image" />}
+            {image && <div className="project-card-overlay"></div>}
             <div className="project-content-wrapper">
                 <div className="project-header">
                     <div className="project-location-badge">
