@@ -29,7 +29,7 @@ const CoreServices = () => {
                     <span className="cs-eyebrow">Our Expertise</span>
                     <h2 className="cs-title">Core Services</h2>
                     <p className="cs-subtitle">
-                        Structured advisory and coordinated execution across the real estate development lifecycle.
+                        Helix integrates advisory and execution across the full real estate development lifecycle — from feasibility through market-ready delivery.
                     </p>
                 </div>
 

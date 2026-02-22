@@ -14,7 +14,7 @@ function Helix360() {
           <p className="page-eyebrow badge-eyebrow">Helix 360</p>
           <h1 className="page-title">Where Civil Contractors Stop,<br />Helix 360 Takes Over</h1>
           <p className="page-subtitle">
-            Helix 360 delivers integrated post-plaster finishing and MEP execution, governed by structured quality control and coordinated vendor management within the real estate development lifecycle.
+            The finishing stage is where most real estate projects lose control — cost leakage, quality dilution, and timeline overruns. Helix 360 delivers integrated post-plaster finishing and MEP execution, governed by structured quality control and coordinated vendor management within the development lifecycle.
           </p>
         </Container>
       </Section>
@@ -25,8 +25,7 @@ function Helix360() {
           <div className="h360-content">
             <h2>Integrated Finishing Services</h2>
             <p className="text-body mb-xl">
-              Real estate projects face maximum cost leakage and quality dilution during the finishing stages.
-              Helix 360 provides single-point accountability for disciplined, governed finishing execution.
+              Developers routinely lose 15–20% of project budgets during post-plaster stages due to fragmented vendor coordination and absent quality governance. Helix 360 provides single-point accountability — integrating finishing, MEP, and vendor management into one governed execution framework aligned to Phase 4 of the Helix Development Lifecycle.
             </p>
 
             <div className="services-grid">
@@ -54,7 +53,7 @@ function Helix360() {
           <div className="h360-sidebar">
             <div className="sidebar-card">
               <h3>Execution at Scale</h3>
-              <p>Disciplined delivery at scale.</p>
+              <p>Governed finishing execution across residential and mixed-use developments.</p>
               <div className="sidebar-metrics">
                 <MetricCard number="4M+" label="sq ft Painted" className="compact-metric" />
                 <MetricCard number="1M+" label="sq ft Flooring" className="compact-metric" />
@@ -64,8 +63,8 @@ function Helix360() {
             </div>
 
             <div className="sidebar-cta">
-              <h3>Need structured finishing execution?</h3>
-              <p className="text-sm mb-md text-muted">Governed delivery ensures your project finishes as strong as it started.</p>
+              <h3>Integrate Finishing into Your Lifecycle</h3>
+              <p className="text-sm mb-md text-muted">Helix 360 connects directly to the Helix Development Framework — ensuring your project's finishing phase is governed with the same discipline as structuring and engineering.</p>
               <Link to="/contact" className="sidebar-link">Start a Strategic Discussion &rarr;</Link>
             </div>
           </div>
@@ -74,8 +73,8 @@ function Helix360() {
 
       <Section className="cta-section-alt">
         <div className="cta-box-simple">
-          <h2>Need a structured finishing partner?</h2>
-          <p>Helix 360 delivers governed post-plaster execution with disciplined coordination and accountability.</p>
+          <h2>Structured Finishing Execution for Real Estate</h2>
+          <p>Helix 360 delivers governed post-plaster execution — coordinated, accountable, and integrated into the development lifecycle.</p>
           <Button to="/contact" variant="primary">Start a Strategic Discussion</Button>
         </div>
       </Section>

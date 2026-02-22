@@ -13,7 +13,7 @@ function AabhaDhwani() {
                     <p className="page-eyebrow badge-eyebrow">Aabha & Dhwani Creative Studios</p>
                     <h1 className="page-title">Real Estate Branding.<br />Strategic Market Positioning.</h1>
                     <p className="page-subtitle">
-                        Integrated branding, advertising, and marketing solutions aligned to real estate development positioning and project launch strategies.
+                        Most real estate marketing operates in isolation from engineering and construction timelines — leading to mispositioned launches, wasted budgets, and delayed absorption. Aabha & Dhwani integrates branding and marketing into the development lifecycle, ensuring every campaign aligns to project milestones.
                     </p>
                 </Container>
             </Section>
@@ -25,7 +25,7 @@ function AabhaDhwani() {
                         <h2 className="section-title">Who We Are</h2>
                         <p className="text-body text-large">
                             Aabha & Dhwani Creative Studios serves as the strategic marketing and branding partner within the Helix Group ecosystem.
-                            The studio delivers disciplined real estate marketing, project branding, and go-to-market execution aligned to the development lifecycle.
+                            The studio delivers disciplined real estate marketing, project branding, and go-to-market execution — connected directly to Phase 4 (Market-Ready Delivery) of the Helix Development Framework. Every campaign is governed by development milestones, ensuring marketing spend delivers predictable commercial outcomes.
                         </p>
                     </div>
                 </Container>
@@ -68,8 +68,8 @@ function AabhaDhwani() {
             <Section className="ad-cta-section">
                 <Container>
                     <div className="ad-cta-box">
-                        <h2>Structured Marketing for Real Estate Development</h2>
-                        <p>Disciplined branding and market positioning aligned to the development lifecycle.</p>
+                        <h2>Governed Marketing for Real Estate Development</h2>
+                        <p>Aabha & Dhwani integrates branding and marketing into the development lifecycle — ensuring every campaign is aligned, disciplined, and commercially accountable.</p>
                         <Button to="/contact" variant="primary">Start a Strategic Discussion</Button>
                     </div>
                 </Container>

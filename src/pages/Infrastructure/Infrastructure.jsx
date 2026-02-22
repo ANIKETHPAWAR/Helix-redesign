@@ -32,7 +32,7 @@ function Infrastructure() {
             <p className="page-eyebrow badge-eyebrow">Helix Infrastructure</p>
             <h1 className="page-title">Structured Development. <br />Predictable Outcomes.</h1>
             <p className="page-subtitle">
-              Helix Infrastructure integrates development advisory, engineering governance, project management, and structured marketing to deliver predictable real estate outcomes for developers, landowners, and investors.
+              Helix Infrastructure integrates development structuring, engineering governance, project management consulting, and project marketing into one governed framework — delivering predictable real estate outcomes for developers, landowners, and investors.
             </p>
             <div className="hero-actions">
               <Button to="/contact" variant="primary">Start a Strategic Discussion</Button>
@@ -55,10 +55,10 @@ function Infrastructure() {
                 <span className="highlight-label">Homes sold across South India</span>
               </div>
               <p className="text-body">
-                Helix Infrastructure integrates engineering capability with disciplined project marketing. Every project is structured for both technical soundness and commercial viability.
+                Most developers treat marketing as an afterthought — disconnected from engineering timelines and construction progress. This misalignment leads to delayed absorption, holding cost overruns, and unpredictable revenue.
               </p>
               <p className="text-body">
-                Our approach governs technical feasibility alongside market positioning, ensuring that what is built is structurally sound, commercially viable, and positioned for predictable absorption.
+                Helix integrates project marketing into the development lifecycle from structuring through delivery. Every project is governed for both technical soundness and commercial viability — ensuring predictable absorption aligned to construction milestones.
               </p>
             </div>
             <div className="infra-img-col">
@@ -118,7 +118,7 @@ function Infrastructure() {
           <div className="capabilities-wrapper">
             <div className="capabilities-header text-center">
               <h2>Core Capabilities</h2>
-              <p>Structured capabilities for disciplined real estate development.</p>
+              <p>Disciplined capabilities integrated across the real estate development lifecycle — from structuring through market-ready delivery.</p>
             </div>
 
             <div className="capabilities-grid">
@@ -183,11 +183,11 @@ function Infrastructure() {
       <section className="infra-cta">
         <Container>
           <div className="cta-content glass-panel">
-            <h2>Ready to discuss your real estate development project?</h2>
-            <p>Helix structures every engagement for predictable, governed delivery across the development lifecycle.</p>
+            <h2>Structured Partnerships for Real Estate Development</h2>
+            <p>Helix governs every engagement from feasibility through handover — delivering predictable outcomes across the development lifecycle.</p>
             <div className="cta-buttons">
               <Button to="/contact" variant="primary">Start a Strategic Discussion</Button>
-              <Link to="/contact" className="secondary-link">View Portfolio &rarr;</Link>
+              <Link to="/projects" className="secondary-link">View Portfolio &rarr;</Link>
             </div>
           </div>
         </Container>
