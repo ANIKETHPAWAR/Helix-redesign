@@ -4,6 +4,10 @@ import Container from '../common/Container/Container';
 import { ProjectCard } from '../common/Card/Card';
 import './FeaturedProjects.css';
 
+import hariniImg from '../../assets/Harini-Mansion-Medipally-Hyd.png';
+import homeTownImg from '../../assets/Home-Town-Heights-Yapral, Hyd.png';
+import parkResidencyImg from '../../assets/The-Park-Residency-Saket-Township- Hyd.png';
+
 const FeaturedProjects = () => {
     // Data from the user request
     const projects = [
@@ -14,7 +18,8 @@ const FeaturedProjects = () => {
             metrics: {
                 units: "61 Villas",
                 area: "4 Acres"
-            }
+            },
+            image: hariniImg
         },
         {
             title: "Vayun Meadows",
@@ -23,7 +28,8 @@ const FeaturedProjects = () => {
             metrics: {
                 units: "50 Apts",
                 area: "2500 Sq.Yds"
-            }
+            },
+            image: homeTownImg
         },
         {
             title: "The Park Residency Apartments",
@@ -32,7 +38,8 @@ const FeaturedProjects = () => {
             metrics: {
                 units: "25 Apts",
                 area: "1500 Sq.Yds"
-            }
+            },
+            image: parkResidencyImg
         }
     ];
 
@@ -53,6 +60,7 @@ const FeaturedProjects = () => {
                             location={project.location}
                             description={project.description}
                             metrics={project.metrics}
+                            image={project.image}
                         />
                     ))}
                 </div>
