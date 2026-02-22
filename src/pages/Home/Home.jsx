@@ -77,14 +77,17 @@ function Home() {
 
       {/* Metrics Banner — compact stats strip */}
       <MetricsBanner />
-      <IntegratedApproach />
+      {/* <IntegratedApproach /> */}
       {/* Clear Differentiator Section */}
+      <ServicesShowcase />
+      <HelixDevelopmentFramework />
+      <ClientsSection />
       <ProofStatements />
       {/* Integrated Approach Section */}
       {/*  */}
 
       {/* Services Showcase Section */}
-      <ServicesShowcase />
+
 
       {/* Problem Section */}
       {/* <Section id="problems">
@@ -135,7 +138,7 @@ function Home() {
 
 
       {/* Helix Development Framework (Visual Timeline) */}
-      <HelixDevelopmentFramework />
+
 
       {/* Featured Projects Section */}
       <FeaturedProjects />
@@ -144,7 +147,7 @@ function Home() {
       <FrameworkSection />
 
       {/* Clients Marquee Section */}
-      <ClientsSection />
+
 
       {/* Bottom CTA */}
       < Section className="cta-section" >

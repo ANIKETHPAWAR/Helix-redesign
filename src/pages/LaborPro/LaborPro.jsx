@@ -13,7 +13,7 @@ function LaborPro() {
                     <p className="page-eyebrow badge-eyebrow">LaborPro Integration</p>
                     <h1 className="page-title">Structured Workforce Deployment<br />for Real Estate.</h1>
                     <p className="page-subtitle">
-                        LaborPro provides structured manpower deployment and operational coordination for real estate construction and development projects.
+                        Workforce bottlenecks cause unpredictable delays, safety risks, and cost escalations on real estate sites. LaborPro provides structured manpower deployment and operational coordination — integrated into the Helix Development Framework to ensure governed, predictable site operations.
                     </p>
                 </Container>
             </Section>
@@ -25,33 +25,33 @@ function LaborPro() {
                         <div className="labor-intro">
                             <h2>Disciplined Workforce Solutions</h2>
                             <p className="text-body">
-                                Helix deploys reliable, skilled, and governed workforce solutions to ensure real estate development sites operate without personnel bottlenecks.
+                                Most developers manage labour through informal networks — leading to inconsistent quality, compliance gaps, and unpredictable site productivity. LaborPro integrates workforce deployment into Phase 3 (Coordinated Execution) of the Helix Development Framework, ensuring every site operates with governed, reliable manpower.
                             </p>
                         </div>
 
                         <div className="labor-services-grid">
                             <div className="labor-service-card">
                                 <h3>Construction Manpower Deployment</h3>
-                                <p>Skilled and unskilled labour for real estate construction sites, governed for efficiency and safety.</p>
+                                <p>Skilled and unskilled labour for real estate construction sites — governed for productivity, safety compliance, and schedule adherence.</p>
                             </div>
                             <div className="labor-service-card">
                                 <h3>Site Operations Coordination</h3>
-                                <p>Structured workforce coordination for real estate development and construction operations.</p>
+                                <p>Structured site-level coordination aligned to project milestones and the Helix execution framework.</p>
                             </div>
                             <div className="labor-service-card">
                                 <h3>Facility & Security Staffing</h3>
-                                <p>Trained personnel for real estate facility maintenance, housekeeping, and site security.</p>
+                                <p>Trained personnel for real estate facility management, housekeeping, and governed site security operations.</p>
                             </div>
                             <div className="labor-service-card">
                                 <h3>Post-Construction Support Staff</h3>
-                                <p>Coordinated staffing for handover operations, maintenance teams, and project closeout support.</p>
+                                <p>Coordinated staffing for governed handover operations, maintenance teams, and post-delivery support.</p>
                             </div>
                         </div>
                     </div>
 
                     <div className="labor-cta-box">
-                        <h2>Ready to structure your project workforce?</h2>
-                        <p>Start a discussion about your real estate manpower requirements.</p>
+                        <h2>Structured Workforce Deployment for Real Estate</h2>
+                        <p>LaborPro integrates manpower solutions into the Helix development lifecycle — ensuring governed, predictable site operations.</p>
                         <Button to="/contact" variant="primary">Start a Strategic Discussion</Button>
                     </div>
                 </Container>

@@ -7,34 +7,39 @@ function About() {
 
   const teamMembers = [
     {
-      name: "Rajesh Kumar",
-      position: "Founder & CEO",
-      initials: "RK"
+      name: "Jagadishwaran G",
+      position: "Founder & Managing Director",
+      initials: "JG"
     },
     {
-      name: "Priya Sharma",
-      position: "Chief Operating Officer",
-      initials: "PS"
+      name: "Anusha",
+      position: "Founder & Director",
+      initials: "A"
     },
     {
-      name: "Anil Reddy",
-      position: "Head of Engineering",
-      initials: "AR"
+      name: "Sabita Reddy",
+      position: "Director Training, Skill Development & Capacity Development.",
+      initials: "SR"
     },
     {
-      name: "Meera Patel",
-      position: "Project Director",
-      initials: "MP"
+      name: "Mohammed Mirza Baig",
+      position: "Chief Accountant",
+      initials: "MB"
     },
     {
-      name: "Vikram Singh",
-      position: "Business Development Head",
-      initials: "VS"
+      name: "Shaalika",
+      position: "Specialist Data Mining & Social Media Marketing",
+      initials: "S"
     },
     {
-      name: "Sneha Iyer",
-      position: "Marketing Director",
-      initials: "SI"
+      name: "V Nagendra",
+      position: "Head Systems & Web Content Management",
+      initials: "VN"
+    },
+    {
+      name: "Bharath S R",
+      position: "Head Branding & Content developer",
+      initials: "BS"
     }
   ]
 
