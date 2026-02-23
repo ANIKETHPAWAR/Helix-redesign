@@ -1,8 +1,11 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import ReCAPTCHA from 'react-google-recaptcha'
 import Section from '../../components/common/Section/Section'
 import Container from '../../components/common/Container/Container'
 import Button from '../../components/common/Button/Button'
 import './Contact.css'
+
+const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -14,6 +17,11 @@ function Contact() {
     message: ''
   })
   const [status, setStatus] = useState('')
+  const [statusType, setStatusType] = useState('') // 'success' | 'error'
+  const [captchaToken, setCaptchaToken] = useState(null)
+  const [captchaError, setCaptchaError] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const captchaRef = useRef(null)
 
   const handleChange = (e) => {
     setFormData({
@@ -22,10 +30,49 @@ function Contact() {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleCaptchaChange = (token) => {
+    setCaptchaToken(token)
+    if (token) setCaptchaError('')
+  }
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Frontend simulation
-    setStatus('Thank you. Your message has been sent to our team.')
+
+    // Validate captcha
+    if (!captchaToken) {
+      setCaptchaError('Please complete the CAPTCHA verification.')
+      return
+    }
+
+    setIsSubmitting(true)
+    setStatus('')
+    setStatusType('')
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData, captchaToken })
+      })
+
+      const data = await res.json()
+
+      if (data.success) {
+        setStatus('Thank you. Your message has been sent to our team.')
+        setStatusType('success')
+        setFormData({ name: '', organisation: '', email: '', phone: '', service: '', message: '' })
+        setCaptchaToken(null)
+        if (captchaRef.current) captchaRef.current.reset()
+      } else {
+        setStatus(data.error || 'Something went wrong. Please try again.')
+        setStatusType('error')
+      }
+    } catch (err) {
+      setStatus('Network error. Please check your connection and try again.')
+      setStatusType('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleWhatsAppClick = () => {
@@ -139,9 +186,25 @@ function Contact() {
                   ></textarea>
                 </div>
 
+                <div className="captcha-wrapper">
+                  <ReCAPTCHA
+                    ref={captchaRef}
+                    sitekey={RECAPTCHA_SITE_KEY}
+                    onChange={handleCaptchaChange}
+                    theme="dark"
+                  />
+                  {captchaError && <span className="captcha-error">{captchaError}</span>}
+                </div>
+
                 <div className="form-actions">
-                  <Button type="submit" variant="primary">Start a Strategic Discussion</Button>
-                  {status && <span className="submit-status">{status}</span>}
+                  <Button type="submit" variant="primary" disabled={isSubmitting}>
+                    {isSubmitting ? 'Submitting...' : 'Start a Strategic Discussion'}
+                  </Button>
+                  {status && (
+                    <span className={`submit-status ${statusType === 'error' ? 'error' : ''}`}>
+                      {status}
+                    </span>
+                  )}
                 </div>
               </form>
             </div>

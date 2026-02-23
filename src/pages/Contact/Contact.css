@@ -131,6 +131,21 @@
   color: var(--color-accent);
 }
 
+.submit-status.error {
+  color: #e74c3c;
+}
+
+.captcha-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.captcha-error {
+  font-size: var(--font-size-xs);
+  color: #e74c3c;
+}
+
 /* Info Column */
 .info-card {
   background: var(--color-bg-light);
