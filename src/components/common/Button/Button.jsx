@@ -8,7 +8,8 @@ const Button = ({
     variant = 'primary',
     className = '',
     onClick,
-    type = 'button'
+    type = 'button',
+    disabled = false
 }) => {
     const btnClass = `btn btn-${variant} ${className}`;
 
@@ -21,7 +22,7 @@ const Button = ({
     }
 
     return (
-        <button type={type} className={btnClass} onClick={onClick}>
+        <button type={type} className={btnClass} onClick={onClick} disabled={disabled}>
             {children}
         </button>
     );
