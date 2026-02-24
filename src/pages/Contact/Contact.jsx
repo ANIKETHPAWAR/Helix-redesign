@@ -65,6 +65,7 @@ function Contact() {
         if (captchaRef.current) captchaRef.current.reset()
       } else {
         setStatus(data.error || 'Something went wrong. Please try again.')
+        if (data.debug) setStatus(prev => prev + ' [DEBUG: ' + data.debug + ']')
         setStatusType('error')
       }
     } catch (err) {
