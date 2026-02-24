@@ -73,6 +73,10 @@ module.exports = async function handler(req, res) {
         return res.status(200).json({ success: true });
     } catch (err) {
         console.error('Google Sheets error:', err.message || err);
-        return res.status(500).json({ success: false, error: 'Failed to save your submission. Please try again later.' });
+        return res.status(500).json({
+            success: false,
+            error: 'Failed to save your submission. Please try again later.',
+            debug: err.message || String(err)
+        });
     }
 }
