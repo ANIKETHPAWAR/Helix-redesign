@@ -312,6 +312,14 @@
     font-size: var(--font-size-3xl);
   }
 
+  .hero-subtitle {
+    font-size: var(--font-size-base);
+  }
+
+  .section-title {
+    font-size: var(--font-size-2xl);
+  }
+
   .header-split {
     grid-template-columns: 1fr;
   }
@@ -329,6 +337,15 @@
     flex-direction: column;
     text-align: center;
     gap: var(--spacing-lg);
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+
+  .cta-content h2 {
+    font-size: var(--font-size-xl);
+  }
+
+  .cta-content p {
+    font-size: var(--font-size-sm);
   }
 
   .process-step {

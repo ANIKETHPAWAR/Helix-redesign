@@ -302,4 +302,62 @@
   .services-grid {
     grid-template-columns: minmax(0, 1fr);
   }
+
+  .h360-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .sidebar-card {
+    padding: 1.5rem;
+  }
+
+  .sidebar-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .sidebar-card p {
+    font-size: 0.9rem;
+  }
+
+  .sidebar-metrics {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .compact-metric {
+    padding: var(--spacing-sm) !important;
+  }
+
+  .compact-metric .metric-number {
+    font-size: var(--font-size-lg) !important;
+  }
+
+  .compact-metric .metric-label {
+    font-size: 0.55rem;
+    letter-spacing: 0.5px;
+  }
+
+  .sidebar-cta {
+    padding: 1.5rem;
+  }
+
+  .sidebar-cta h3 {
+    font-size: 1.15rem;
+  }
+
+  .sidebar-cta p {
+    font-size: 0.85rem;
+  }
+
+  .cta-box-simple {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .cta-box-simple h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-box-simple p {
+    font-size: 1rem;
+  }
 }

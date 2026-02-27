@@ -161,6 +161,10 @@
         grid-template-columns: 1fr;
     }
 
+    .ss-grid-advisory {
+        grid-template-columns: 1fr;
+    }
+
     .services-showcase-section {
         padding: 4rem 0;
     }

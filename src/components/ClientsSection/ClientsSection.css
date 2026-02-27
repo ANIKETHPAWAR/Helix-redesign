@@ -8,7 +8,6 @@
         radial-gradient(at 98.5% 98.4%, #6F00FF 0px, transparent 50%) #000000;
     mix-blend-mode: var(--_gradient-blend-mode, normal);
     background-attachment: fixed;
-    background-size: cover;
     position: relative;
     overflow: hidden;
 }
@@ -116,6 +115,10 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .clients-section {
+        background-attachment: scroll;
+    }
+
     .marquee-track {
         gap: 2rem;
         animation-duration: 25s;

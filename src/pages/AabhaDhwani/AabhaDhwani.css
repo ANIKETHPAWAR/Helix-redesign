@@ -148,3 +148,17 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
+
+@media (max-width: 768px) {
+    .ad-services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ad-cta-box h2 {
+        font-size: 1.75rem;
+    }
+
+    .ad-cta-box {
+        padding: 2rem 1rem;
+    }
+}

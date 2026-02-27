@@ -67,10 +67,6 @@ function Infrastructure() {
             <div className="infra-img-col">
               <div className="image-wrapper glass-frame">
                 <img src={infraImg} alt="Infrastructure Project" />
-                <div className="floating-badge">
-                  <span className="badge-icon">🏗️</span>
-                  <span>Coordinated Execution</span>
-                </div>
               </div>
             </div>
           </div>
@@ -105,10 +101,6 @@ function Infrastructure() {
             <div className="infra-img-col">
               <div className="image-wrapper glass-frame">
                 <img src={consultImg} alt="Consulting and Strategy" />
-                <div className="floating-badge bottom-right">
-                  <span className="badge-icon">📈</span>
-                  <span>Governed Delivery</span>
-                </div>
               </div>
             </div>
           </div>
