@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
+import { ArrowUpRight } from 'lucide-react'
 import { Link, useLocation } from 'react-router-dom'
 import './Header.css'
-import logoHicpl from '../../assets/Logo-hicpl.jpeg'
+import logoHicpl from '../../assets/Logo-hicpl.png'
 import Container from '../common/Container/Container'
 import Button from '../common/Button/Button'
 
@@ -35,9 +36,9 @@ function Header() {
       <Container className="site-header-inner">
         <Link to="/" className="brand" aria-label="Helix Group" onClick={closeNav}>
           <img src={logoHicpl} alt="Helix Group" className="brand-logo" />
-          <div className="brand-text">
+          {/* <div className="brand-text">
             <span className="brand-title">Helix Group</span>
-          </div>
+          </div> */}
         </Link>
 
         <button
@@ -132,7 +133,7 @@ function Header() {
           </ul>
           <div className="nav-cta-wrapper">
             <Button to="/contact" variant="primary" onClick={closeNav} className="nav-cta-btn">
-              Start a Strategic Discussion
+              Start a Strategic Discussion <ArrowUpRight size={18} />
             </Button>
           </div>
         </nav>

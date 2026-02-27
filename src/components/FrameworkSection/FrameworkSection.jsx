@@ -1,4 +1,5 @@
 import React from 'react';
+import { ArrowUpRight } from 'lucide-react';
 import './FrameworkSection.css';
 import Container from '../common/Container/Container';
 import Button from '../common/Button/Button';
@@ -26,7 +27,7 @@ const FrameworkSection = () => {
                         </div>
 
                         <Button to="/contact" variant="primary" className="framework-btn">
-                            Start a Strategic Discussion
+                            Start a Strategic Discussion <ArrowUpRight size={18} />
                         </Button>
                     </div>
 
