@@ -54,7 +54,7 @@
 
   /* Layout */
   --container-max-width: 1200px;
-  --container-padding: 1rem;
+  --container-padding: 1.25rem;
   --header-height: 80px;
 
   /* Effects */
@@ -79,6 +79,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 html {
@@ -165,16 +167,24 @@ img {
 }
 
 .premium-gradient-bg {
-  background: radial-gradient(at 10% 25%, #02ACF7 0px, transparent 50%),
+  background: radial-gradient(at 50% 0%, #0D49FF 0px, transparent 60%),
+    radial-gradient(at 10% 25%, #02ACF7 0px, transparent 50%),
     radial-gradient(at 24% 82%, #0284C7 0px, transparent 50%),
     radial-gradient(at 12% 73%, #003EFA 0px, transparent 50%),
     radial-gradient(at 90% 36%, #0D49FF 0px, transparent 50%),
-    radial-gradient(at 98.5% 98.4%, #6F00FF 0px, transparent 50%) #000000;
+    radial-gradient(at 98.5% 98.4%, #6F00FF 0px, transparent 50%) #0a1628;
   mix-blend-mode: var(--_gradient-blend-mode);
   background-attachment: fixed;
-  background-size: cover;
   min-height: 100vh;
   width: 100%;
+}
+
+/* Fix: mobile browsers don't support background-attachment: fixed with
+   complex gradients — causes black/broken rendering on scroll */
+@media (max-width: 1024px) {
+  .premium-gradient-bg {
+    background-attachment: scroll;
+  }
 }
 
 .frosted-backdrop {

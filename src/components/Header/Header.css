@@ -297,6 +297,10 @@
     padding: 0.625rem 1.25rem;
   }
 
+  .nav-cta-wrapper {
+    display: none;
+  }
+
   /* Mobile Dropdown Overrides */
   .nav-item-dropdown {
     flex-direction: column;

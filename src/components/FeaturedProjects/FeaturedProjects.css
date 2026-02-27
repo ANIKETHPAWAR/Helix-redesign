@@ -242,6 +242,10 @@
         gap: 1rem;
     }
 
+    .featured-projects-grid {
+        grid-template-columns: 1fr;
+    }
+
     .view-all-link {
         width: 100%;
         justify-content: center;

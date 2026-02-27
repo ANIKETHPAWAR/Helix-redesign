@@ -108,3 +108,17 @@
     color: var(--color-text-light);
     margin-bottom: var(--spacing-xl);
 }
+
+@media (max-width: 768px) {
+    .labor-services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .labor-cta-box h2 {
+        font-size: 1.5rem;
+    }
+
+    .labor-cta-box {
+        padding: 2rem 1.5rem;
+    }
+}
