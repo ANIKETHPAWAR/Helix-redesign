@@ -1,4 +1,5 @@
 import React from 'react';
+import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import {
   DraftingCompass,
@@ -35,7 +36,9 @@ function Infrastructure() {
               Helix Infrastructure integrates development structuring, engineering governance, project management consulting, and project marketing into one governed framework — delivering predictable real estate outcomes for developers, landowners, and investors.
             </p>
             <div className="hero-actions">
-              <Button to="/contact" variant="primary">Start a Strategic Discussion</Button>
+              <Button to="/contact" variant="primary">
+                Start a Strategic Discussion <ArrowUpRight size={18} />
+              </Button>
             </div>
           </div>
         </Container>
@@ -186,7 +189,9 @@ function Infrastructure() {
             <h2>Structured Partnerships for Real Estate Development</h2>
             <p>Helix governs every engagement from feasibility through handover — delivering predictable outcomes across the development lifecycle.</p>
             <div className="cta-buttons">
-              <Button to="/contact" variant="primary">Start a Strategic Discussion</Button>
+              <Button to="/contact" variant="primary">
+                Start a Strategic Discussion <ArrowUpRight size={18} />
+              </Button>
               <Link to="/projects" className="secondary-link">View Portfolio &rarr;</Link>
             </div>
           </div>

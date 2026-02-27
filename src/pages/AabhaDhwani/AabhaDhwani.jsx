@@ -1,8 +1,12 @@
 import React from 'react';
+import { ArrowUpRight } from 'lucide-react';
 import Section from '../../components/common/Section/Section';
 import Container from '../../components/common/Container/Container';
 import Button from '../../components/common/Button/Button';
 import './AabhaDhwani.css';
+import ANDlogo from '../../assets/AND-logo.png';
+import BrandLogo from '../../components/common/BrandLogo/BrandLogo';
+
 
 function AabhaDhwani() {
     return (
@@ -10,7 +14,8 @@ function AabhaDhwani() {
             {/* Hero Section */}
             <Section className="ad-hero">
                 <Container>
-                    <p className="page-eyebrow badge-eyebrow">Aabha & Dhwani Creative Studios</p>
+                    <BrandLogo src={ANDlogo} alt="Aabha & Dhwani Logo" />
+                    {/* <p className="page-eyebrow badge-eyebrow">Aabha & Dhwani Creative Studios</p> */}
                     <h1 className="page-title">Real Estate Branding.<br />Strategic Market Positioning.</h1>
                     <p className="page-subtitle">
                         Most real estate marketing operates in isolation from engineering and construction timelines — leading to mispositioned launches, wasted budgets, and delayed absorption. Aabha & Dhwani integrates branding and marketing into the development lifecycle, ensuring every campaign aligns to project milestones.
@@ -70,7 +75,9 @@ function AabhaDhwani() {
                     <div className="ad-cta-box">
                         <h2>Governed Marketing for Real Estate Development</h2>
                         <p>Aabha & Dhwani integrates branding and marketing into the development lifecycle — ensuring every campaign is aligned, disciplined, and commercially accountable.</p>
-                        <Button to="/contact" variant="primary">Start a Strategic Discussion</Button>
+                        <Button to="/contact" variant="primary">
+                            Start a Strategic Discussion <ArrowUpRight size={18} />
+                        </Button>
                     </div>
                 </Container>
             </Section>

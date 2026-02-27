@@ -1,0 +1,368 @@
+/* ==========================================================================
+   Mr. Helix Mascot — Base + Pattern Styles
+   ========================================================================== */
+
+/* ---- Base ---- */
+.mr-helix {
+    display: block;
+    pointer-events: none;
+    user-select: none;
+    object-fit: contain;
+    flex-shrink: 0;
+    z-index: 2;
+}
+
+/* ---- Wrapper (figure) ---- */
+.mr-helix-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+    user-select: none;
+    flex-shrink: 0;
+    z-index: 2;
+}
+
+/* Inherit pattern positioning on the wrapper for abs-positioned patterns */
+.mr-helix-wrap--endorsement {
+    position: absolute;
+    bottom: -8px;
+    right: 24px;
+    z-index: 1;
+}
+
+.mr-helix-wrap--companion {
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    z-index: 3;
+}
+
+.mr-helix-wrap--watermark {
+    position: absolute;
+    right: -40px;
+    bottom: 0;
+    z-index: 0;
+}
+
+.mr-helix-wrap--accent {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    z-index: 0;
+}
+
+.mr-helix-wrap--standalone {
+    position: relative;
+    z-index: 1;
+}
+
+.mr-helix-wrap--guide {
+    margin-top: 1.5rem;
+}
+
+/* Wrapper positions */
+.mr-helix-wrap--left {
+    margin-right: auto;
+}
+
+.mr-helix-wrap--right {
+    margin-left: auto;
+}
+
+.mr-helix-wrap--center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Float animation on wrapper for standalone */
+.mr-helix-wrap--animate.mr-helix-wrap--standalone {
+    animation: mrHelixFloat 4s ease-in-out infinite;
+}
+
+.mr-helix-wrap--animate.mr-helix-wrap--companion,
+.mr-helix-wrap--animate.mr-helix-wrap--guide {
+    animation: mrHelixFloat 4s ease-in-out infinite;
+}
+
+/* ---- Name Badge ---- */
+.mr-helix-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family-display, 'Outfit', sans-serif);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #0284C7;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(224, 242, 254, 0.85));
+    border: 1px solid rgba(2, 132, 199, 0.2);
+    border-radius: 20px;
+    padding: 0.25rem 0.75rem;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow:
+        0 2px 8px rgba(2, 132, 199, 0.12),
+        0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 3;
+    transition: all 0.3s ease;
+}
+
+/* Badge sizes */
+.mr-helix-badge--sm {
+    font-size: 0.55rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 12px;
+}
+
+.mr-helix-badge--md {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.65rem;
+}
+
+.mr-helix-badge--lg {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+}
+
+.mr-helix-badge--xl {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.9rem;
+}
+
+/* Dark background variant — auto-detect via parent context */
+.hdf-header-mascot .mr-helix-badge,
+.cs-header-mascot .mr-helix-badge,
+.mascot-strip .mr-helix-badge {
+    color: #38bdf8;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(30, 58, 95, 0.8));
+    border-color: rgba(56, 189, 248, 0.25);
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(56, 189, 248, 0.1) inset;
+}
+
+/* ---- Sizes ---- */
+.mr-helix--sm {
+    height: 120px;
+}
+
+.mr-helix--md {
+    height: 180px;
+}
+
+.mr-helix--lg {
+    height: 240px;
+}
+
+.mr-helix--xl {
+    height: 320px;
+}
+
+/* ---- Positions ---- */
+.mr-helix--left {
+    margin-right: auto;
+}
+
+.mr-helix--right {
+    margin-left: auto;
+}
+
+.mr-helix--center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==========================================================================
+   PATTERN: Endorsement  —  CTA card accent, positioned absolute right
+   ========================================================================== */
+.mr-helix--endorsement {
+    position: absolute;
+    bottom: -8px;
+    right: 24px;
+    opacity: 0.18;
+    z-index: 1;
+}
+
+/* ==========================================================================
+   PATTERN: Companion  —  Peek from left edge of CTA box
+   ========================================================================== */
+.mr-helix--companion {
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    opacity: 0.92;
+    z-index: 3;
+    filter: drop-shadow(0 4px 24px rgba(0, 0, 0, 0.3));
+}
+
+/* ==========================================================================
+   PATTERN: Watermark  —  Large, faded background element
+   ========================================================================== */
+.mr-helix--watermark {
+    position: absolute;
+    right: -40px;
+    bottom: 0;
+    opacity: 0.06;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   PATTERN: Guide  —  Contextual companion in info columns
+   ========================================================================== */
+.mr-helix--guide {
+    opacity: 0.85;
+    filter: drop-shadow(0 2px 16px rgba(0, 0, 0, 0.18));
+    margin-top: 1.5rem;
+}
+
+/* ==========================================================================
+   PATTERN: Accent  —  Floating accent near content
+   ========================================================================== */
+.mr-helix--accent {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    opacity: 0.14;
+    z-index: 0;
+}
+
+/* ==========================================================================
+   PATTERN: Standalone  —  Clean, in-flow display (dedicated sections)
+   ========================================================================== */
+.mr-helix--standalone {
+    position: relative;
+    opacity: 1;
+    z-index: 1;
+    filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.25));
+}
+
+/* Float animation for standalone */
+.mr-helix--animate.mr-helix--standalone {
+    animation: mrHelixFloat 4s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+@keyframes mrHelixFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes mrHelixFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Float for companion & guide patterns */
+.mr-helix--animate.mr-helix--companion,
+.mr-helix--animate.mr-helix--guide {
+    animation: mrHelixFloat 4s ease-in-out infinite;
+}
+
+/* Fade-in for endorsement & accent */
+.mr-helix--animate.mr-helix--endorsement,
+.mr-helix--animate.mr-helix--accent {
+    animation: mrHelixFadeInUp 0.8s ease-out both;
+}
+
+/* ==========================================================================
+   Responsive  —  Hide on small screens, scale on tablet
+   ========================================================================== */
+@media (max-width: 480px) {
+    .mr-helix--sm {
+        height: 56px;
+    }
+
+    .mr-helix--md {
+        height: 72px;
+    }
+
+    .mr-helix--lg {
+        height: 96px;
+    }
+
+    .mr-helix--xl {
+        height: 120px;
+    }
+
+    .mr-helix--companion {
+        left: -6px;
+    }
+
+    .mr-helix--watermark {
+        right: -10px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .mr-helix--sm {
+        height: 80px;
+    }
+
+    .mr-helix--md {
+        height: 110px;
+    }
+
+    .mr-helix--lg {
+        height: 150px;
+    }
+
+    .mr-helix--xl {
+        height: 200px;
+    }
+
+    .mr-helix--companion {
+        left: -10px;
+    }
+
+    .mr-helix--watermark {
+        right: -20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .mr-helix--sm {
+        height: 100px;
+    }
+
+    .mr-helix--md {
+        height: 140px;
+    }
+
+    .mr-helix--lg {
+        height: 190px;
+    }
+
+    .mr-helix--xl {
+        height: 260px;
+    }
+}
+
+/* ---- Print: always hide ---- */
+@media print {
+    .mr-helix {
+        display: none !important;
+    }
+}

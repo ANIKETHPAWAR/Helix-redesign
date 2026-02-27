@@ -1,17 +1,22 @@
 import React from 'react';
+import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Section from '../../components/common/Section/Section';
 import Container from '../../components/common/Container/Container';
 import Button from '../../components/common/Button/Button';
 import { MetricCard } from '../../components/common/Card/Card';
 import './Helix360.css';
+import Helix360Logo from '../../assets/Helix-360-logo.png';
+import BrandLogo from '../../components/common/BrandLogo/BrandLogo';
+
 
 function Helix360() {
   return (
     <div className="premium-gradient-bg">
       <Section className="h360-header">
         <Container>
-          <p className="page-eyebrow badge-eyebrow">Helix 360</p>
+          <BrandLogo src={Helix360Logo} alt="Helix 360 Logo" />
+          {/* <p className="page-eyebrow badge-eyebrow">Helix 360</p> */}
           <h1 className="page-title">Where Civil Contractors Stop,<br />Helix 360 Takes Over</h1>
           <p className="page-subtitle">
             The finishing stage is where most real estate projects lose control — cost leakage, quality dilution, and timeline overruns. Helix 360 delivers integrated post-plaster finishing and MEP execution, governed by structured quality control and coordinated vendor management within the development lifecycle.
@@ -65,7 +70,9 @@ function Helix360() {
             <div className="sidebar-cta">
               <h3>Integrate Finishing into Your Lifecycle</h3>
               <p className="text-sm mb-md text-muted">Helix 360 connects directly to the Helix Development Framework — ensuring your project's finishing phase is governed with the same discipline as structuring and engineering.</p>
-              <Link to="/contact" className="sidebar-link">Start a Strategic Discussion &rarr;</Link>
+              <Link to="/contact" className="sidebar-link">
+                Start a Strategic Discussion <ArrowUpRight size={18} style={{ display: 'inline-block', verticalAlign: 'middle', marginLeft: '4px' }} />
+              </Link>
             </div>
           </div>
         </div>
@@ -75,7 +82,9 @@ function Helix360() {
         <div className="cta-box-simple">
           <h2>Structured Finishing Execution for Real Estate</h2>
           <p>Helix 360 delivers governed post-plaster execution — coordinated, accountable, and integrated into the development lifecycle.</p>
-          <Button to="/contact" variant="primary">Start a Strategic Discussion</Button>
+          <Button to="/contact" variant="primary">
+            Start a Strategic Discussion <ArrowUpRight size={18} />
+          </Button>
         </div>
       </Section>
     </div>

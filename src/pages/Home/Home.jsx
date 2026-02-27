@@ -1,4 +1,5 @@
 import './Home.css'
+import { ArrowUpRight } from 'lucide-react';
 import Section from '../../components/common/Section/Section'
 import Container from '../../components/common/Container/Container'
 import Button from '../../components/common/Button/Button'
@@ -157,7 +158,9 @@ function Home() {
             <p>Helix Group partners exclusively with developers, landowners, and investors to deliver governed real estate outcomes.</p>
           </div>
           <div className="cta-actions">
-            <Button to="/contact" variant="primary">Start a Strategic Discussion</Button>
+            <Button to="/contact" variant="primary">
+              Start a Strategic Discussion <ArrowUpRight size={24} />
+            </Button>
           </div>
         </div>
       </Section >

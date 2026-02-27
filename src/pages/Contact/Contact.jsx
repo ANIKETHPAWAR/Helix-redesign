@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import { ArrowUpRight } from 'lucide-react'
 import ReCAPTCHA from 'react-google-recaptcha'
 import Section from '../../components/common/Section/Section'
 import Container from '../../components/common/Container/Container'
@@ -199,7 +200,7 @@ function Contact() {
 
                 <div className="form-actions">
                   <Button type="submit" variant="primary" disabled={isSubmitting}>
-                    {isSubmitting ? 'Submitting...' : 'Start a Strategic Discussion'}
+                    {isSubmitting ? 'Submitting...' : <>Submit Project Enquiry <ArrowUpRight size={18} /></>}
                   </Button>
                   {status && (
                     <span className={`submit-status ${statusType === 'error' ? 'error' : ''}`}>

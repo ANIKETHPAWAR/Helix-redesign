@@ -48,11 +48,27 @@
     padding: 0 2rem;
 }
 
-/* --- Section Header --- */
+/* --- Section Header (side-by-side: text + mascot) --- */
 .cs-header {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
     margin-bottom: 6rem;
     position: relative;
+}
+
+.cs-header-text {
+    text-align: left;
+    flex: 1;
+    max-width: 620px;
+}
+
+.cs-header-mascot {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cs-eyebrow {
@@ -289,6 +305,21 @@
 
     .cs-header {
         margin-bottom: 4rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cs-header-text {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .cs-header-mascot {
+        order: -1;
+    }
+
+    .cs-header-mascot .mr-helix {
+        height: 100px;
     }
 
     .cs-title {

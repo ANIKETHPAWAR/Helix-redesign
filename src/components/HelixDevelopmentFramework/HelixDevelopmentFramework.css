@@ -31,12 +31,28 @@
     pointer-events: none;
 }
 
-/* ---- Header ---- */
+/* ---- Header (side-by-side: text + mascot) ---- */
 .hdf-header {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
     margin-bottom: 5rem;
     position: relative;
     z-index: 1;
+}
+
+.hdf-header-text {
+    text-align: left;
+    flex: 1;
+    max-width: 620px;
+}
+
+.hdf-header-mascot {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hdf-eyebrow {
@@ -409,6 +425,21 @@
 
     .hdf-header {
         margin-bottom: 3.5rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hdf-header-text {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .hdf-header-mascot {
+        order: -1;
+    }
+
+    .hdf-header-mascot .mr-helix {
+        height: 100px;
     }
 
     /* Stack vertically on tablet/mobile */

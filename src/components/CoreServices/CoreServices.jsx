@@ -1,6 +1,7 @@
 import React from 'react';
 import { Ruler, HardHat, TrendingUp, ArrowRight } from 'lucide-react';
 import Container from '../common/Container/Container';
+import MrHelix from '../common/MrHelix/MrHelix';
 import './CoreServices.css';
 
 const CoreServices = () => {
@@ -26,11 +27,16 @@ const CoreServices = () => {
         <section className="core-services-section">
             <Container>
                 <div className="cs-header">
-                    <span className="cs-eyebrow">Our Expertise</span>
-                    <h2 className="cs-title">Core Services</h2>
-                    <p className="cs-subtitle">
-                        Helix integrates advisory and execution across the full real estate development lifecycle — from feasibility through market-ready delivery.
-                    </p>
+                    <div className="cs-header-text">
+                        <span className="cs-eyebrow">Our Expertise</span>
+                        <h2 className="cs-title">Core Services</h2>
+                        <p className="cs-subtitle">
+                            Helix integrates advisory and execution across the full real estate development lifecycle — from feasibility through market-ready delivery.
+                        </p>
+                    </div>
+                    <div className="cs-header-mascot">
+                        <MrHelix variant={2} size="xl" pattern="standalone" animate={true} />
+                    </div>
                 </div>
 
                 <div className="cs-grid">
