@@ -6,6 +6,11 @@
   padding: 3rem 0 1.7rem;
 }
 
+.premium-gradient-bg .page-header {
+  padding-bottom: var(--spacing-xl);
+  padding-top: var(--spacing-xl);
+}
+
 .page-eyebrow {
   font-size: 0.78rem;
   text-transform: uppercase;
