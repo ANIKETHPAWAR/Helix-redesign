@@ -13,7 +13,7 @@ import schoolMysoreImg from '../../assets/School-Building-Mysore.jpeg';
 import commercialBangaloreImg from '../../assets/Commercial-Project-Banglore.png';
 import ladiesHostelImg from '../../assets/Ladies-Hostel-Building-Medchal-Hyd.png';
 import schoolShimogaPngImg from '../../assets/School-Building-Shimoga.png';
-import jbSereneCityImg from '../../assets/JB-Serene-City-Ibrahimpatnam-HYD.png';
+import jbSereneCityImg from '../../assets/JB-Serene-City-Ibrahimpatnam-Hyd.png';
 import aksharaSchoolImg from '../../assets/Akshara.jpg';
 import hth from '../../assets/HTH.png';
 import ASC from '../../assets/ASC.jpeg';
