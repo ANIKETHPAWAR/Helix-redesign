@@ -154,6 +154,10 @@
   height: 100%;
 }
 
+.info-card .btn-secondary {
+  margin-top: var(--spacing-lg);
+}
+
 .info-card h3 {
   color: var(--color-primary);
   margin-bottom: var(--spacing-xs);

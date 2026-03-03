@@ -2,6 +2,17 @@
 .projects-page {
   position: relative;
   min-height: 100vh;
+  background-color: #FAF9F6;
+}
+
+.projects-page .section {
+  padding: var(--spacing-xl) 0;
+}
+
+.projects-page .page-header {
+
+  padding-bottom: var(--spacing-xl);
+  padding-top: var(--spacing-xl);
 }
 
 /* Add subtle texture/noise overlay */

@@ -5,7 +5,7 @@ import { ProjectCard } from '../common/Card/Card';
 import './FeaturedProjects.css';
 
 import hariniImg from '../../assets/Harini-Mansion-Medipally-Hyd.png';
-import homeTownImg from '../../assets/Home-Town-Heights-Yapral, Hyd.png';
+import homeTownImg from '../../assets/HTH.png';
 import parkResidencyImg from '../../assets/The-Park-Residency-Saket-Township- Hyd.png';
 
 const FeaturedProjects = () => {
@@ -22,13 +22,10 @@ const FeaturedProjects = () => {
             image: hariniImg
         },
         {
-            title: "Vayun Meadows",
-            location: "Yapral, Hyderabad",
-            description: "Scope of work: Design, Construction and Sales of 50 Apartments in 2500 Sq.Yds totalling to 79,670 Sq. Ft.",
-            metrics: {
-                units: "50 Apts",
-                area: "2500 Sq.Yds"
-            },
+            title: "Home Town Heights",
+            location: "Telangana (Yapral)",
+            description: "Scope of work: Design and Sales of Residential Apartment in 1 acre 9 guntas with 1,92,000 sft at Home Town Heights, Kowkoor, Yapral, Secunderabad.",
+            metrics: { Area: "1 acre 9 guntas", type: "Residential" },
             image: homeTownImg
         },
         {

@@ -108,14 +108,14 @@
     justify-content: center;
     text-align: center;
     background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(41, 41, 41, 0.2);
     /* Assuming dark background usually */
     backdrop-filter: blur(10px);
     cursor: pointer;
 }
 
 .metric-card:hover {
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(252, 248, 248, 0.2);
     /* Hint of brand color */
 }
 
