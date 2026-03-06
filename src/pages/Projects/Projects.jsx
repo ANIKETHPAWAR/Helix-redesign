@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Container from '../../components/common/Container/Container';
-import { ProjectCard } from '../../components/common/Card/Card';
+import { ProjectCard, ProjectCardDark } from '../../components/common/Card/Card';
 import './Projects.css';
 
 import hariniImg from '../../assets/Harini-Mansion-Medipally-Hyd.png';
@@ -102,7 +102,7 @@ function Projects() {
         title: "JB Serene City",
         location: "Telangana (Ibrahimpatnam)",
         description: "Scope of work: Construction of 340 villas in Ibrahimpatnam sizes ranging from 3000 sft to 4000 sft",
-        metrics: { units: "340 Villas", area: "Ibrahimpatnam" },
+        metrics: { units: "340 Villas", },
         image: jbSereneCityImg
       },
       {
@@ -144,21 +144,21 @@ function Projects() {
         title: "Sree Nivasam",
         location: "Telangana (Piglipur, Abdullapurmet)",
         description: "Scope of work: Design, Construction and Sales of 82 Custom built Villas at Sree Nivasam, Piglipur, Abdullapurmet.",
-        metrics: { units: "82 Villas", area: "Piglipur, Abdullapurmet" },
+        metrics: { units: "82 Villas", },
         image: snImg
       },
       {
         title: "TRR Highness Villas",
         location: "Telangana (Yellareddyguda, Kapra)",
         description: "Scope of work:Design and Sales of 46 Villas at TRR Highness Kanishka Villas, Yellareddyguda, Kapra, Hyderabad. ",
-        metrics: { units: "46 Villas", area: "Yellareddyguda, Kapra" },
+        metrics: { units: "46 Villas", },
         image: trrImg
       },
       {
         title: "Botek Factory",
         location: "Telangana (Adibatla, Ibrahimpatnam)",
         description: "Scope of work:Design and Construction of Botek Factory at Adibatla, Ibrahimpatnam.",
-        metrics: { units: "1", area: "Adibatla, Ibrahimpatnam" },
+        metrics: { units: "1", },
         image: botekImg
       },
     ],
@@ -261,14 +261,24 @@ function Projects() {
           {/* Grid */}
           <div className="project-grid">
             {projects[activeTab].map((project, index) => (
-              <ProjectCard
-                key={index}
-                title={project.title}
-                location={project.location}
-                description={project.description}
-                metrics={project.metrics}
-                image={project.image}
-              />
+              activeTab === 'completed' ? (
+                <ProjectCard
+                  key={index}
+                  title={project.title}
+                  location={project.location}
+                  description={project.description}
+                  metrics={project.metrics}
+                  image={project.image}
+                />
+              ) : (
+                <ProjectCardDark
+                  key={index}
+                  title={project.title}
+                  location={project.location}
+                  description={project.description}
+                  metrics={project.metrics}
+                />
+              )
             ))}
           </div>
 

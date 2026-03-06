@@ -19,7 +19,7 @@ function Footer() {
               title="Back to Top"
             >
               <img src={logoHicpl} alt="Helix Group" className="footer-logo" />
-              <span className="footer-brand-title">Helix Group</span>
+              <span className="footer-brand-title">Helix Infrastructure Consultants Pvt Ltd.</span>
             </div>
             <p className="footer-mission">
               Structured development. Governed engineering. Predictable delivery.<br />
