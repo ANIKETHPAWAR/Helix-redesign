@@ -14,9 +14,9 @@ function LaborPro() {
                 <Container>
                     <BrandLogo src={LaborproLogo} alt="LaborPro Logo" />
                     {/* <p className="page-eyebrow badge-eyebrow">LaborPro Integration</p> */}
-                    <h1 className="page-title">Structured Workforce Deployment<br />for Real Estate.</h1>
+                    <h1 className="page-title">Workforce Operations Platform</h1>
                     <p className="page-subtitle">
-                        Workforce bottlenecks cause unpredictable delays, safety risks, and cost escalations on real estate sites. LaborPro provides structured manpower deployment and operational coordination — integrated into the Helix Development Framework to ensure governed, predictable site operations.
+                        Structured workforce management and operational deployment across real estate, manufacturing, logistics, and other workforce-intensive sectors. Workforce bottlenecks cause unpredictable delays, safety risks, and cost escalations. LaborPro provides structured manpower deployment and operational coordination — integrated into the Helix Development Platform to ensure governed, predictable business operations.
                     </p>
                 </Container>
             </Section>
@@ -26,28 +26,28 @@ function LaborPro() {
                 <Container>
                     <div className="labor-content-grid">
                         <div className="labor-intro">
-                            <h2>Disciplined Workforce Solutions</h2>
+                            <h2>Workforce Deployment Systems</h2>
                             <p className="text-body">
-                                Most developers manage labour through informal networks — leading to inconsistent quality, compliance gaps, and unpredictable site productivity. LaborPro integrates workforce deployment into Phase 3 (Coordinated Execution) of the Helix Development Framework, ensuring every site operates with governed, reliable manpower.
+                                Structured deployment of skilled and semi-skilled workforce across construction, industrial, logistics, and operational environments — governed through productivity monitoring, safety compliance, and disciplined workforce coordination.
                             </p>
                         </div>
 
                         <div className="labor-services-grid">
                             <div className="labor-service-card">
-                                <h3>Construction Manpower Deployment</h3>
-                                <p>Skilled and unskilled labour for real estate construction sites — governed for productivity, safety compliance, and schedule adherence.</p>
+                                <h3>Operational Workforce Coordination</h3>
+                                <p>Site-level and operational workforce coordination aligned with project schedules, manufacturing operations, logistics activities, and institutional environments requiring organized manpower deployment.</p>
                             </div>
                             <div className="labor-service-card">
                                 <h3>Site Operations Coordination</h3>
                                 <p>Structured site-level coordination aligned to project milestones and the Helix execution framework.</p>
                             </div>
                             <div className="labor-service-card">
-                                <h3>Facility & Security Staffing</h3>
-                                <p>Trained personnel for real estate facility management, housekeeping, and governed site security operations.</p>
+                                <h3> Facility & Infrastructure Support Workforce</h3>
+                                <p> Deployment of trained personnel supporting facility operations including maintenance support, housekeeping services, and governed security coordination across commercial, residential, industrial, and institutional environments.</p>
                             </div>
                             <div className="labor-service-card">
-                                <h3>Post-Construction Support Staff</h3>
-                                <p>Coordinated staffing for governed handover operations, maintenance teams, and post-delivery support.</p>
+                                <h3>Operational & Post-Delivery Support Teams</h3>
+                                <p> Coordinated workforce deployment supporting operational continuity, maintenance activities, logistics operations, and post-completion support across multiple workforce-intensive sectors.</p>
                             </div>
                         </div>
                     </div>

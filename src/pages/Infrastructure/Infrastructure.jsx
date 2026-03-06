@@ -32,8 +32,10 @@ function Infrastructure() {
           <div className="infra-hero-content">
             <p className="page-eyebrow badge-eyebrow">Helix Infrastructure</p>
             <h1 className="page-title">Structured Development. <br />Predictable Outcomes.</h1>
+            <h3>Supporting the marketing of over 10,000 residential units across multiple developments.</h3>
+            <br />
             <p className="page-subtitle">
-              Helix Infrastructure integrates development structuring, engineering governance, project management consulting, and project marketing into one governed framework — delivering predictable real estate outcomes for developers, landowners, and investors.
+              Helix Infrastructure integrates development structuring, engineering governance, project management consulting, and real estate project marketing into one governed framework — delivering predictable real estate outcomes for developers, landowners, and investors.
             </p>
             <div className="hero-actions">
               <Button to="/contact" variant="primary">

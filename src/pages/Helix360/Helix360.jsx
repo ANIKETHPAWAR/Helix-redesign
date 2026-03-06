@@ -28,7 +28,7 @@ function Helix360() {
         <div className="h360-grid">
           {/* Main Content */}
           <div className="h360-content">
-            <h2>Integrated Finishing Services</h2>
+            <h2>Integrated Finishing & MEP Execution</h2>
             <p className="text-body mb-xl">
               Developers routinely lose 15–20% of project budgets during post-plaster stages due to fragmented vendor coordination and absent quality governance. Helix 360 provides single-point accountability — integrating finishing, MEP, and vendor management into one governed execution framework aligned to Phase 4 of the Helix Development Lifecycle.
             </p>
@@ -47,7 +47,7 @@ function Helix360() {
                 <h3>Electrical & Plumbing MEP Execution</h3>
               </div>
               <div className="service-item">
-                <h3>Specialized Building Product Integration</h3>
+                <h3>Any Other Custom Designed Solutions</h3>
               </div>
             </div>
 
