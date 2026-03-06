@@ -226,7 +226,7 @@ function Projects() {
       <section className="page-header">
         <Container>
           <p className="page-eyebrow">Our Portfolio</p>
-          <h1 className="page-title">Executed at Scale. Delivered on Ground.</h1>
+          <h1 className="page-title">Executed at Scale.<br /> Delivered on Ground.</h1>
           <p className="page-subtitle">
             From residential townships to institutional campuses, our portfolio demonstrates proven execution capability.
           </p>
