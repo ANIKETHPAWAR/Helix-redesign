@@ -79,7 +79,7 @@ function Contact() {
 
   const handleWhatsAppClick = () => {
     const phone = "918885028100" // Replace with real number
-    const message = "Hi Helix team, I'm reaching out via the website contact page."
+    const message = "Hello, I would like to discuss a real estate development project."
     const url = `https://wa.me/${encodeURIComponent(phone)}?text=${encodeURIComponent(message)}`
     window.open(url, "_blank", "noopener")
   }
@@ -88,11 +88,10 @@ function Contact() {
     <div className="premium-gradient-bg">
       <Section className="contact-header">
         <Container>
-          <p className="page-eyebrow">Contact</p>
-          <h1 className="page-title">Start a Strategic Discussion</h1>
+
+          <h1 className="page-title">Start a Structured Project Discussion</h1>
           <p className="page-subtitle">
-            Share your development requirements and our team will respond with a structured assessment
-            and recommended next steps for your real estate project.
+            This form is intended for real estate development enquiries. Please share basic project details so our team can review and respond appropriately.
           </p>
 
           <div className="trust-disclaimer">
@@ -169,10 +168,11 @@ function Contact() {
                     value={formData.service}
                     onChange={handleChange}
                   >
-                    <option value="">Select a service...</option>
-                    <option value="infrastructure">Infrastructure Delivery</option>
-                    <option value="helix360">Helix 360 Finishing</option>
-                    <option value="consulting">Strategic Consulting</option>
+
+                    <option value="Helix Infrastructure Consultants Pvt Ltd">Helix Infrastructure Consultants Pvt Ltd</option>
+                    <option value="Helix 360">Helix 360</option>
+                    <option value="LaborPro">LaborPro</option>
+                    <option value="Abha N Dhwani Creative Studios">Abha N Dhwani Creative Studios</option>
                   </select>
                 </div>
 

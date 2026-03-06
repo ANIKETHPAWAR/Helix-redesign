@@ -2,7 +2,7 @@ import './WhatsAppFloat.css'
 
 function WhatsAppFloat() {
   const phone = "918885028100"
-  const message = "Hi Helix team, I'd like to discuss a B2B infrastructure / real estate requirement."
+  const message = "Hello, I would like to discuss a real estate development project."
 
   const handleClick = () => {
     const url = `https://wa.me/${encodeURIComponent(phone)}?text=${encodeURIComponent(message)}`

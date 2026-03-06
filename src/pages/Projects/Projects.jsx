@@ -22,6 +22,7 @@ import vmImg from '../../assets/VM.jpg';
 import snImg from '../../assets/SN.jpg';
 import trrImg from '../../assets/TRR.png';
 import botekImg from '../../assets/BF.jpg';
+import s2Img from '../../assets/Shimoga-2.jpg';
 function Projects() {
   const [activeTab, setActiveTab] = useState('completed');
 
@@ -39,7 +40,7 @@ function Projects() {
         location: "Yapral, Hyderabad",
         description: "Scope of work: Design, Construction and Sales of 50 Apartments in 2500 Sq.Yds totalling to 79,670 Sq. Ft.",
         metrics: { units: "50 Apts", area: "2500 Sq.Yds" },
-        image: homeTownImg
+        image: vmImg
       },
       {
         title: "The Park Residency Apartments",
@@ -57,21 +58,21 @@ function Projects() {
       },
       {
         title: "Good Shepherd School",
-        location: "Telangana (Raichur)",
+        location: "Karnataka (Raichur)",
         description: "Scope of work: Identification of land, Design and Construction of School Building in 4 acres with 10,000 sft at Raichur.",
         metrics: { area: "4 Acres", type: "Institutional" },
         image: schoolShimogaImg
       },
       {
         title: "Good Shepherd High School",
-        location: "Telangana (Yelburga)",
+        location: "Karnataka (Yelburga)",
         description: "Scope of work: Identification of land, Design and Construction of School Building in 3.5 acres with 10,000 sft at Yelburga.",
         metrics: { area: "3.5 Acres", type: "Institutional" },
         image: schoolYelburgaImg
       },
       {
         title: "School Building",
-        location: "Telangana (Mysore)",
+        location: "Mysore",
         description: "Scope of work: Identification of land, Design and Construction of School Building in 3.5 acres with 10,000 sft at Mysore",
         metrics: { area: "3.5 Acres", type: "Institutional" },
         image: schoolMysoreImg
@@ -95,7 +96,7 @@ function Projects() {
         location: "Telangana (Shimoga)",
         description: "Scope of work: Identification of land, Design and Construction of School Building in 3.6 acres with 10,000 sft at Shimoga.",
         metrics: { area: "3.6 Acres", type: "Institutional" },
-        image: schoolShimogaImg
+        image: s2Img
       },
       {
         title: "JB Serene City",
@@ -163,17 +164,22 @@ function Projects() {
     ],
     in_progress: [
       {
-        title: "Christian Charitable Trust",
-        location: "Telangana ",
-        description: "Ongoing Design and Construction of Hostel Building in 800 Sq.Yds at KLR NJR Layout, Medchal totalling to 23600 Sq. Ft.",
-        metrics: { area: "800 Sq.Yds", status: "Structure Complete" },
+        title: "Green Oaks",
+        location: "Telangana (Cherlapally)",
+        description: "Construction of Villas at Green Oaks Cherlapally.",
+
 
       },
       {
-        title: "Christian Charitable Trust",
-        location: "Telangana ",
-        description: "Design and Construction of School Building in 3.6 acres at Shimoga totalling to 10,000 Sq. Ft.",
-        metrics: { area: "3.6 acres", status: "Structure Complete" },
+        title: "Commercial Building",
+        location: "Telangana (Kokapet)",
+        description: "Designing of 10 floor commercial building at Kokapet for Harish Reddy.",
+
+      },
+      {
+        title: "Office Building",
+        location: "Telangana",
+        description: "Design and construction of G+5 Office building for Cloudernetes IT Solutions",
 
       }
     ],
@@ -194,7 +200,7 @@ function Projects() {
       {
         title: "The Elysium",
         location: "Mangalpalle, Adibhatla",
-        description: "Design, Construction and Sales of 187 Villas, 1 million sft Commercial space and 1 million sft Residential space.",
+        description: "Design, Construction and Sales of 187 Villas and 2,50,000 sft commercial space.",
         metrics: { units: "187 Villas", type: "Residential" }
       },
       {
@@ -202,8 +208,14 @@ function Projects() {
         location: "Narayanpet, Telangana",
         description: "Design and Construction of 10,000 sft School Building in 3.6 acres at Narayanpet, Telangana.",
         metrics: { area: "3.6 Acres", type: "Institutional" },
-        image: schoolYelburgaImg
 
+
+      },
+      {
+        title: "Residential Apartments",
+        location: "Hanumakonda",
+        description: "Sales and Marketing of 170 apartments at Hanumakonda.",
+        metrics: { units: "170 Apartments", type: "Residential" }
       }
     ]
   };
