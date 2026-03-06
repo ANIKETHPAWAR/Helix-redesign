@@ -3,7 +3,6 @@ import { ArrowUpRight } from 'lucide-react'
 import { Link, useLocation } from 'react-router-dom'
 import './Header.css'
 import logoHicpl from '../../assets/Logo-hicpl.png'
-import Container from '../common/Container/Container'
 import Button from '../common/Button/Button'
 
 function Header() {
@@ -33,7 +32,7 @@ function Header() {
 
   return (
     <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
-      <Container className="site-header-inner">
+      <div className="site-header-inner">
         <Link to="/" className="brand" aria-label="Helix Group" onClick={closeNav}>
           <img src={logoHicpl} alt="Helix Group" className="brand-logo" />
           {/* <div className="brand-text">
@@ -74,7 +73,7 @@ function Header() {
             {/* Ecosystem Dropdown */}
             <li className="nav-item-dropdown">
               <div className="nav-link nav-dropdown-trigger">
-                Ecosystem
+                The Helix Development Platform
                 <svg className="dropdown-arrow" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
@@ -137,7 +136,7 @@ function Header() {
             </Button>
           </div>
         </nav>
-      </Container>
+      </div>
     </header>
   )
 }

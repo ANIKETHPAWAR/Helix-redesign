@@ -22,9 +22,9 @@ function About() {
       initials: "SR"
     },
     {
-      name: "Mohammed Mirza Baig",
+      name: "ADS Kali Prasad",
       position: "Chief Accountant",
-      initials: "MB"
+      initials: "AKP"
     },
     {
       name: "Shaalika",
@@ -32,9 +32,9 @@ function About() {
       initials: "S"
     },
     {
-      name: "V Nagendra",
+      name: "Sai Kumar",
       position: "Head Systems & Web Content Management",
-      initials: "VN"
+      initials: "SK"
     },
     {
       name: "Bharath S R",
@@ -64,7 +64,8 @@ function About() {
     },
     {
       quote: "Working with the whole team of Helix was a great experience! You put yourself in the hands of these brilliant professionals and they go about doing their job superbly. At the other side of the experience you’re left in a calm, relaxed state. Great marketing strategies and exceptional sales.  No hassle, no need to worry about any of the details as everything is taken care of. Expert guidance; great customer care; awesome marketing.We look forward to many more associations with Helix in the future.",
-      author: "Harini Mansion",
+      author: "Srinivas & Gyaneshwar",
+      role: "Directors Harini Mansion Pvt Ltd",
 
     }
   ]
@@ -91,10 +92,9 @@ function About() {
       <section className="page-header">
         <div className="container">
           <p className="page-eyebrow">About Helix</p>
-          <h1 className="page-title">One Framework. End-to-End Accountability.</h1>
+          <h1 className="page-title">Helix Philosophy</h1>
           <p className="page-subtitle">
-            Helix Group is a structured real estate development partner integrating engineering governance,
-            project management, coordinated execution, and market-ready delivery under one accountable framework.
+            Helix was built on a simple belief: real estate projects succeed when they are structured well from the beginning. Many developments struggle not because of lack of opportunity, but because of fragmented planning, unclear responsibilities, and uncoordinated execution. Helix was created to bring structure and accountability across the development lifecycle. Our approach integrates development structuring, engineering governance, coordinated execution, workforce systems, and project marketing into a single disciplined framework. We work selectively with partners who value clarity, reliability, and long-term reputation in project delivery.
           </p>
         </div>
       </section>

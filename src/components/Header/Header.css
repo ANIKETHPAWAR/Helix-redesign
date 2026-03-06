@@ -22,7 +22,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--spacing-2xl);
+  gap: var(--spacing-lg);
+  width: 100%;
+  padding: 0 1.5rem;
 }
 
 .brand {
@@ -52,14 +54,14 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: var(--spacing-2xl);
+  gap: var(--spacing-lg);
   margin-left: auto;
 }
 
 .nav-list {
   display: flex;
   align-items: center;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-md);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -217,8 +219,8 @@
   white-space: nowrap;
 }
 
-/* ---- Intermediate desktop: tighten spacing so everything fits ---- */
-@media (max-width: 1280px) {
+/* ---- Wide desktop: first tightening pass ---- */
+@media (max-width: 1440px) {
   .site-header-inner {
     gap: var(--spacing-lg);
   }
@@ -242,8 +244,37 @@
   }
 }
 
+/* ---- Intermediate desktop: tighten further so everything fits ---- */
+@media (max-width: 1280px) {
+  .site-header-inner {
+    gap: var(--spacing-sm);
+  }
+
+  .nav {
+    gap: var(--spacing-sm);
+  }
+
+  .nav-list {
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    font-size: 0.7rem;
+    letter-spacing: 0.1px;
+  }
+
+  .nav-cta-btn {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  .brand-logo {
+    height: 38px;
+  }
+}
+
 /* ---- Mobile / Tablet navigation (hamburger) ---- */
-@media (max-width: 1080px) {
+@media (max-width: 1200px) {
   .site-header {
     position: fixed;
     top: 0;
