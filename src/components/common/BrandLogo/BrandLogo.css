@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     /* Centered with prominent radial-gradient background */
-    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.12) 0%, rgba(2, 172, 247, 0.06) 50%, transparent 80%);
+    background: whitesmoke;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.12);
