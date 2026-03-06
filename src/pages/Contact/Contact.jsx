@@ -168,7 +168,7 @@ function Contact() {
                     value={formData.service}
                     onChange={handleChange}
                   >
-
+                    <option value="" disabled>Select a service...</option>
                     <option value="Helix Infrastructure Consultants Pvt Ltd">Helix Infrastructure Consultants Pvt Ltd</option>
                     <option value="Helix 360">Helix 360</option>
                     <option value="LaborPro">LaborPro</option>
