@@ -68,7 +68,7 @@ function Header() {
                 className={`nav-link ${isActive('/infrastructure') ? 'nav-link--active' : ''}`}
                 onClick={closeNav}
               >
-                Infrastructure
+                Helix  Infrastructure
               </Link>
             </li>
             {/* Ecosystem Dropdown */}

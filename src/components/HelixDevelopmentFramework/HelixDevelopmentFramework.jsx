@@ -1,7 +1,7 @@
 import React from 'react';
 import { Compass, Shield, Hammer, Rocket, ChevronRight } from 'lucide-react';
 import Container from '../common/Container/Container';
-import MrHelix from '../common/MrHelix/MrHelix';
+
 import './HelixDevelopmentFramework.css';
 
 const phases = [
@@ -69,9 +69,6 @@ const HelixDevelopmentFramework = () => {
                         <p className="hdf-main-subtitle">
                             Four structured phases that govern every Helix engagement — from opportunity assessment to market-ready delivery.
                         </p>
-                    </div>
-                    <div className="hdf-header-mascot">
-                        <MrHelix variant={1} size="xl" pattern="standalone" animate={true} />
                     </div>
                 </div>
 

@@ -1,5 +1,6 @@
 import Section from '../common/Section/Section'
 import Container from '../common/Container/Container'
+import MrHelix from '../common/MrHelix/MrHelix'
 import { ShieldCheck, GitMerge, Users, BarChart3, ArrowRight } from 'lucide-react'
 import './ProofStatements.css'
 
@@ -34,13 +35,18 @@ function ProofStatements() {
   return (
     <Section className="proof-section differentiator-section">
       <Container>
-        <div className="proof-header text-center">
-          <span className="diff-eyebrow">What Sets Helix Apart</span>
-          <h2 className="proof-title">A Clear Differentiator</h2>
-          <p className="proof-subtitle">
-            Helix doesn't just consult — it structures, governs, and delivers real estate projects
-            with end-to-end accountability that no fragmented vendor model can match.
-          </p>
+        <div className="proof-header-row">
+          <div className="proof-header text-center">
+            <span className="diff-eyebrow">What Sets Helix Apart</span>
+            <h2 className="proof-title">A Clear Differentiator</h2>
+            <p className="proof-subtitle">
+              Helix doesn't just consult — it structures, governs, and delivers real estate projects
+              with end-to-end accountability that no fragmented vendor model can match.
+            </p>
+          </div>
+          <div className="proof-mascot">
+            <MrHelix variant={1} size="xl" pattern="standalone" animate={true} />
+          </div>
         </div>
 
         <div className="diff-grid">

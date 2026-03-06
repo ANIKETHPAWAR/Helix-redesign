@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
-import logoHicpl from '../../assets/Logo-hicpl.jpeg';
+import logoHicpl from '../../assets/Logo-hicpl.png';
 import Container from '../common/Container/Container';
 
 function Footer() {

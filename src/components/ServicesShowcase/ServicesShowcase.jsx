@@ -16,8 +16,8 @@ const ServicesShowcase = () => {
             icon: <Compass size={24} />
         },
         {
-            title: "Project Marketing",
-            description: "Disciplined marketing and sales execution aligned to development lifecycle milestones.",
+            title: "Engineering, Construction & Project Governance",
+            description: "Governed architectural design, structural engineering, construction execution oversight, and disciplined project management across real estate developments.",
             icon: <Megaphone size={24} />
         }
     ];

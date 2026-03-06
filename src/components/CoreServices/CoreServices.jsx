@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Ruler, HardHat, TrendingUp, ArrowRight } from 'lucide-react';
 import Container from '../common/Container/Container';
 import MrHelix from '../common/MrHelix/MrHelix';
@@ -9,17 +10,20 @@ const CoreServices = () => {
         {
             icon: <Ruler strokeWidth={1.5} size={40} />,
             title: "Development Advisory",
-            description: "Structured land evaluation, feasibility analysis, project planning, and regulatory coordination for real estate."
+            description: "Structured land evaluation, feasibility analysis, project planning, and regulatory coordination for real estate.",
+            link: "/contact"
         },
         {
             icon: <HardHat strokeWidth={1.5} size={40} />,
             title: "Engineering & PMC",
-            description: "Governed architectural design, structural engineering, and coordinated project management consulting."
+            description: "Governed architectural design, structural engineering, and coordinated project management consulting.",
+            link: "/helix360"
         },
         {
             icon: <TrendingUp strokeWidth={1.5} size={40} />,
             title: "Project Marketing",
-            description: "Disciplined branding, sales execution, and structured project marketing aligned to development milestones."
+            description: "Disciplined branding, sales execution, and structured project marketing aligned to development milestones.",
+            link: "/aabha-dhwani"
         }
     ];
 
@@ -51,10 +55,10 @@ const CoreServices = () => {
                                 <p className="cs-card-desc">{service.description}</p>
                             </div>
 
-                            <div className="cs-card-footer">
+                            <Link to={service.link} className="cs-card-footer">
                                 <span>Learn more</span>
                                 <ArrowRight className="cs-arrow" size={18} />
-                            </div>
+                            </Link>
                         </div>
                     ))}
                 </div>

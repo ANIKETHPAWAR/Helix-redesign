@@ -154,8 +154,14 @@ function Home() {
       < Section className="cta-section" >
         <div className="cta-box">
           <div className="cta-content">
-            <h2>Structured Partnerships for Real Estate Development</h2>
-            <p>Helix Group partners exclusively with developers, landowners, and investors to deliver governed real estate outcomes.</p>
+            <h2>Who We Work With</h2>
+            <p>Helix collaborates with developers and landowners who value structured execution and disciplined growth. We typically partner with:</p>
+            <ul className="cta-list">
+              <li>◈ Landowners exploring structured development</li>
+              <li>◈ Emerging and mid-sized developers</li>
+              <li>◈ Established developers expanding into new projects</li>
+              <li>◈ Investors seeking disciplined project execution</li>
+            </ul>
           </div>
           <div className="cta-actions">
             <Button to="/contact" variant="primary">

@@ -244,6 +244,22 @@
   opacity: 0.8;
 }
 
+.cta-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-md) 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.cta-list li {
+  color: var(--color-text-light);
+  opacity: 0.9;
+  font-size: var(--font-size-base);
+  padding-left: var(--spacing-xs);
+}
+
 /* ==========================================================================
    Mr. Helix Brand Strip — Dedicated mascot showcase section
    ========================================================================== */

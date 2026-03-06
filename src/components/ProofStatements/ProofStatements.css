@@ -21,8 +21,21 @@
 }
 
 /* Header */
-.differentiator-section .proof-header {
+.proof-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
   margin-bottom: 4rem;
+}
+
+.differentiator-section .proof-header {
+  margin-bottom: 0;
+  flex: 1;
+}
+
+.proof-mascot {
+  flex-shrink: 0;
 }
 
 .diff-eyebrow {
@@ -208,6 +221,15 @@
 
   .differentiator-section .proof-title {
     font-size: 2rem;
+  }
+
+  .proof-header-row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .proof-mascot {
+    display: none;
   }
 
   .diff-grid {
