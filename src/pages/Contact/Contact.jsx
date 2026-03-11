@@ -94,9 +94,7 @@ function Contact() {
             This form is intended for real estate development enquiries. Please share basic project details so our team can review and respond appropriately.
           </p>
 
-          <div className="trust-disclaimer">
-            <strong>Note:</strong> Helix Group operates exclusively within structured real estate development.
-          </div>
+
         </Container>
       </Section>
 

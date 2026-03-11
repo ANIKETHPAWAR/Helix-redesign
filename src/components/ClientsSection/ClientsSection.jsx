@@ -4,6 +4,21 @@ import './ClientsSection.css';
 
 const ClientsSection = () => {
     const clients = [
+        "Vin Vin Constructions",
+        "Advait Senior Homes",
+        "Sree Nivasam Villas",
+        "Rhodium Villas",
+        "Home Town Heights",
+        "TRR Highness Kanishka Villas",
+        "OM Books",
+        "Indigo Constructions",
+        "Vardhan Infra",
+        "The Ambience Vista",
+        "Vardhan Green Oaks",
+        "Tirumala Builders",
+        "Sunshine Square",
+        "Maruthi Golden Oaks",
+        "Theme Ambience",
         "SRJ Constructions",
         "Harini Mansion Pvt. Ltd",
         "The Park Residency Apartments",

@@ -93,7 +93,7 @@ function Projects() {
       },
       {
         title: "Good Shepherd School",
-        location: "Telangana (Shimoga)",
+        location: "Shimoga (Karnataka)",
         description: "Scope of work: Identification of land, Design and Construction of School Building in 3.6 acres with 10,000 sft at Shimoga.",
         metrics: { area: "3.6 Acres", type: "Institutional" },
         image: s2Img
@@ -133,13 +133,7 @@ function Projects() {
 
         image: greenOaksImg
       },
-      {
-        title: "Vayun Meadows",
-        location: "Telangana (Kapra)",
-        description: "Scope of work: Design, Construction and Sales of Residential Apartment at Vayun Meadows, Kapra.",
 
-        image: vmImg
-      },
       {
         title: "Sree Nivasam",
         location: "Telangana (Piglipur, Abdullapurmet)",

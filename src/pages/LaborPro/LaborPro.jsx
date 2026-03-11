@@ -53,8 +53,8 @@ function LaborPro() {
                     </div>
 
                     <div className="labor-cta-box">
-                        <h2>Structured Workforce Deployment for Real Estate</h2>
-                        <p>LaborPro integrates manpower solutions into the Helix development lifecycle — ensuring governed, predictable site operations.</p>
+                        <h2>Structured Workforce Operations Platform</h2>
+                        <p>LaborPro is a structured workforce deployment platform designed to support organizations across construction, manufacturing, logistics, infrastructure, and facility operations — enabling disciplined manpower management within complex operational environments.</p>
                         <Button variant="primary" onClick={() => { window.open("https://www.laborpro.co", "_blank") }}>
                             Visit LaborPro <ArrowUpRight size={18} />
                         </Button>
