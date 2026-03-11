@@ -11,13 +11,13 @@ const ServicesShowcase = () => {
             icon: <TrendingUp size={24} />
         },
         {
-            title: "Engineering & PMC",
-            description: "Governed architectural design, structural engineering, and coordinated project management.",
+            title: "Engineering, Construction & Project Governance",
+            description: "Governed architectural design, structural engineering, construction execution oversight, and disciplined project management across real estate developments.",
             icon: <Compass size={24} />
         },
         {
-            title: "Engineering, Construction & Project Governance",
-            description: "Governed architectural design, structural engineering, construction execution oversight, and disciplined project management across real estate developments.",
+            title: "Project Marketing",
+            description: "Disciplined  marketing and sales execution aligned to development lifecycle milestones.",
             icon: <Megaphone size={24} />
         }
     ];
