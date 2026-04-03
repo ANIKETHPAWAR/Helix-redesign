@@ -60,7 +60,7 @@ export const ProjectCard = ({ title, location, description, metrics, image }) =>
             {/* Image Section */}
             <div className="project-card-image-wrapper">
                 {image ? (
-                    <img src={image} alt={title} className="project-card-image" />
+                    <img src={image} alt={title} className="project-card-image" loading="lazy" width="400" height="300" />
                 ) : (
                     <div className="project-card-placeholder">
                         <Building2 size={48} />

@@ -4,9 +4,9 @@ import Container from '../common/Container/Container';
 import { ProjectCard } from '../common/Card/Card';
 import './FeaturedProjects.css';
 
-import hariniImg from '../../assets/Harini-Mansion-Medipally-Hyd.png';
-import homeTownImg from '../../assets/HTH.png';
-import parkResidencyImg from '../../assets/The-Park-Residency-Saket-Township- Hyd.png';
+import hariniImg from '../../assets/Harini-Mansion-Medipally-Hyd.jpg';
+import homeTownImg from '../../assets/HTH.jpg';
+import parkResidencyImg from '../../assets/The-Park-Residency-Saket-Township- Hyd.jpg';
 
 const FeaturedProjects = () => {
     // Data from the user request

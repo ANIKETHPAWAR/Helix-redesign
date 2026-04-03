@@ -21,6 +21,7 @@ const XIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 22.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
 )
 import ReCAPTCHA from 'react-google-recaptcha'
+import SEO from '../../components/common/SEO/SEO'
 import Section from '../../components/common/Section/Section'
 import Container from '../../components/common/Container/Container'
 import Button from '../../components/common/Button/Button'
@@ -106,6 +107,56 @@ function Contact() {
 
   return (
     <div className="premium-gradient-bg">
+      <SEO
+        title="Contact Helix Group | Real Estate Consulting Inquiry"
+        description="Get in touch with Helix Group for real estate development consulting, project management, and construction advisory services in Hyderabad, India."
+        keywords="contact helix group, real estate consulting inquiry, construction project management contact, Hyderabad real estate consultants contact, B2B consulting inquiry"
+        canonicalPath="/contact"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Contact", path: "/contact" }
+        ]}
+        structuredData={[
+          {
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact Helix Group",
+            "description": "Get in touch with Helix Group for real estate development consulting services."
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Helix Group",
+            "image": "https://helix-redesign.vercel.app/favicon.jpg",
+            "url": "https://helix-redesign.vercel.app",
+            "priceRange": "$$$$",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Plot No.101/109A, Phase 3, Saket Township, Kapra, ECIL Post",
+              "addressLocality": "Hyderabad",
+              "addressRegion": "Telangana",
+              "postalCode": "500062",
+              "addressCountry": "IN"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "17.4725",
+              "longitude": "78.5449"
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              "opens": "09:00",
+              "closes": "18:00"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "Business Inquiry",
+              "availableLanguage": ["English", "Hindi", "Telugu"]
+            }
+          }
+        ]}
+      />
       <Section className="contact-header">
         <Container>
 

@@ -6,7 +6,7 @@ const BrandLogo = ({ src, alt, className = '' }) => {
 
     return (
         <div className={`brand-logo-wrapper ${className}`}>
-            <img src={src} alt={alt} className="brand-logo-img" />
+            <img src={src} alt={alt} className="brand-logo-img" loading="lazy" width="180" height="60" />
         </div>
     );
 };

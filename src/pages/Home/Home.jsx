@@ -1,5 +1,6 @@
 import './Home.css'
 import { ArrowUpRight } from 'lucide-react';
+import SEO from '../../components/common/SEO/SEO';
 import Section from '../../components/common/Section/Section'
 import Container from '../../components/common/Container/Container'
 import Button from '../../components/common/Button/Button'
@@ -50,6 +51,46 @@ const Icons = {
 function Home() {
   return (
     <>
+      <SEO
+        title="Real Estate Development Consulting | Integrated Construction Consulting India"
+        description="Helix Group delivers integrated real estate development consulting, engineering governance, construction project management, and project marketing under one accountable framework in India."
+        keywords="real estate development consulting, integrated construction consulting India, real estate project advisory services, project management consultancy real estate, real estate development solutions Hyderabad"
+        canonicalPath="/"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Helix Group",
+          "alternateName": "Helix Infrastructure Consultants Pvt Ltd",
+          "url": "https://helix-redesign.vercel.app",
+          "logo": "https://helix-redesign.vercel.app/favicon.jpg",
+          "description": "Integrated real estate development consulting and construction project management company in Hyderabad, India.",
+          "foundingDate": "2015",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Plot No.101/109A, Phase 3, Saket Township, Kapra, ECIL Post",
+            "addressLocality": "Hyderabad",
+            "addressRegion": "Telangana",
+            "postalCode": "500062",
+            "addressCountry": "IN"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/company/helix-infrastructure-consultants-p-ltd/",
+            "https://www.instagram.com/helix_hyderabad/",
+            "https://www.facebook.com/HelixInfra",
+            "https://x.com/Helix_Infra"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Helix Group Services",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Helix Infrastructure - Development Advisory & Project Management" }},
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Helix 360 - Integrated Finishing & MEP Execution" }},
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "LaborPro - Construction Workforce Management" }},
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Aabha & Dhwani - Brand Strategy & Marketing" }}
+            ]
+          }
+        }}
+      />
       {/* Hero Section */}
       <div className="hero-section">
         <HeroCarousel>

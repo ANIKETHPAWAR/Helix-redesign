@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../../components/common/SEO/SEO';
 import {
   DraftingCompass,
   ClipboardList,
@@ -19,12 +20,55 @@ import CoreServices from '../../components/CoreServices/CoreServices';
 
 // Assets
 import heroBg from '../../assets/I-1.jpg';
-import infraImg from '../../assets/infra-1.png';
+import infraImg from '../../assets/infra-1.jpg';
 import consultImg from '../../assets/I-5.jpg';
 
 function Infrastructure() {
   return (
     <div className="infra-page">
+      <SEO
+        title="Real Estate Development Advisory | Project Management Consultancy"
+        description="Helix Infrastructure provides real estate development advisory, project management consultancy for construction, land development feasibility consulting, and real estate project structuring services."
+        keywords="real estate development advisory, project management consultancy construction, real estate engineering consultants, land development feasibility consultants, real estate project structuring consultants"
+        canonicalPath="/infrastructure"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Helix Infrastructure", path: "/infrastructure" }
+        ]}
+        structuredData={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Helix Infrastructure - Development Advisory",
+            "provider": { "@type": "Organization", "name": "Helix Group" },
+            "description": "Real estate development advisory, project management consultancy, engineering governance, and project structuring services.",
+            "areaServed": { "@type": "Country", "name": "India" },
+            "serviceType": "Real Estate Development Advisory"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What does a real estate development consultant do?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A real estate development consultant provides advisory services across the entire project lifecycle — from feasibility assessment and development structuring to engineering governance, project management, and go-to-market strategy. They help developers mitigate risk and deliver predictable outcomes."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is real estate project structuring?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Real estate project structuring involves designing the financial, legal, and operational framework for a development project. It includes land feasibility analysis, regulatory coordination, partnership structuring, and phased development planning to ensure commercial viability."
+                }
+              }
+            ]
+          }
+        ]}
+      />
       {/* Hero Section */}
       <section className="infra-hero" style={{ backgroundImage: `url(${heroBg})` }}>
         <div className="infra-hero-overlay"></div>
@@ -68,7 +112,7 @@ function Infrastructure() {
             </div>
             <div className="infra-img-col">
               <div className="image-wrapper glass-frame">
-                <img src={infraImg} alt="Infrastructure Project" />
+                <img src={infraImg} alt="Real estate infrastructure project by Helix Group Hyderabad" loading="lazy" width="600" height="400" />
               </div>
             </div>
           </div>
@@ -102,7 +146,7 @@ function Infrastructure() {
             </div>
             <div className="infra-img-col">
               <div className="image-wrapper glass-frame">
-                <img src={consultImg} alt="Consulting and Strategy" />
+                <img src={consultImg} alt="Real estate consulting and development strategy by Helix Group" loading="lazy" width="600" height="400" />
               </div>
             </div>
           </div>

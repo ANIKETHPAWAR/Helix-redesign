@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import SEO from '../../components/common/SEO/SEO'
 import './About.css'
 
 function About() {
@@ -112,6 +113,27 @@ function About() {
 
   return (
     <div className="premium-gradient-bg">
+      <SEO
+        title="About Helix Group | Real Estate Consulting Company Hyderabad"
+        description="Learn about Helix Group — a leading B2B real estate development consulting and delivery organization in Hyderabad, India. Meet our team of engineering and project management experts."
+        keywords="about helix group, real estate consulting company Hyderabad, construction consulting team India, B2B real estate advisory firm, real estate project management company"
+        canonicalPath="/about"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "About", path: "/about" }
+        ]}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "name": "About Helix Group",
+          "description": "Learn about Helix Group's team, history, and mission in real estate development consulting.",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "Helix Group",
+            "foundingLocation": "Hyderabad, Telangana, India"
+          }
+        }}
+      />
       {/* Page Header */}
       <section className="page-header">
         <div className="container">

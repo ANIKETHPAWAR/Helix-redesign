@@ -1,26 +1,27 @@
 import React, { useState } from 'react';
+import SEO from '../../components/common/SEO/SEO';
 import Container from '../../components/common/Container/Container';
 import { ProjectCard, ProjectCardDark } from '../../components/common/Card/Card';
 import './Projects.css';
 
-import hariniImg from '../../assets/Harini-Mansion-Medipally-Hyd.png';
-import homeTownImg from '../../assets/vayun.png';
-import parkResidencyImg from '../../assets/The-Park-Residency-Saket-Township- Hyd.png';
-import lakshmiEliteImg from '../../assets/Lakshmi-Elite-Villas-Vampuguda-Kapra-Hyd.png';
+import hariniImg from '../../assets/Harini-Mansion-Medipally-Hyd.jpg';
+import homeTownImg from '../../assets/vayun.jpg';
+import parkResidencyImg from '../../assets/The-Park-Residency-Saket-Township- Hyd.jpg';
+import lakshmiEliteImg from '../../assets/Lakshmi-Elite-Villas-Vampuguda-Kapra-Hyd.jpg';
 import schoolShimogaImg from '../../assets/School-Building-Shimoga.jpeg';
 import schoolYelburgaImg from '../../assets/School-Building-Yelburga.jpeg';
 import schoolMysoreImg from '../../assets/School-Building-Mysore.jpeg';
-import commercialBangaloreImg from '../../assets/Commercial-Project-Banglore.png';
-import ladiesHostelImg from '../../assets/Ladies-Hostel-Building-Medchal-Hyd.png';
-import schoolShimogaPngImg from '../../assets/School-Building-Shimoga.png';
-import jbSereneCityImg from '../../assets/JB-Serene-City-Ibrahimpatnam-Hyd.png';
+import commercialBangaloreImg from '../../assets/Commercial-Project-Banglore.jpg';
+import ladiesHostelImg from '../../assets/Ladies-Hostel-Building-Medchal-Hyd.jpg';
+import schoolShimogaPngImg from '../../assets/School-Building-Shimoga.jpg';
+import jbSereneCityImg from '../../assets/JB-Serene-City-Ibrahimpatnam-Hyd.jpg';
 import aksharaSchoolImg from '../../assets/Akshara.jpg';
-import hth from '../../assets/HTH.png';
+import hth from '../../assets/HTH.jpg';
 import ASC from '../../assets/ASC.jpeg';
 import greenOaksImg from '../../assets/GO.jpg';
 import vmImg from '../../assets/VM.jpg';
 import snImg from '../../assets/SN.jpg';
-import trrImg from '../../assets/TRR.png';
+import trrImg from '../../assets/TRR.jpg';
 import botekImg from '../../assets/BF.jpg';
 import s2Img from '../../assets/Shimoga-2.jpg';
 import gss from '../../assets/new-gss.jpg';
@@ -217,6 +218,34 @@ function Projects() {
 
   return (
     <div className="projects-page">
+      <SEO
+        title="Real Estate Projects Portfolio | Completed Construction Projects India"
+        description="Explore Helix Group's portfolio of 18+ completed real estate development and construction projects across Hyderabad, India. Residential, commercial, and mixed-use developments."
+        keywords="real estate project portfolio India, completed construction projects Hyderabad, real estate development case studies, construction project management portfolio, residential commercial projects India"
+        canonicalPath="/projects"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Projects", path: "/projects" }
+        ]}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Helix Group Project Portfolio",
+          "description": "Portfolio of completed real estate development and construction projects by Helix Group",
+          "mainEntity": {
+            "@type": "ItemList",
+            "name": "Completed Projects",
+            "numberOfItems": 18,
+            "itemListElement": projects.completed.map((project, index) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "name": project.title,
+              "description": project.description,
+              "url": "https://helix-redesign.vercel.app/projects"
+            }))
+          }
+        }}
+      />
       {/* Page Header */}
       <section className="page-header">
         <Container>

@@ -9,6 +9,7 @@ import Projects from './pages/Projects/Projects'
 
 import LaborPro from './pages/LaborPro/LaborPro'
 import AabhaDhwani from './pages/AabhaDhwani/AabhaDhwani'
+import NotFound from './pages/NotFound/NotFound'
 import ScrollToTop from './components/common/ScrollToTop/ScrollToTop'
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="about" element={<About />} />
           <Route path="projects" element={<Projects />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </>

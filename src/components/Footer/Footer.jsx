@@ -18,7 +18,7 @@ function Footer() {
               style={{ cursor: 'pointer' }}
               title="Back to Top"
             >
-              <img src={logoHicpl} alt="Helix Group" className="footer-logo" />
+              <img src={logoHicpl} alt="Helix Group" className="footer-logo" loading="lazy" width="48" height="48" />
               <span className="footer-brand-title">Helix Infrastructure Consultants Pvt Ltd.</span>
             </div>
             <p className="footer-mission">

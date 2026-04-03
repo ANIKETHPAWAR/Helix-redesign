@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
+import SEO from '../../components/common/SEO/SEO';
 import Section from '../../components/common/Section/Section';
 import Container from '../../components/common/Container/Container';
 import Button from '../../components/common/Button/Button';
@@ -9,6 +10,53 @@ import BrandLogo from '../../components/common/BrandLogo/BrandLogo';
 function LaborPro() {
     return (
         <div className="premium-gradient-bg">
+            <SEO
+                title="LaborPro | Construction Workforce Management Platform India"
+                description="LaborPro by Helix Group — structured workforce management and operational deployment platform for construction, manufacturing, logistics, and workforce-intensive sectors in India."
+                keywords="construction manpower supply company, industrial workforce outsourcing India, facility management staffing services, project workforce management solutions, construction labor deployment platform"
+                canonicalPath="/laborpro"
+                breadcrumbs={[
+                    { name: "Home", path: "/" },
+                    { name: "LaborPro", path: "/laborpro" }
+                ]}
+                structuredData={[
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "SoftwareApplication",
+                        "name": "LaborPro",
+                        "applicationCategory": "BusinessApplication",
+                        "operatingSystem": "Web",
+                        "description": "Structured workforce management and operational deployment platform for construction and workforce-intensive sectors.",
+                        "url": "https://www.laborpro.co",
+                        "offers": {
+                            "@type": "Offer",
+                            "description": "Contact for pricing"
+                        }
+                    },
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": [
+                            {
+                                "@type": "Question",
+                                "name": "What is construction manpower supply?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Construction manpower supply involves the organized deployment of skilled and semi-skilled workers to construction sites. It covers sourcing, vetting, deploying, and managing workers for tasks like masonry, carpentry, electrical work, plumbing, and general labor — ensuring projects have the right workforce at the right time."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "What is industrial workforce outsourcing?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Industrial workforce outsourcing is the practice of engaging a third-party provider to supply and manage workers for industrial operations. This includes construction, manufacturing, logistics, and facility management — helping organizations scale workforce capacity without the overhead of direct recruitment and HR management."
+                                }
+                            }
+                        ]
+                    }
+                ]}
+            />
             {/* Header / Hero */}
             <Section className="labor-header">
                 <Container>

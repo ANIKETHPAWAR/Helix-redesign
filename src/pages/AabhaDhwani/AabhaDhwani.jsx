@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
+import SEO from '../../components/common/SEO/SEO';
 import Section from '../../components/common/Section/Section';
 import Container from '../../components/common/Container/Container';
 import Button from '../../components/common/Button/Button';
@@ -11,6 +12,49 @@ import BrandLogo from '../../components/common/BrandLogo/BrandLogo';
 function AabhaDhwani() {
     return (
         <div className="premium-gradient-bg">
+            <SEO
+                title="Aabha & Dhwani Creative Studios | Real Estate Marketing & Branding India"
+                description="Aabha & Dhwani Creative Studios by Helix Group — brand strategy, digital marketing, advertising campaigns, and strategic communication for organizations across industries in India."
+                keywords="branding and advertising agency India, digital marketing and social media agency, integrated marketing campaign agency, corporate branding consultants, brand identity design agency, social media marketing agency, performance marketing consultants, advertising campaign management agency, ATL BTL marketing campaign consultants"
+                canonicalPath="/aabha-dhwani"
+                breadcrumbs={[
+                    { name: "Home", path: "/" },
+                    { name: "Aabha & Dhwani", path: "/aabha-dhwani" }
+                ]}
+                structuredData={[
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "Service",
+                        "name": "Aabha & Dhwani Creative Studios",
+                        "provider": { "@type": "Organization", "name": "Helix Group" },
+                        "description": "Brand strategy, digital marketing, advertising execution, and strategic communication services for organizations across industries.",
+                        "areaServed": { "@type": "Country", "name": "India" },
+                        "serviceType": "Marketing & Branding"
+                    },
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": [
+                            {
+                                "@type": "Question",
+                                "name": "What does a branding and advertising agency do?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "A branding and advertising agency helps organizations build and communicate their brand identity. Services include brand strategy, visual identity design, digital marketing, social media management, advertising campaign management, and content creation — all aimed at strengthening market presence and driving business growth."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "What is integrated marketing campaign management?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Integrated marketing campaign management is the coordinated planning and execution of marketing across multiple channels — digital, print, social media, ATL (Above The Line), and BTL (Below The Line). It ensures consistent messaging and maximizes reach by combining brand strategy with data-driven performance marketing."
+                                }
+                            }
+                        ]
+                    }
+                ]}
+            />
             {/* Hero Section */}
             <Section className="ad-hero">
                 <Container>

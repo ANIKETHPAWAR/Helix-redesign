@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../../components/common/SEO/SEO';
 import Section from '../../components/common/Section/Section';
 import Container from '../../components/common/Container/Container';
 import Button from '../../components/common/Button/Button';
@@ -13,6 +14,49 @@ import BrandLogo from '../../components/common/BrandLogo/BrandLogo';
 function Helix360() {
   return (
     <div className="premium-gradient-bg">
+      <SEO
+        title="Helix 360 | End-to-End Real Estate Finishing & MEP Execution India"
+        description="Helix 360 delivers integrated post-plaster finishing and MEP execution for real estate projects — painting, flooring, sanitary fittings, and electrical works under one governed framework in India."
+        keywords="post plaster finishing contractors, MEP finishing services construction, flooring and sanitary execution contractors, integrated finishing construction services, real estate finishing services India"
+        canonicalPath="/helix360"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Helix 360", path: "/helix360" }
+        ]}
+        structuredData={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Helix 360",
+            "provider": { "@type": "Organization", "name": "Helix Group" },
+            "description": "Integrated post-plaster finishing and MEP execution for real estate development projects.",
+            "areaServed": { "@type": "Country", "name": "India" },
+            "serviceType": "Construction Finishing & MEP Execution"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is post plaster finishing in construction?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Post-plaster finishing refers to all construction work that takes place after the structural plastering is complete. This includes painting, flooring, tiling, sanitary and bathroom fittings, electrical wiring, plumbing, and MEP (Mechanical, Electrical, Plumbing) execution. It is the stage where a building transitions from structure to livable space."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are MEP finishing services in construction?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "MEP finishing services cover the installation and coordination of Mechanical, Electrical, and Plumbing systems in a building. This includes electrical wiring, plumbing lines, HVAC systems, fire safety installations, and sanitary fittings — all critical for making a building functional and compliant."
+                }
+              }
+            ]
+          }
+        ]}
+      />
       <Section className="h360-header">
         <Container>
           <BrandLogo src={Helix360Logo} alt="Helix 360 Logo" />
