@@ -23,6 +23,7 @@ import snImg from '../../assets/SN.jpg';
 import trrImg from '../../assets/TRR.png';
 import botekImg from '../../assets/BF.jpg';
 import s2Img from '../../assets/Shimoga-2.jpg';
+import gss from '../../assets/new-gss.jpg';
 function Projects() {
   const [activeTab, setActiveTab] = useState('completed');
 
@@ -61,7 +62,7 @@ function Projects() {
         location: "Karnataka (Raichur)",
         description: "Scope of work: Identification of land, Design and Construction of School Building in 4 acres with 10,000 sft at Raichur.",
         metrics: { area: "4 Acres", type: "Institutional" },
-        image: schoolShimogaImg
+        image: gss
       },
       {
         title: "Good Shepherd High School",
@@ -193,7 +194,7 @@ function Projects() {
       },
       {
         title: "The Elysium",
-        location: "Mangalpalle, Adibhatla",
+        location: "Mangalpalle, Adibatla",
         description: "Design, Construction and Sales of 187 Villas and 2,50,000 sft commercial space.",
         metrics: { units: "187 Villas", type: "Residential" }
       },

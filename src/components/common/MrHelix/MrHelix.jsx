@@ -70,11 +70,7 @@ function MrHelix({
                 draggable="false"
                 className={imgClasses}
             />
-            {shouldShowBadge && (
-                <figcaption className={`mr-helix-badge mr-helix-badge--${size}`}>
-                    Mr. Helix
-                </figcaption>
-            )}
+
         </figure>
     );
 }

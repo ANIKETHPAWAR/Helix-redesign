@@ -149,7 +149,11 @@ img {
   text-transform: uppercase;
 }
 
-/* Scrollbar */
+/* Scrollbar – always visible */
+html {
+  overflow-y: scroll;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -159,12 +163,12 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-secondary);
+  background: rgba(255, 255, 255, 0.25);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-text-muted);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 /* Premium Radial Gradient Background */

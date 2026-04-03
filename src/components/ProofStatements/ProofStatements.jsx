@@ -45,7 +45,7 @@ function ProofStatements() {
             </p>
           </div>
           <div className="proof-mascot">
-            <MrHelix variant={1} size="xl" pattern="standalone" animate={true} />
+            <MrHelix variant={2} size="xl" pattern="standalone" animate={true} />
           </div>
         </div>
 

@@ -40,7 +40,7 @@ function Footer() {
           <div className="footer-links-col">
             <h4 className="footer-heading">Services</h4>
             <ul className="footer-list">
-              <li><Link to="/infrastructure" className="footer-link">Infrastructure</Link></li>
+              <li><Link to="/infrastructure" className="footer-link">Helix Infrastructure</Link></li>
               <li><Link to="/helix360" className="footer-link">Helix 360</Link></li>
               <li><Link to="/laborpro" className="footer-link">LaborPro</Link></li>
               <li><Link to="/aabha-dhwani" className="footer-link">Aabha & Dhwani</Link></li>
