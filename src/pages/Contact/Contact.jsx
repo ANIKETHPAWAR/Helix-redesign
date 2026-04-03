@@ -1,5 +1,25 @@
 import { useState, useRef } from 'react'
-import { ArrowUpRight, Linkedin, Facebook } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
+
+const LinkedInIcon = () => (
+  <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+)
+
+const FacebookIcon = () => (
+  <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+)
+
+const InstagramIcon = () => (
+  <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+)
+
+const ThreadsIcon = () => (
+  <svg viewBox="0 0 16 16" fill="currentColor" width="18" height="18"><path d="M6.321 6.016c-.27-.18-1.166-.802-1.166-.802.756-1.081 1.753-1.502 3.132-1.502.975 0 1.803.327 2.394.948s.928 1.509 1.005 2.644q.492.207.905.484c1.109.745 1.719 1.86 1.719 3.137 0 2.716-2.226 5.075-6.256 5.075C4.594 16 1 13.987 1 7.994 1 2.034 4.482 0 8.044 0 9.69 0 13.55.243 15 5.036l-1.36.353C12.516 1.974 10.163 1.43 8.006 1.43c-3.565 0-5.582 2.171-5.582 6.79 0 4.143 2.254 6.343 5.63 6.343 2.777 0 4.847-1.443 4.847-3.556 0-1.438-1.208-2.127-1.27-2.127-.236 1.234-.868 3.31-3.644 3.31-1.618 0-3.013-1.118-3.013-2.582 0-2.09 1.984-2.847 3.55-2.847.586 0 1.294.04 1.663.114 0-.637-.54-1.728-1.9-1.728-1.25 0-1.566.405-1.967.868ZM8.716 8.19c-2.04 0-2.304.87-2.304 1.416 0 .878 1.043 1.168 1.6 1.168 1.02 0 2.067-.282 2.232-2.423a6.2 6.2 0 0 0-1.528-.161"/></svg>
+)
+
+const XIcon = () => (
+  <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 22.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+)
 import ReCAPTCHA from 'react-google-recaptcha'
 import Section from '../../components/common/Section/Section'
 import Container from '../../components/common/Container/Container'
@@ -98,7 +118,7 @@ function Contact() {
         </Container>
       </Section>
 
-      <Section>
+      <Section className="contact-body">
         <div className="contact-grid">
           {/* Form Column */}
           <div className="contact-form-col">
@@ -220,60 +240,66 @@ function Contact() {
                 <h4 id="social-heading">Follow us on</h4>
 
                 <div className="social-groups">
-                  {/* LinkedIn */}
+                  {/* 1. Helix Infrastructure Consultants Pvt Ltd */}
                   <div className="social-group">
                     <div className="social-group-title">
-                      <div className="social-icon-wrapper">
-                        <Linkedin size={18} aria-hidden="true" />
-                      </div>
-                      <span>LinkedIn</span>
+                      <span>Helix Infrastructure Consultants Pvt Ltd</span>
                     </div>
-                    <div className="social-links-list">
-                      <a href="https://www.linkedin.com/company/helix-infrastructure-consultants-p-ltd/" target="_blank" rel="noopener noreferrer" className="social-link-item">Helix Infrastructure</a>
-                      <a href="https://www.linkedin.com/company/helix-tech-labor-pro-india-llp/" target="_blank" rel="noopener noreferrer" className="social-link-item">Helix Tech Labor Pro India LLP</a>
-                      <a href="https://www.linkedin.com/company/and-creative-studios/" target="_blank" rel="noopener noreferrer" className="social-link-item">AND Creative Studios</a>
+                    <div className="social-icons-row">
+                      <a href="https://www.linkedin.com/company/helix-infrastructure-consultants-p-ltd/" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="LinkedIn" title="LinkedIn"><LinkedInIcon /></a>
+                      <a href="https://www.facebook.com/HelixInfra" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Facebook" title="Facebook"><FacebookIcon /></a>
+                      <a href="https://www.instagram.com/helix_hyderabad/" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Instagram" title="Instagram"><InstagramIcon /></a>
+                      <a href="https://www.threads.com/@helix_hyderabad?invite=0" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Threads" title="Threads"><ThreadsIcon /></a>
+                      <a href="https://x.com/Helix_Infra" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="X (Twitter)" title="X (Twitter)"><XIcon /></a>
                     </div>
                   </div>
 
-                  {/* Facebook */}
+                  {/* 2. Helix 360 */}
                   <div className="social-group">
                     <div className="social-group-title">
-                      <div className="social-icon-wrapper">
-                        <Facebook size={18} aria-hidden="true" />
-                      </div>
-                      <span>Facebook</span>
+                      <span>Helix 360</span>
                     </div>
-                    <div className="social-links-list">
-                      <a href="https://www.facebook.com/profile.php?id=61579118492180" target="_blank" rel="noopener noreferrer" className="social-link-item">Labor Pro</a>
-                      <a href="https://www.facebook.com/HelixInfra" target="_blank" rel="noopener noreferrer" className="social-link-item">Helix Infra</a>
-                      <a href="https://www.facebook.com/ANDCreativeStudios" target="_blank" rel="noopener noreferrer" className="social-link-item">AND Creative Studios</a>
+                    <div className="social-icons-row">
+                      <a href="https://www.linkedin.com/company/helix-360-construction-services/" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="LinkedIn" title="LinkedIn"><LinkedInIcon /></a>
+                      <a href="https://www.facebook.com/profile.php?id=61575522209034" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Facebook" title="Facebook"><FacebookIcon /></a>
+                      <a href="https://www.instagram.com/hel.ix360" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Instagram" title="Instagram"><InstagramIcon /></a>
+                      <a href="https://www.threads.com/@hel.ix360" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Threads" title="Threads"><ThreadsIcon /></a>
+                      <a href="https://x.com/Helix360S" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="X (Twitter)" title="X (Twitter)"><XIcon /></a>
                     </div>
                   </div>
 
-                  {/* Other Platforms */}
-                  <div className="social-buttons-row">
-                    <a href="https://x.com/Helix_Infra" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="X (Twitter)" title="X (Twitter)">
-                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 22.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                      </svg>
-                    </a>
+                  {/* 3. LaborPro */}
+                  <div className="social-group">
+                    <div className="social-group-title">
+                      <span>LaborPro</span>
+                    </div>
+                    <div className="social-icons-row">
+                      <a href="https://www.linkedin.com/company/helix-tech-labor-pro-india-llp/" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="LinkedIn" title="LinkedIn"><LinkedInIcon /></a>
+                      <a href="https://www.facebook.com/profile.php?id=61579118492180" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Facebook" title="Facebook"><FacebookIcon /></a>
+                      <a href="https://www.instagram.com/laborpro193/" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Instagram" title="Instagram"><InstagramIcon /></a>
+                      <a href="https://www.threads.com/@laborpro193" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Threads" title="Threads"><ThreadsIcon /></a>
+                      <a href="https://x.com/Laborpro193" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="X (Twitter)" title="X (Twitter)"><XIcon /></a>
+                    </div>
+                  </div>
 
-                    <a href="https://www.threads.com/@helix_hyderabad?invite=0" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Threads" title="Threads">
-
-
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-threads" viewBox="0 0 16 16">
-
-                        <path d="M6.321 6.016c-.27-.18-1.166-.802-1.166-.802.756-1.081 1.753-1.502 3.132-1.502.975 0 1.803.327 2.394.948s.928 1.509 1.005 2.644q.492.207.905.484c1.109.745 1.719 1.86 1.719 3.137 0 2.716-2.226 5.075-6.256 5.075C4.594 16 1 13.987 1 7.994 1 2.034 4.482 0 8.044 0 9.69 0 13.55.243 15 5.036l-1.36.353C12.516 1.974 10.163 1.43 8.006 1.43c-3.565 0-5.582 2.171-5.582 6.79 0 4.143 2.254 6.343 5.63 6.343 2.777 0 4.847-1.443 4.847-3.556 0-1.438-1.208-2.127-1.27-2.127-.236 1.234-.868 3.31-3.644 3.31-1.618 0-3.013-1.118-3.013-2.582 0-2.09 1.984-2.847 3.55-2.847.586 0 1.294.04 1.663.114 0-.637-.54-1.728-1.9-1.728-1.25 0-1.566.405-1.967.868ZM8.716 8.19c-2.04 0-2.304.87-2.304 1.416 0 .878 1.043 1.168 1.6 1.168 1.02 0 2.067-.282 2.232-2.423a6.2 6.2 0 0 0-1.528-.161" />
-
-                      </svg>
-                    </a>
-
+                  {/* 4. Aabha 'N' Dhwani */}
+                  <div className="social-group">
+                    <div className="social-group-title">
+                      <span>Aabha 'N' Dhwani</span>
+                    </div>
+                    <div className="social-icons-row">
+                      <a href="https://www.linkedin.com/company/and-creative-studios/" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="LinkedIn" title="LinkedIn"><LinkedInIcon /></a>
+                      <a href="https://www.facebook.com/ANDCreativeStudios" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Facebook" title="Facebook"><FacebookIcon /></a>
+                      <a href="https://www.instagram.com/aabha_and_dhwani_creative/" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Instagram" title="Instagram"><InstagramIcon /></a>
+                      <a href="https://www.threads.com/@aabha_and_dhwani_creative" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Threads" title="Threads"><ThreadsIcon /></a>
+                      <a href="https://x.com/AND_Creatives" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="X (Twitter)" title="X (Twitter)"><XIcon /></a>
+                    </div>
                   </div>
                 </div>
               </div>
 
               <div className="info-item">
-                <h4>Office</h4>
+                <h4>HEAD OFFICE</h4>
                 <p>
                   Helix Group<br />
                   Plot No.101/109A, Phase 3, Saket Township,<br />
@@ -281,19 +307,8 @@ function Contact() {
                   Telangana, INDIA – 500062
                 </p>
               </div>
-              <div className="map-embed mt-lg" style={{ borderRadius: '8px', overflow: 'hidden' }}>
-                <iframe
-                  title="Helix Group Location"
-                  src="https://maps.google.com/maps?q=Plot%20No.101%2F109A%2C%20Phase%203%2C%20Saket%20Township%2C%20Kapra%2C%20ECIL%20Post%20%E2%80%93%20Hyderabad%2C%20Telangana%2C%20INDIA%20%E2%80%93%20500062&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                  width="100%"
-                  height="250"
-                  style={{ border: 0, display: 'block' }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
-              <Button variant="secondary" onClick={handleWhatsAppClick}>
+
+              <Button variant="primary" onClick={handleWhatsAppClick}>
                 Chat on WhatsApp
               </Button>
             </div>
