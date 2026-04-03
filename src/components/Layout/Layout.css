@@ -1,8 +1,4 @@
-/* Add padding to prevent content from being hidden behind fixed header */
-main {
-    padding-top: var(--header-height, 80px);
-}
-
+/* Add padding to prevent content from being hidden behind fixed header on mobile */
 @media (max-width: 1080px) {
     main {
         padding-top: 60px;

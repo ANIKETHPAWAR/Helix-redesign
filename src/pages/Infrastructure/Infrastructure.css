@@ -10,8 +10,10 @@
 /* --- Hero Section --- */
 .infra-hero {
   position: relative;
-  height: 92vh;
-  min-height: 600px;
+  height: 100vh;
+  min-height: 700px;
+  padding-top: calc(var(--header-height, 80px) + var(--spacing-xl));
+  padding-bottom: var(--spacing-3xl);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

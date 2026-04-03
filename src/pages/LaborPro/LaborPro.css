@@ -1,7 +1,7 @@
 /* LaborPro Page Styles */
 
 .labor-header {
-    padding-top: var(--spacing-3xl);
+    padding-top: calc(var(--header-height, 80px) + var(--spacing-xl));
     background: transparent;
     width: 100%;
     overflow: hidden;

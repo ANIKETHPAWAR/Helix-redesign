@@ -8,7 +8,7 @@
 
 .premium-gradient-bg .page-header {
   padding-bottom: var(--spacing-3xl);
-  padding-top: var(--spacing-xl);
+  padding-top: calc(var(--header-height, 80px) + var(--spacing-xl));
 }
 
 .page-eyebrow {

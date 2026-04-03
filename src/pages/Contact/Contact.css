@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .contact-header {
-  padding-top: var(--spacing-lg);
+  padding-top: calc(var(--header-height, 80px) + var(--spacing-lg));
   background: transparent;
   width: 100%;
   overflow: hidden;
