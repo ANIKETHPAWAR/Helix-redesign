@@ -69,6 +69,13 @@ function Contact() {
       return
     }
 
+    // Validate service selection
+    if (!formData.service) {
+      setStatus('Please select a service.')
+      setStatusType('error')
+      return
+    }
+
     // Validate message: at least 10 characters
     if (formData.message.trim().length < 10) {
       setStatus('Please provide at least 10 characters in the project details.')
@@ -266,12 +273,13 @@ function Contact() {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="service">Service Interest</label>
+                  <label htmlFor="service">Service Interest *</label>
                   <select
                     id="service"
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
+                    required
                   >
                     <option value="" disabled>Select a service...</option>
                     <option value="Helix Infrastructure Consultants Pvt Ltd">Helix Infrastructure Consultants Pvt Ltd</option>
