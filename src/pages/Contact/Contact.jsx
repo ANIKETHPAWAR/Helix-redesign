@@ -69,6 +69,13 @@ function Contact() {
       return
     }
 
+    // Validate organisation
+    if (!formData.organisation.trim()) {
+      setStatus('Organisation is required.')
+      setStatusType('error')
+      return
+    }
+
     // Validate service selection
     if (!formData.service) {
       setStatus('Please select a service.')
@@ -231,13 +238,14 @@ function Contact() {
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="organisation">Organisation</label>
+                    <label htmlFor="organisation">Organisation *</label>
                     <input
                       type="text"
                       id="organisation"
                       name="organisation"
                       value={formData.organisation}
                       onChange={handleChange}
+                      required
                     />
                   </div>
                 </div>

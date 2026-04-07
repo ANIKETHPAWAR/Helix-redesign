@@ -9,7 +9,7 @@ module.exports = async function handler(req, res) {
     const { name, organisation, email, phone, service, message, captchaToken } = req.body;
 
     // Validate required fields
-    if (!name || !email || !phone || !service || !message) {
+    if (!name || !organisation || !email || !phone || !service || !message) {
         return res.status(400).json({ success: false, error: 'All required fields must be filled.' });
     }
 
