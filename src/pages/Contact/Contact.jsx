@@ -62,6 +62,20 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault()
 
+    // Validate name: at least 4 characters
+    if (formData.name.trim().length < 4) {
+      setStatus('Name must be at least 4 characters.')
+      setStatusType('error')
+      return
+    }
+
+    // Validate message: at least 10 characters
+    if (formData.message.trim().length < 10) {
+      setStatus('Please provide at least 10 characters in the project details.')
+      setStatusType('error')
+      return
+    }
+
     // Validate phone: exactly 10 digits
     const phoneDigits = formData.phone.replace(/\D/g, '')
     if (phoneDigits.length !== 10) {
@@ -205,6 +219,8 @@ function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
+                      minLength="4"
+                      title="Name must be at least 4 characters"
                     />
                   </div>
                   <div className="form-group">
@@ -273,7 +289,10 @@ function Contact() {
                     rows="4"
                     value={formData.message}
                     onChange={handleChange}
+                    required
+                    minLength="10"
                     placeholder="Please describe your project scope, location, and timeline..."
+                    title="Please provide at least 10 characters"
                   ></textarea>
                 </div>
 

@@ -9,8 +9,18 @@ module.exports = async function handler(req, res) {
     const { name, organisation, email, phone, service, message, captchaToken } = req.body;
 
     // Validate required fields
-    if (!name || !email || !phone) {
-        return res.status(400).json({ success: false, error: 'Name, email, and phone are required.' });
+    if (!name || !email || !phone || !message) {
+        return res.status(400).json({ success: false, error: 'Name, email, phone, and project details are required.' });
+    }
+
+    // Validate name: at least 4 characters
+    if (name.trim().length < 4) {
+        return res.status(400).json({ success: false, error: 'Name must be at least 4 characters.' });
+    }
+
+    // Validate message: at least 10 characters
+    if (message.trim().length < 10) {
+        return res.status(400).json({ success: false, error: 'Project details must be at least 10 characters.' });
     }
 
     // Validate phone: exactly 10 digits
