@@ -13,6 +13,18 @@ module.exports = async function handler(req, res) {
         return res.status(400).json({ success: false, error: 'Name, email, and phone are required.' });
     }
 
+    // Validate phone: exactly 10 digits
+    const phoneDigits = (phone || '').replace(/\D/g, '');
+    if (phoneDigits.length !== 10) {
+        return res.status(400).json({ success: false, error: 'Please enter a valid 10-digit phone number.' });
+    }
+
+    // Validate email format
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(email)) {
+        return res.status(400).json({ success: false, error: 'Please enter a valid email address.' });
+    }
+
     if (!captchaToken) {
         return res.status(400).json({ success: false, error: 'Please complete the CAPTCHA.' });
     }

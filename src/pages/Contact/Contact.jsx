@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { ArrowUpRight } from 'lucide-react'
 
 const LinkedInIcon = () => (
@@ -30,6 +31,7 @@ import './Contact.css'
 const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY
 
 function Contact() {
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     name: '',
     organisation: '',
@@ -60,6 +62,22 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault()
 
+    // Validate phone: exactly 10 digits
+    const phoneDigits = formData.phone.replace(/\D/g, '')
+    if (phoneDigits.length !== 10) {
+      setStatus('Please enter a valid 10-digit phone number.')
+      setStatusType('error')
+      return
+    }
+
+    // Validate email: must be a complete email address
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+    if (!emailRegex.test(formData.email)) {
+      setStatus('Please enter a valid email address (e.g. name@example.com).')
+      setStatusType('error')
+      return
+    }
+
     // Validate captcha
     if (!captchaToken) {
       setCaptchaError('Please complete the CAPTCHA verification.')
@@ -80,11 +98,8 @@ function Contact() {
       const data = await res.json()
 
       if (data.success) {
-        setStatus('Thank you. Your message has been sent to our team.')
-        setStatusType('success')
-        setFormData({ name: '', organisation: '', email: '', phone: '', service: '', message: '' })
-        setCaptchaToken(null)
-        if (captchaRef.current) captchaRef.current.reset()
+        navigate('/thank-you')
+        return
       } else {
         setStatus(data.error || 'Something went wrong. Please try again.')
         if (data.debug) setStatus(prev => prev + ' [DEBUG: ' + data.debug + ']')
@@ -214,6 +229,8 @@ function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
+                      pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                      title="Please enter a valid email address (e.g. name@example.com)"
                     />
                   </div>
                   <div className="form-group">
@@ -225,6 +242,9 @@ function Contact() {
                       value={formData.phone}
                       onChange={handleChange}
                       required
+                      pattern="[0-9]{10}"
+                      maxLength="10"
+                      title="Please enter a valid 10-digit phone number"
                     />
                   </div>
                 </div>
