@@ -170,8 +170,8 @@ function Contact() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "Helix Group",
-            "image": "https://helix-redesign.vercel.app/favicon.jpg",
-            "url": "https://helix-redesign.vercel.app",
+            "image": "https://hicpl.com/favicon.jpg",
+            "url": "https://hicpl.com",
             "priceRange": "$$$$",
             "address": {
               "@type": "PostalAddress",

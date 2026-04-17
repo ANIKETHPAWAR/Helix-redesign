@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 
 const SITE_NAME = 'Helix Group'
-const SITE_URL = 'https://helix-redesign.vercel.app'
+const SITE_URL = 'https://hicpl.com'
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.jpg`
 
 function SEO({ title, description, keywords, canonicalPath, ogImage = DEFAULT_OG_IMAGE, ogType = 'website', structuredData, breadcrumbs, robots }) {

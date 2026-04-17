@@ -241,7 +241,7 @@ function Projects() {
               "position": index + 1,
               "name": project.title,
               "description": project.description,
-              "url": "https://helix-redesign.vercel.app/projects"
+              "url": "https://hicpl.com/projects"
             }))
           }
         }}

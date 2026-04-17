@@ -61,8 +61,8 @@ function Home() {
           "@type": "Organization",
           "name": "Helix Group",
           "alternateName": "Helix Infrastructure Consultants Pvt Ltd",
-          "url": "https://helix-redesign.vercel.app",
-          "logo": "https://helix-redesign.vercel.app/favicon.jpg",
+          "url": "https://hicpl.com",
+          "logo": "https://hicpl.com/favicon.jpg",
           "description": "Integrated real estate development consulting and construction project management company in Hyderabad, India.",
           "foundingDate": "2015",
           "address": {

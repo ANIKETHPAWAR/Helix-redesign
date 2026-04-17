@@ -12,7 +12,7 @@ import { mkdirSync, readFileSync, writeFileSync } from 'fs'
 import { dirname, join } from 'path'
 
 const DIST = 'dist'
-const SITE_URL = 'https://helix-redesign.vercel.app'
+const SITE_URL = 'https://hicpl.com'
 
 const pages = [
   {
